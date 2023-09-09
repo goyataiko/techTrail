@@ -1,10 +1,10 @@
 <!-- Experience-Area-Start -->
-<section class="experience-area section-padding">
+<section class="experience-area section-padding col-md-8">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6 d-none d-lg-block">
                 <figure class="single-image wow fadeInLeft">
-                    <img src="images/exper.jpg" alt="">
+                    <img src="{{asset('frontend/assets/images/exper.jpg')}}" alt="">
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -29,7 +29,7 @@
                         <div class="col-sm-6">
                             <div class="icon-info wow fadeInUp" data-wow-delay="0.4s">
                                 <div class="icon"><i class="fas fa-envelope"></i></div>
-                                <h6><a href="#" class="text">rabins@gmail.com</a></h6>
+                                <h6><a href="#" class="text">goyataiko@gmail.com</a></h6>
                             </div>
                         </div>
                     </div>

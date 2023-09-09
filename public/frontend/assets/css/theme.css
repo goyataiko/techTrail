@@ -2,13 +2,17 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    margin: 0 auto;
+}
+
 .section-padding {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding-top: 150px;
+    padding-bottom: 150px;
 }
 
 .section-padding-top {
-    padding-top: 120px;
+    padding-top: 150px;
 }
 
 .section-padding-bottom {
@@ -63,7 +67,7 @@ Button-Styles
     width: 0;
     height: 0;
     border-radius: 50%;
-    background: #ff885e;
+    background: #6777ef;
     -webkit-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
     -o-transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
     transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
@@ -105,23 +109,23 @@ Button-Styles
 .button-primary {
     display: inline-block;
     color: #ffffff;
-    background-color: #ff885e;
+    background-color: #6777ef;
     padding: 18px 40px;
-    border: 1px solid #ff885e;
+    border: 1px solid #6777ef;
     font-size: 16px;
     font-weight: 600;
 }
 
 .button-primary:hover {
-    color: #ff885e;
+    color: #6777ef;
 }
 
 .load-more,
 .button-primary-trans {
     display: inline-block;
-    color: #ff885e;
+    color: #6777ef;
     padding: 15px 40px;
-    border: 1px solid #ff885e;
+    border: 1px solid #6777ef;
     font-size: 16px;
     font-weight: 600;
 }
@@ -151,12 +155,12 @@ Button-Styles
 
 .button-orange {
     padding: 15px 38px;
-    border: 1px solid #ff885e;
-    background-color: #ff885e;
+    border: 1px solid #6777ef;
+    background-color: #6777ef;
 }
 
 .button-orange:hover {
-    color: #ff885e;
+    color: #6777ef;
 }
 
 .button-orange .dir-part {
@@ -218,7 +222,7 @@ Button-Styles
 
 .main_menu .navbar-nav li .active,
 .main_menu .navbar-nav li:hover>a {
-    color: #ff885e;
+    color: #6777ef;
 }
 
 .menu_fix .navbar-nav li a {
@@ -247,7 +251,7 @@ Button-Styles
 }
 
 .main_menu .menu_icon li a:hover {
-    color: #ff885e;
+    color: #6777ef;
 }
 
 .menu_fix .menu_icon li a {
@@ -392,7 +396,7 @@ Button-Styles
 
 .single-service .title:before {
     content: "";
-    background: #ff885e;
+    background: #6777ef;
     width: 15px;
     height: 3px;
     position: absolute;
@@ -441,8 +445,8 @@ Button-Styles
 .filter-menu li {
     display: inline-block;
     font-size: 15px;
-    color: #ff885e;
-    border: 1px solid #ff885e;
+    color: #6777ef;
+    border: 1px solid #6777ef;
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     padding: 10px 30px;
@@ -457,7 +461,7 @@ Button-Styles
 
 .filter-menu li:hover,
 .filter-menu li.active {
-    background: #ff885e;
+    background: #6777ef;
     color: #fff;
 }
 
@@ -502,7 +506,7 @@ Button-Styles
 }
 
 blockquote {
-    border-left: 10px solid #ff885e;
+    border-left: 10px solid #6777ef;
     background-color: #f3f7ff;
     border-radius: 10px;
 }
@@ -514,7 +518,7 @@ blockquote {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #ff885e;
+    background-color: #6777ef;
     opacity: 0.7;
     z-index: -1;
 }
@@ -715,7 +719,7 @@ blockquote {
 .icon-info .icon {
     width: 50px;
     height: 50px;
-    background-color: #ff885e;
+    background-color: #6777ef;
     font-size: 20px;
     line-height: 50px;
     text-align: center;
@@ -763,7 +767,7 @@ blockquote {
 }
 
 .testimonial-slider .single-testimonial .quote {
-    background-color: #ff885e;
+    background-color: #6777ef;
     width: 50px;
     height: 50px;
     line-height: 50px;
@@ -818,7 +822,7 @@ blockquote {
 .input-box:focus {
     -webkit-box-shadow: 16px 16px 32px 0 rgba(0, 0, 0, 0.05);
     box-shadow: 16px 16px 32px 0 rgba(0, 0, 0, 0.05);
-    border: 1px solid #ff885e;
+    border: 1px solid #6777ef;
 }
 
 .contact-form .input-box {
@@ -927,7 +931,7 @@ blockquote {
 }
 
 .single-blog .title a:hover {
-    color: #ff885e;
+    color: #6777ef;
 }
 
 .single-blog .blog-image {
@@ -995,7 +999,7 @@ blockquote {
 
 /* .blog-meta .single-meta .meta-value:before {
     content: ".";
-    color: #ff885e;
+    color: #6777ef;
     margin-right: 5px;
 } */
 
@@ -1082,7 +1086,7 @@ Footer-Area
 }
 
 .footer-bottom {
-    background-color: #ff885e;
+    background-color: #190844;
     /* margin-left: 5px; */
     /* margin-right: 5px; */
     padding: 25px 15px;
@@ -1144,8 +1148,8 @@ Footer-Area
     height: 60px;
     line-height: 60px;
     font-size: 16px;
-    border: 2px solid #ff885e;
-    color: #ff885e;
+    border: 2px solid #6777ef;
+    color: #6777ef;
     text-align: center;
     background-color: #ffffff;
     border-radius: 100px;
@@ -1158,7 +1162,7 @@ Footer-Area
 }
 
 #scrollUp:hover {
-    background-color: #ff885e;
+    background-color: #6777ef;
     color: #ffffff;
 }
 
@@ -1305,7 +1309,7 @@ Footer-Area
 
 /* .portfolio-details .portflio-info .single-info .title:before {
     content: ".";
-    color: #ff885e;
+    color: #6777ef;
     margin-right: 5px;
 } */
 
@@ -1340,7 +1344,7 @@ Footer-Area
 }
 
 .description .dots-list li:before {
-    color: #ff885e;
+    color: #6777ef;
     font-family: 'Font Awesome 5 Pro';
     content: "\f00c";
     font-weight: 900;
@@ -1371,7 +1375,7 @@ Footer-Area
     text-align: center;
     line-height: 50px;
     color: #fff;
-    background-color: #ff885e;
+    background-color: #6777ef;
     margin: 15px;
     font-size: 22px;
     transition: 0.3s;
@@ -1383,7 +1387,7 @@ Footer-Area
 }
 
 .single-navigation .nav-link:hover .icon {
-    background-color: #ff885e;
+    background-color: #6777ef;
     color: #ffffff;
 }
 
@@ -1425,6 +1429,7 @@ Footer-Area
 .main_menu.menu_fix {
     background: #fff;
     border-color: #eeeeeeb5;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .main_menu.menu_fix .nav li a {
@@ -1447,7 +1452,7 @@ Footer-Area
 }
 
 .header-text a.button-dark.mouse-dir {
-    background: #ff885e;
+    background: #6777ef;
 }
 
 .about-image img {
@@ -1455,7 +1460,7 @@ Footer-Area
 }
 
 .slick-dots li button {
-    background-color: #ff885e;
+    background-color: #6777ef;
     border-radius: 50%;
     margin: 5px 2px 0 2px;
 }
@@ -1470,9 +1475,13 @@ Footer-Area
 }
 
 .navbar-brand {
-    max-width: 190px;
+    max-width: 200px;
     padding: 0;
     margin: 0;
+}
+
+.navbar-brand>img {
+    margin-top: -0.5em;
 }
 
 .footer-widgets .footer-logo {
@@ -1503,7 +1512,7 @@ Footer-Area
     height: 40px;
     line-height: 40px;
     text-align: center;
-    background: #ff885e1f;
+    background: #6777ef1f;
     margin-right: 7px;
     border-radius: 50%;
     transition: all linear .3s;

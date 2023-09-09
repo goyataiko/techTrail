@@ -1,5 +1,5 @@
 <!-- Portfolio-Area-Start -->
-<section class="portfolio-area section-padding-top" id="portfolio-page">
+<section class="portfolio-area section-padding-top col-md-8" id="portfolio-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
@@ -28,7 +28,7 @@
                 <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item branding">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-1.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-1.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-1.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -42,7 +42,7 @@
                 <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item interface">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-2.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-2.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-2.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -56,7 +56,7 @@
                 <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item branding">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-3.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-3.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-3.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -70,7 +70,7 @@
                 <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item interface experience">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-4.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-4.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-4.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -84,7 +84,7 @@
                 <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item branding development experience">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-5.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-5.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-5.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -98,7 +98,7 @@
                 <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item interface">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-6.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-6.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-6.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -112,7 +112,7 @@
                 <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item development">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-7.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-7.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-7.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -126,7 +126,7 @@
                 <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item experience">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-8.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-8.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-8.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
@@ -140,7 +140,7 @@
                 <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item development">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="images/portfolio-9.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/portfolio-9.jpg')}}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="images/portfolio-9.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>

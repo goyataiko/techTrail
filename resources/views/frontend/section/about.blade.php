@@ -1,10 +1,10 @@
 <!-- About-Area-Start -->
-<section class="about-area section-padding-top">
+<section class="about-area section-padding-top col-md-8">
     <div class="container">
         <div class="row d-flex align-items-center">
             <div class="col-lg-6">
                 <figure class="about-image">
-                    <img src="images/about-image.png" alt="" class="wow fadeInUp" data-wow-delay="0.3s">
+                    <img src="{{asset('frontend/assets/images/about-image.png')}}" alt="" class="wow fadeInUp" data-wow-delay="0.3s">
                 </figure>
             </div>
             <div class="col-lg-6">

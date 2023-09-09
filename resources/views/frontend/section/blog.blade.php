@@ -1,5 +1,5 @@
 <!-- Blog-Area-Start -->
-<section class="blog-area section-padding-top" id="blog-page">
+<section class="blog-area section-padding-top col-md-10" id="blog-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
@@ -18,7 +18,7 @@
                 <div class="blog-slider">
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-1.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-1.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Great things never come from.</a></h3>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-2.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-2.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Don’t stop when you’re tired. Stop
@@ -45,7 +45,7 @@
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-3.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-3.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Success doesn’t just find you.</a>
@@ -59,7 +59,7 @@
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-4.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-4.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Sometimes later becomes never.</a>
@@ -73,7 +73,7 @@
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-5.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-5.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Don’t wait for opportunity. Create
@@ -87,7 +87,7 @@
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="images/blog-6.jpg" alt="">
+                            <img src="{{asset('frontend/assets/images/blog-6.jpg')}}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Your limitation-it’s only your
