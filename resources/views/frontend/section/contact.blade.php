@@ -1,5 +1,5 @@
 <!-- Contact-Area-Start -->
-<section class="contact-area section-padding" id="contact-page">
+<section class="contact-area section-padding col-md-8" id="contact-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">

@@ -1,6 +1,6 @@
 <!-- Service-Area-Start -->
 
-<section class="service-area section-padding-top" id="about-page">
+<section class="service-area section-padding-top col-md-10" id="about-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-4">

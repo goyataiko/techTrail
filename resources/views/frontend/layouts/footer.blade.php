@@ -50,8 +50,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="copyright">
-                        <p>Copyright 2023 <span>Rabins</span>. All Rights Reserved.</p>
-                        <p>Powered by WebSolutionUS &nbsp; | &nbsp; 2022 - 2023</p>
+                        <p>Copyright 2023 <span>TechTrail</span>. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>

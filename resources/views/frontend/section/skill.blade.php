@@ -1,5 +1,5 @@
 <!-- Skills-Area-Start -->
-<section class="skills-area section-padding-top" id="skills-page">
+<section class="skills-area section-padding-top col-md-8" id="skills-page">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
@@ -56,7 +56,7 @@
             </div>
             <div class="col-lg-6 d-none d-lg-block">
                 <figure class="single-image text-right wow fadeInRight">
-                    <img src="images/skill.jpg" alt="">
+                    <img src="{{asset('frontend/assets/images/skill.jpg')}}" alt="">
                 </figure>
             </div>
         </div>
