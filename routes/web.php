@@ -16,7 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('frontend.home');
+});
+
+Route::get('/blog', function () {
+    return view('frontend.blog');
+});
+
+Route::get('/blog-detail', function () {
+    return view('frontend.blog-detail');
+});
+
+Route::get('/portfolio-detail', function () {
+    return view('frontend.portfolio-detail');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
