@@ -1,7 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-    <section class="section col-md-10 mx-auto">
+    <section class="section col-md-10 mx-2">
         <div class="section-header">
             <div class="section-header-back">
                 <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
@@ -20,27 +20,27 @@
                             <div class="card-body">
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Sub Title</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <textarea name="" id="" class="form-control" style="height: 100px"></textarea>
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Button Text</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Button URL</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <input type="text" class="form-control">
                                     </div>
                                 </div>
@@ -48,7 +48,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Background
                                         Image</label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <div class="custom-file">
                                             <input type="file" class="custom-file-input" id="customFile">
                                             <label class="custom-file-label" for="customFile">Choose file</label>
@@ -58,7 +58,7 @@
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                                    <div class="col-sm-12 col-md-7">
+                                    <div class="col-sm-12 col-md-8">
                                         <button class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
