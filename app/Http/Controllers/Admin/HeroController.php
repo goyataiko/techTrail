@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Hero;
 use Illuminate\Http\Request;
+use File;
 
 class HeroController extends Controller
 {
@@ -13,7 +14,8 @@ class HeroController extends Controller
      */
     public function index()
     {
-        return view('admin.hero.index');
+        $hero = Hero::first();
+        return view('admin.hero.index', compact('hero'));
     }
 
     /**
@@ -60,13 +62,15 @@ class HeroController extends Controller
             // 3mb
         ]);
 
-        // dd($request->all());
-
-        if($request->hasfile('image')){
+        if ($request->hasfile('image')) {
+            $hero = Hero::first();
+            if($hero && File::exists(public_path($hero->image))){
+                File::delete(public_path($hero->image));
+            }
             $image = $request->file('image');
-            $imageName = rand().$image->getClientOriginalName();
-            $image -> move(public_path('/uploads'), $imageName);
-            $imagePath = "/uploads/".$imageName;            
+            $imageName = rand() . $image->getClientOriginalName();
+            $image->move(public_path('/uploads'), $imageName);
+            $imagePath = "/uploads/" . $imageName;
         }
 
         Hero::updateOrCreate(
