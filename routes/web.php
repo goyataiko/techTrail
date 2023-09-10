@@ -3,7 +3,6 @@
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\ProfileController;
-use GuzzleHttp\Middleware;
 use Illuminate\Support\Facades\Route;
 
 /*
