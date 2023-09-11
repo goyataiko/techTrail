@@ -13,7 +13,7 @@ class TyperTitleController extends Controller
      */
     public function index()
     {
-        $titles = TyperTitle::get()->sortByDesc('id');
+        $titles = TyperTitle::get();
 
         return view('admin.hero.typerTitle.index', compact('titles'));
     }
@@ -39,7 +39,7 @@ class TyperTitleController extends Controller
         $create->title = $request->title;
         $create->save();
 
-        toastr()->success('Created successfully!', 'Congrats');
+        toastr()->success('Created successfully!');
         return redirect('admin/typerTitle');
     }
 
@@ -74,7 +74,7 @@ class TyperTitleController extends Controller
         $update->save();
 
         toastr()->success('Updated successfully!', 'Congrats');
-        return redirect('admin/typerTitle');
+        return back();
     }
 
     /**
@@ -84,7 +84,7 @@ class TyperTitleController extends Controller
     {
         TyperTitle::find($id)->delete();
 
-        toastr()->success('Deleted successfully!', 'Congrats');
+        toastr()->success('Deleted successfully!');
         return back();
 
     }

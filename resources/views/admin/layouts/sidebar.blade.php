@@ -41,6 +41,9 @@
             <li class="nav-item active">
                 <a href="/dashboard" class="nav-link"><i class="fas fa-fire"></i><span>Dashboard</span></a>
             </li>
+            <li class="nav-item">
+                <a href="/" class="nav-link" target="_blank"><i class="fas fa-atlas"></i><span>Main</span></a>
+            </li>
             <li class="menu-header">Section</li>
 
             <li class="nav-item dropdown active">
