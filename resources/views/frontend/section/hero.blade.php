@@ -1,6 +1,6 @@
 <!-- Hero-Area-Start -->
 
-<header class="header-area parallax-bg" id="home-page" style="background: url('{{asset($hero->image)}}')">
+<header class="header-area parallax-bg" id="home-page" style="background: url('{{ asset($hero->image) }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -19,4 +19,21 @@
         </div>
     </div>
 </header>
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            @php
+                $titles = [];
+                foreach ($typerTitles as $typeTitle) {
+                    $titles[] = $typeTitle->title;
+                }
+                $titles = json_encode($titles);
+                
+            @endphp
+            $('.header-area .typer-title').typer({!! $titles !!});
+
+        });
+    </script>
+@endpush
 <!-- Hero-Area-End -->
