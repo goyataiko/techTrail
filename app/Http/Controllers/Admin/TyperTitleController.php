@@ -13,7 +13,7 @@ class TyperTitleController extends Controller
      */
     public function index()
     {
-        return view('admin.hero.typerTitle');
+        return view('admin.hero.typerTitle.index');
     }
 
     /**
@@ -21,7 +21,7 @@ class TyperTitleController extends Controller
      */
     public function create()
     {
-        return view('admin.hero.createTyper');
+        return view('admin.hero.typerTitle.create');
     }
 
     /**
