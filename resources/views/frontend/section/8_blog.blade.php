@@ -1,4 +1,6 @@
+
 <!-- Blog-Area-Start -->
+
 <section class="blog-area section-padding-top col-md-10" id="blog-page">
     <div class="container">
         <div class="row">
@@ -104,4 +106,5 @@
         </div>
     </div>
 </section>
+
 <!-- Blog-Area-End -->

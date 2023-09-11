@@ -1,3 +1,4 @@
+
 <!-- Hero-Area-Start -->
 
 <header class="header-area parallax-bg" id="home-page" style="background: url('{{ asset($hero->image) }}')">
