@@ -13,7 +13,9 @@ class TyperTitleController extends Controller
      */
     public function index()
     {
-        return view('admin.hero.typerTitle.index');
+        $titles = TyperTitle::get()->sortByDesc('id');
+
+        return view('admin.hero.typerTitle.index', compact('titles'));
     }
 
     /**
@@ -54,7 +56,8 @@ class TyperTitleController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $title = TyperTitle::findorFail($id);
+        return view('admin.hero.typerTitle.edit', compact('title'));
     }
 
     /**
@@ -62,7 +65,16 @@ class TyperTitleController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'title' => ['required', 'max:100'],
+        ]);
+
+        $update = TyperTitle::findorFail($id);
+        $update->title = $request->title;
+        $update->save();
+
+        toastr()->success('Updated successfully!', 'Congrats');
+        return redirect('admin/typerTitle');
     }
 
     /**
@@ -70,6 +82,10 @@ class TyperTitleController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        TyperTitle::find($id)->delete();
+
+        toastr()->success('Deleted successfully!', 'Congrats');
+        return back();
+
     }
 }
