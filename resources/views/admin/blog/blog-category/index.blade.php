@@ -26,17 +26,17 @@
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                 <div class="modal-content">
-                                    <form action="{{ route('admin.typer-title.store') }}" method="post">
+                                    <form action="{{ route('admin.blog-category.store') }}" method="post">
                                         @csrf
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Create Title</h5>
+                                            <h5 class="modal-title" id="exampleModalLabel">Create Category</h5>
                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                 <span aria-hidden="true">&times;</span>
                                             </button>
                                         </div>
                                         <div class="modal-body text-left">
-                                            TyperTitle
-                                            <input type="text" name="title" class="form-control" value="" />
+                                            Category Name
+                                            <input type="text" name="name" class="form-control" value="" />
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal"
@@ -59,7 +59,7 @@
                                     <thead>
                                         <tr>
                                             <th width="10%" class="text-center">id</th>
-                                            <th width="90%">Title</th>
+                                            <th width="90%">Category Name</th>
                                             <th class="text-center">Edit</th>
                                             <th class="text-center">Delete</th>
                                         </tr>
@@ -74,7 +74,7 @@
                                             @endphp
                                             <tr>
                                                 <td class="text-center"> {{ $id }} </td>
-                                                <td>{{ $mo->title }}</td>
+                                                <td>{{ $mo->name }}</td>
                                                 <td class="action"><a href="#" data-toggle="modal"
                                                         data-target="#edit{{ $mo->id }}"
                                                         class="btn btn-success"><i class='fas fa-edit'></i></a>
@@ -87,23 +87,23 @@
                                                             role="document">
                                                             <div class="modal-content">
                                                                 <form
-                                                                    action="{{ route('admin.typer-title.destroy', [$mo->id]) }}"
+                                                                    action="{{ route('admin.blog-category.update', [$mo->id]) }}"
                                                                     method="POST">
                                                                     @method('PUT')
                                                                     @csrf
                                                                     <div class="modal-header">
                                                                         <h5 class="modal-title" id="exampleModalLabel">
-                                                                            Edit Title</h5>
+                                                                            Edit Category</h5>
                                                                         <button type="button" class="close"
                                                                             data-dismiss="modal" aria-label="Close">
                                                                             <span aria-hidden="true">&times;</span>
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body text-left">
-                                                                        TyperTitle
-                                                                        <input type="text" name="title"
+                                                                     Category Name
+                                                                        <input type="text" name="name"
                                                                             class="form-control"
-                                                                            value="{{ $mo->title }}" />
+                                                                            value="{{ $mo->name }}" />
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary"
@@ -142,12 +142,12 @@
                                                                     </button>
                                                                 </div>
                                                                 <div class="modal-body text-left">
-                                                                    TyperTitle <span class="badge badge-primary">ID:
+                                                                    Category <span class="badge badge-primary">ID:
                                                                         {{ $id }} </span> will be deleted.<br>
                                                                     Are you sure you want to proceed?
                                                                 </div>
                                                                 <form
-                                                                    action="{{ route('admin.typer-title.destroy', [$mo->id]) }}"
+                                                                    action="{{ route('admin.blog-category.destroy', [$mo->id]) }}"
                                                                     method="post">@csrf
                                                                     @method('DELETE')
                                                                     <div class="modal-footer">
