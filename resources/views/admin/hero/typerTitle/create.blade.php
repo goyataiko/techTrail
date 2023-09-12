@@ -16,7 +16,7 @@
                         <div class="card-header">
                             <h4>Create Title</h4>
                         </div>
-                        <form action="{{ route('admin.typerTitle.store') }}" method="post">
+                        <form action="{{ route('admin.typer-title.store') }}" method="post">
                             @csrf
                             <div class="card-body">
                                 <div class="form-group row mb-4">
