@@ -16,7 +16,7 @@
                         <div class="card-header">
                             <h4>All Title</h4>
                             <div class="card-header-action">
-                                <a href="{{ route('admin.typerTitle.create') }}" class="btn btn-primary">Create More <i
+                                <a href="{{ route('admin.typer-title.create') }}" class="btn btn-primary">Create More <i
                                         class="fas fa-plus"></i></a>
                             </div>
                         </div>
@@ -38,10 +38,10 @@
                                                 <td class="text-center">{{ $title->id }}</td>
                                                 <td>{{ $title->title }}</td>
                                                 <td class="action"><a
-                                                        href="{{ route('admin.typerTitle.edit', [$title->id]) }}"
+                                                        href="{{ route('admin.typer-title.edit', [$title->id]) }}"
                                                         class="btn btn-success">Edit</a>
                                                 <td class="action">
-                                                    <a href="{{ route('admin.typerTitle.destroy', [$title->id]) }}"
+                                                    <a href="{{ route('admin.typer-title.destroy', [$title->id]) }}"
                                                         class="btn btn-danger">Delete</a>
                                                 </td>
                                             </tr>

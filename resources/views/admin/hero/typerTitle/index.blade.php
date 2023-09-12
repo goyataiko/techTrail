@@ -25,7 +25,7 @@
                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                 <div class="modal-content">
-                                    <form action="{{ route('admin.typerTitle.store') }}" method="post">
+                                    <form action="{{ route('admin.typer-title.store') }}" method="post">
                                         @csrf
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLabel">Create Title</h5>
@@ -86,7 +86,7 @@
                                                             role="document">
                                                             <div class="modal-content">
                                                                 <form
-                                                                    action="{{ route('admin.typerTitle.destroy', [$title->id]) }}"
+                                                                    action="{{ route('admin.typer-title.destroy', [$title->id]) }}"
                                                                     method="POST">
                                                                     @method('PUT')
                                                                     @csrf
@@ -146,7 +146,7 @@
                                                                     Are you sure you want to proceed?
                                                                 </div>
                                                                 <form
-                                                                    action="{{ route('admin.typerTitle.destroy', [$title->id]) }}"
+                                                                    action="{{ route('admin.typer-title.destroy', [$title->id]) }}"
                                                                     method="post">@csrf
                                                                     @method('DELETE')
                                                                     <div class="modal-footer">

@@ -48,5 +48,6 @@ require __DIR__ . '/auth.php';
 
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function (){
     Route::resource('hero', HeroController::class);
-    Route::resource('typerTitle', TyperTitleController::class);
+    Route::resource('typer-title', TyperTitleController::class);
+    Route::resource('blog-categoy', BlogCategoryController::class);
 });

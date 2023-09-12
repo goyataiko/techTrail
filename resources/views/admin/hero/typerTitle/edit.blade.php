@@ -16,7 +16,7 @@
                         <div class="card-header">
                             <h4>Edit Title</h4>
                         </div>
-                        <form action="{{ route('admin.typerTitle.update', $title->id) }}" method="post">
+                        <form action="{{ route('admin.typer-title.update', $title->id) }}" method="post">
                             @csrf
                             @method('PUT')
                             <div class="card-body">
