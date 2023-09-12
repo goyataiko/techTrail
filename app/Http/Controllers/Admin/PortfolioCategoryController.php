@@ -3,19 +3,19 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\BlogCategory;
+use App\Models\PortfolioCategory;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
-class BlogCategoryController extends Controller
+class PortfolioCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $table = BlogCategory::get();
-        return view('admin.blog.category.index', compact('table'));
+        $table = PortfolioCategory::get();
+        return view('admin.portfolio.category.index', compact('table'));
     }
 
     /**
@@ -35,7 +35,7 @@ class BlogCategoryController extends Controller
             'name' => ['required', 'max:30'],
         ]);
 
-        $create = new BlogCategory;
+        $create = new PortfolioCategory;
         $create->name = $request->name;
         $create->slug = Str::slug($request->name);
         $create->save();
@@ -69,7 +69,7 @@ class BlogCategoryController extends Controller
             'name' => ['required', 'max:30'],
         ]);
 
-        $update = BlogCategory::findorFail($id);
+        $update = PortfolioCategory::findorFail($id);
         $update->name = $request->name;
         $update->slug = Str::slug($request->name);
         $update->save();
@@ -83,7 +83,7 @@ class BlogCategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        BlogCategory::find($id)->delete();
+        PortfolioCategory::find($id)->delete();
 
         toastr()->success('Deleted successfully!');
         return back();
