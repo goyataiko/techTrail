@@ -1,4 +1,6 @@
+
 <!-- About-Area-Start -->
+
 <section class="about-area section-padding-top col-md-8">
     <div class="container">
         <div class="row d-flex align-items-center">
@@ -32,4 +34,5 @@
         </div>
     </div>
 </section>
+
 <!-- About-Area-End -->

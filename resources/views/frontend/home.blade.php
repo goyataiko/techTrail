@@ -1,14 +1,14 @@
 @extends('frontend.layouts.layout')
 @section('content')
 
-@include('frontend.section.hero')
-@include('frontend.section.service')
-@include('frontend.section.about')
-@include('frontend.section.portfolio')
-@include('frontend.section.skill')
-@include('frontend.section.experience')
-@include('frontend.section.testimonial')
-@include('frontend.section.blog')
-@include('frontend.section.contact')
+@include('frontend.section.1_hero')
+@include('frontend.section.2_service')
+@include('frontend.section.3_about')
+@include('frontend.section.4_portfolio')
+@include('frontend.section.5_skill')
+@include('frontend.section.6_experience')
+@include('frontend.section.7_testimonial')
+@include('frontend.section.8_blog')
+@include('frontend.section.9_contact')
 
 @endsection

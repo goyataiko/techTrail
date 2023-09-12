@@ -3,9 +3,10 @@
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container col-md-9">
         <a class="navbar-brand mt-n2" href="index.html">
-            <img src="{{asset('frontend/assets/images/logo-x.png')}}" alt="Tech Trail">
+            <img src="{{asset('frontend/assets/images/logo-x-w.png')}}" alt="Tech Trail">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <i class="far fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,5 +39,6 @@
         </div>
     </div>
 </nav>
+
 
 <!-- Navbar-Area-End -->

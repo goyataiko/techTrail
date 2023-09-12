@@ -2,19 +2,25 @@
     "use strict";
 
 
-    //======menu fix js======
-    if ($('.main_menu').offset() != undefined) {
-        var navoff = $('.main_menu').offset().top;
-        $(window).scroll(function () {
-            var scrolling = $(this).scrollTop();
+    // //======menu fix js======
+    // const asset = "{{asset('frontend/assets/images/logo-x.png')}}";
 
-            if (scrolling > navoff) {
-                $('.main_menu').addClass('menu_fix');
-            } else {
-                $('.main_menu').removeClass('menu_fix');
-            }
-        });
-    }
+    // if ($('.main_menu').offset() != undefined) {
+    //     var navoff = $('.main_menu').offset().top;
+    //     $(window).scroll(function () {
+    //         var scrolling = $(this).scrollTop();
+
+    //         if (scrolling > navoff) {
+    //             $('.main_menu').addClass('menu_fix');
+    //             $('.main_menu').each(function (index, element) {
+    //                 const img = $(element).find("img");
+    //                 img.attr("src", asset);
+    //             });
+    //         } else {
+    //             $('.main_menu').removeClass('menu_fix');
+    //         }
+    //     });
+    // }
 
 
 
@@ -248,7 +254,7 @@
         //     textTwo = "Let's work together.",
         //     textThree = "I can create awesome stuff.";
         // $('.header-area .typer-title').typer([textOne, textTwo, textThree]);
-        
+
         // SLIDER
         var menu = [];
         jQuery('.swiper-slide').each(function (index) {

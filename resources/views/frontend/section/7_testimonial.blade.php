@@ -1,4 +1,5 @@
 <!-- Testimonial-Area-Start -->
+
 <section class="testimonial-area col-md-10">
     <div class="container">
         <div class="row">
@@ -77,4 +78,5 @@
         </div>
     </div>
 </section>
+
 <!-- Testimonial-Area-End -->
