@@ -35,33 +35,22 @@
 
         });
 
-        //======menu fix js======
 
-        $(document).ready(function() {
-            const asset = "{{ asset('frontend/assets/images/logo-x.png') }}";
-            const asset2 = "{{ asset('frontend/assets/images/logo-x-w.png') }}";
-
-            if ($('.main_menu').offset() != undefined) {
-                var navoff = $('.main_menu').offset().top;
-                $(window).scroll(function() {
-                    var scrolling = $(this).scrollTop();
-
-                    if (scrolling > navoff) {
-                        $('.main_menu').addClass('menu_fix');
-                        $('.main_menu').each(function(index, element) {
+        $(window).on('scroll',function(){
+                if($(window).scrollTop()){
+                    $('.main_menu').addClass('menu_fix');
+                    $('.main_menu').each(function(index, element) {
                             const img = $(element).find("img");
-                            img.attr("src", asset);
+                            img.attr("src", "{{ asset('frontend/assets/images/logo-x.png') }}");
                         });
-                    } else {
-                        $('.main_menu').removeClass('menu_fix');
-                        $('.main_menu').each(function(index, element) {
+                }else{
+                    $('.main_menu').removeClass('menu_fix');
+                    $('.main_menu').each(function(index, element) {
                             const img = $(element).find("img");
-                            img.attr("src", asset2);
+                            img.attr("src", "{{ asset('frontend/assets/images/logo-x-w.png') }}");
                         });
-                    }
-                });
-            }
-        });
+                }
+            });
     </script>
 @endpush
 <!-- Hero-Area-End -->
