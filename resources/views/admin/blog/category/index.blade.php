@@ -1,7 +1,7 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-{{-- Blog Category --}}
+    {{-- Blog Category --}}
     <section class="col-md-10 mx-2">
         <div class="section-body">
             <div class="row">
@@ -68,26 +68,26 @@
                                         @php
                                             $id = 0;
                                         @endphp
-                                        @foreach ($model as $mo)
+                                        @foreach ($table as $ta)
                                             @php
                                                 $id++;
                                             @endphp
                                             <tr>
                                                 <td class="text-center"> {{ $id }} </td>
-                                                <td>{{ $mo->name }}</td>
+                                                <td>{{ $ta->name }}</td>
                                                 <td class="action"><a href="#" data-toggle="modal"
-                                                        data-target="#edit{{ $mo->id }}"
-                                                        class="btn btn-success"><i class='fas fa-edit'></i></a>
+                                                        data-target="#edit{{ $ta->id }}" class="btn btn-success"><i
+                                                            class='fas fa-edit'></i></a>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="edit{{ $mo->id }}" tabindex="-1"
+                                                    <div class="modal fade" id="edit{{ $ta->id }}" tabindex="-1"
                                                         role="dialog" aria-labelledby="exampleModalLabel"
                                                         aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered modal-lg"
                                                             role="document">
                                                             <div class="modal-content">
                                                                 <form
-                                                                    action="{{ route('admin.blog-category.update', [$mo->id]) }}"
+                                                                    action="{{ route('admin.blog-category.update', [$ta->id]) }}"
                                                                     method="POST">
                                                                     @method('PUT')
                                                                     @csrf
@@ -100,10 +100,10 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body text-left">
-                                                                     Category Name
+                                                                        Category Name
                                                                         <input type="text" name="name"
                                                                             class="form-control"
-                                                                            value="{{ $mo->name }}" />
+                                                                            value="{{ $ta->name }}" />
                                                                     </div>
                                                                     <div class="modal-footer">
                                                                         <button type="button" class="btn btn-secondary"
@@ -123,12 +123,12 @@
                                                 <td class="action">
                                                     <!-- Button trigger modal -->
                                                     <button type="button" class="btn btn-danger" data-toggle="modal"
-                                                        data-target="#delete{{ $mo->id }}">
+                                                        data-target="#delete{{ $ta->id }}">
                                                         <i class='fas fa-trash'></i>
                                                     </button>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="delete{{ $mo->id }}" tabindex="-1"
+                                                    <div class="modal fade" id="delete{{ $ta->id }}" tabindex="-1"
                                                         role="dialog" aria-labelledby="exampleModalLabel"
                                                         aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -147,7 +147,7 @@
                                                                     Are you sure you want to proceed?
                                                                 </div>
                                                                 <form
-                                                                    action="{{ route('admin.blog-category.destroy', [$mo->id]) }}"
+                                                                    action="{{ route('admin.blog-category.destroy', [$ta->id]) }}"
                                                                     method="post">@csrf
                                                                     @method('DELETE')
                                                                     <div class="modal-footer">
