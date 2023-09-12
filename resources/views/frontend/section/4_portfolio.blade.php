@@ -32,8 +32,8 @@
                             <img src="{{ asset('frontend/assets/images/portfolio-1.jpg') }}" alt="">
                         </figure>
                         <div class="portfolio-content">
-                            <a href="images/portfolio-1.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Black Golden</a></h4>
+                            <a href="/portfolio-detail" data-lity class="icon"><i class="fas fa-plus"></i></a>
+                            <h4 class="title"><a href="/portfolio-detail">Black Golden</a></h4>
                             <div class="desc">
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                             </div>

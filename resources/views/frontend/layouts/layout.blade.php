@@ -36,14 +36,6 @@
     <script src="{{asset('frontend/assets/js/vendor/modernizr.js')}}"></script>
     <script src="{{asset('frontend/assets/js/main.js')}}"></script>
 @stack('scripts')
-    {{-- <script>
-        $(document).ready(function() {
-            var textOne = "Layout Section!! Hello World! A",
-                textTwo = "Hello World! B",
-                textThree = "I can create awesome stuff.";
-            $('.header-area .typer-title').typer([textOne, textTwo, textThree]);
-        });
-    </script> --}}
 </body>
 
 </html>
