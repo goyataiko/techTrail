@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\BlogCategory;
 use Illuminate\Http\Request;
+use Str;
 
 class BlogCategoryController extends Controller
 {
@@ -12,7 +14,8 @@ class BlogCategoryController extends Controller
      */
     public function index()
     {
-        //
+        $model = BlogCategory::get();
+        return view('admin.blog.blog-category.index', compact('model'));
     }
 
     /**
@@ -28,7 +31,18 @@ class BlogCategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // dd($request->all());
+        $request->validate([
+            'name' => ['required', 'max:30'],
+        ]);
+
+        $create = new BlogCategory;
+        $create->name = $request->name;
+        $create->slug = Str::slug($request->name);
+        $create->save();
+
+        toastr()->success('Created successfully!');
+        return back();
     }
 
     /**
@@ -52,7 +66,17 @@ class BlogCategoryController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+            'name' => ['required', 'max:30'],
+        ]);
+
+        $update = BlogCategory::findorFail($id);
+        $update->name = $request->name;
+        $update->slug = Str::slug($request->name);
+        $update->save();
+
+        toastr()->success('Updated successfully!', 'Congrats');
+        return back();
     }
 
     /**
@@ -60,6 +84,9 @@ class BlogCategoryController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        BlogCategory::find($id)->delete();
+
+        toastr()->success('Deleted successfully!');
+        return back();
     }
 }

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogCategoryController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\TyperTitleController;
@@ -49,5 +50,5 @@ require __DIR__ . '/auth.php';
 Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function (){
     Route::resource('hero', HeroController::class);
     Route::resource('typer-title', TyperTitleController::class);
-    Route::resource('blog-categoy', BlogCategoryController::class);
+    Route::resource('blog-category', BlogCategoryController::class);
 });

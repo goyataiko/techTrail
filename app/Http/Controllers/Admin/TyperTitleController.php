@@ -13,9 +13,9 @@ class TyperTitleController extends Controller
      */
     public function index()
     {
-        $titles = TyperTitle::get();
+        $model = TyperTitle::get();
 
-        return view('admin.hero.typerTitle.index', compact('titles'));
+        return view('admin.hero.typerTitle.index', compact('model'));
     }
 
     /**
