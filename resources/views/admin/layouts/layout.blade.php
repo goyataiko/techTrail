@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Dashboard</title>
-    <link rel="shortcut icon" type="image/ico" href="{{asset('frontend/assets/images/favicon-alt.png')}}" />
+    <link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon-alt.png') }}" />
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,7 +15,8 @@
 
     <!-- CSS Libraries -->
     <link rel="stylesheet" href="{{ asset('assets/css/datatable.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs4.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet">
+    {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/selectric.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-tagsinput.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-timepicker.min.css') }}">
@@ -62,9 +63,10 @@
     <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css"
+    <script src="{{ asset('assets/js/plugins/summernote-bs5.min.js') }}"></script>
+    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css"
         integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
     <script src="{{ asset('assets/js/plugins/jquery.selectric.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/jquery.uploadPreview.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/bootstrap-tagsinput.min.js') }}"></script>
@@ -88,9 +90,15 @@
     <script>
         @if (!empty($errors->all()))
             @foreach ($errors->all() as $error)
-                toastr.error("{{$error}}")
+                toastr.error("{{ $error }}")
             @endforeach
         @endif
+
+        $(document).ready(function() {
+            $("#datepicker").datepicker();
+            $('.summernote').summernote();
+
+        });
     </script>
 
 </body>
