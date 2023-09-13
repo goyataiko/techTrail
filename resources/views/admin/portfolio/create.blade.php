@@ -15,11 +15,6 @@
         </div>
 
         <div class="section-body">
-            <h2 class="section-title">Create New Post</h2>
-            <p class="section-lead">
-                On this page you can create a new post and fill in all fields.
-            </p>
-
             <div class="row">
                 <div class="col-12">
                     <div class="card">
@@ -28,16 +23,16 @@
                         </div>
                         <div class="card-body">
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
+                                <div class="col-sm-12 col-md-9">
                                     <input type="text" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Images</label>
-                                <div class="col-sm-12 col-md-7">
-                                    <div id="image-preview" class="image-preview">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
+                                <div class="col-sm-12 col-md-9 d-flex">
+                                    <div id="image-preview" class="image-preview mr-3">
                                         <label for="image-upload" id="image-label">Choose File</label>
                                         <input type="file" name="image" id="image-upload" />
                                     </div>
@@ -45,64 +40,63 @@
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
+                                <div class="col-sm-12 col-md-9">
                                     <select class="form-control selectric">
-                                        <option>Tech</option>
-                                        <option>News</option>
-                                        <option>Political</option>
+                                        @foreach ($category as $cat)
+                                            <option>{{ $cat->name }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Tags</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
+                                <div class="col-sm-12 col-md-9">
                                     <input type="text" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Work Detail</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
+                                <div class="col-sm-12 col-md-9">
                                     <input type="text" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Site Link</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
+                                <div class="col-sm-12 col-md-9">
                                     <input type="text" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Content</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
+                                <div class="col-sm-12 col-md-9">
                                     <textarea class="summernote"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                              <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Created Time</label>
-                              <div class="col-sm-12 col-md-7">
-                                <input type="text" class="form-control datepicker">
-                              </div>
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created Time</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control datepicker">
+                                </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Status</label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
+                                <div class="col-sm-12 col-md-9">
                                     <select class="form-control selectric">
-                                        <option>Publish</option>
-                                        <option>Draft</option>
-                                        <option>Pending</option>
+                                        <option value="1">Publish</option>
+                                        <option value="2">Draft</option>                                        
                                     </select>
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                                <div class="col-sm-12 col-md-7">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
+                                <div class="col-sm-12 col-md-9">
                                     <button class="btn btn-primary">Create Post</button>
                                 </div>
                             </div>

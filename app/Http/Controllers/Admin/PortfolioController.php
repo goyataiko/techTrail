@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
+use App\Models\PortfolioCategory;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -23,7 +24,8 @@ class PortfolioController extends Controller
      */
     public function create()
     {
-        return view('admin.portfolio.create');
+        $category = PortfolioCategory::get();
+        return view('admin.portfolio.create', compact('category'));
     }
 
     /**
