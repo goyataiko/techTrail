@@ -8,8 +8,8 @@
             </div>
             <h1>Create New Post</h1>
             <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="#">Posts</a></div>
+                <div class="breadcrumb-item active"><a href="/admin">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="/admin/portfolio">Posts</a></div>
                 <div class="breadcrumb-item">Create New Post</div>
             </div>
         </div>
@@ -25,16 +25,19 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input type="text" class="form-control">
+                                    <input type="text" name="title" class="form-control">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
                                 <div class="col-sm-12 col-md-9 d-flex">
-                                    <div id="image-preview" class="image-preview mr-3">
-                                        <label for="image-upload" id="image-label">Choose File</label>
-                                        <input type="file" name="image" id="image-upload" />
+                                    <input type="file" name="images" class="real-upload" accept="image/*" required multiple>
+                                    <div class="upload image-preview">
+                                        <label>Choose File</label>
+                                    </div>
+                                    <div class="preview-box">
+                                        <ul class="image-preview-t"></ul>
                                     </div>
                                 </div>
                             </div>
@@ -42,55 +45,55 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <select class="form-control selectric">
+                                    <select name="category_id" class="form-control selectric">
                                         @foreach ($category as $cat)
-                                            <option>{{ $cat->name }}</option>
+                                            <option value="{{ $cat->id }}" >{{ $cat->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tool</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input type="text" class="form-control inputtags">
+                                    <input type="text" name="tag" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input type="text" class="form-control inputtags">
+                                    <input type="text" name="work_detail" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input type="text" class="form-control inputtags">
+                                    <input type="text" name="link" class="form-control inputtags">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <textarea class="summernote"></textarea>
+                                    <textarea name="description" class="summernote"></textarea>
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created Time</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <input type="text" class="form-control datepicker">
+                                    <input type="text" name="created_at" class="form-control datepicker">
                                 </div>
                             </div>
 
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
                                 <div class="col-sm-12 col-md-9">
-                                    <select class="form-control selectric">
-                                        <option value="1">Publish</option>
-                                        <option value="2">Draft</option>                                        
+                                    <select name="status" class="form-control selectric">
+                                        <option value="1">Draft</option>
+                                        <option value="2">Publish</option>
                                     </select>
                                 </div>
                             </div>
@@ -106,17 +109,9 @@
             </div>
         </div>
     </section>
+
+    <script>
+
+    </script>
 @endsection
 
-@push('scripts')
-    <script>
-        $(document).ready(function() {
-            $('#image-preview').css({
-                'background-image': 'url("")',
-                'background-size': 'cover',
-                'background-position': 'center center'
-            })
-
-        });
-    </script>
-@endpush
