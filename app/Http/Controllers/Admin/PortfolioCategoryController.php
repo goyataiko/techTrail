@@ -23,7 +23,7 @@ class PortfolioCategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('test');
     }
 
     /**

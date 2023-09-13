@@ -58,8 +58,9 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Portfolio</span></a>
                 <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="#">Setting</a></li>
                     <li><a class="nav-link" href="{{ route('admin.portfolio-category.index') }}">Category</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Portfolio</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.portfolio.index') }}">Post List</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
