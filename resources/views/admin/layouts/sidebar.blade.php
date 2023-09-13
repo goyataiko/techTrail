@@ -4,7 +4,7 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <img alt="image" src="../assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+                <img alt="image" src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -58,17 +58,17 @@
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Portfolio</span></a>
                 <ul class="dropdown-menu" style="display: none;">
-                    <li><a class="nav-link" href="#">Setting</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.portfolio.index') }}">Posting List</a></li>
                     <li><a class="nav-link" href="{{ route('admin.portfolio-category.index') }}">Category</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.portfolio.index') }}">Post List</a></li>
+                    <li><a class="nav-link" href="#">Setting</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
                     <span>Blog</span></a>
                 <ul class="dropdown-menu" style="display: none;">
+                    <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Posting List</a></li>
                     <li><a class="nav-link" href="{{ route('admin.blog-category.index') }}">Category</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Blog Section</a></li>
                 </ul>
             </li>
 
