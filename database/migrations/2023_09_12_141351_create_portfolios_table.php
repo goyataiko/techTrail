@@ -16,12 +16,12 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('link')->nullable();
 
-            $table->integer('category_id');
-            $table->text('tag')->nullable();
+            $table->tinyInteger('category_id');
+            $table->text('tool')->nullable();
             $table->text('work_detail')->nullable();
-            $table->text('content')->nullable();
+            $table->text('description')->nullable();
 
-            $table->unsignedBigInteger('status')->nullable();
+            $table->tinyInteger('status')->nullable();
             $table->timestamps();
         });
     }
