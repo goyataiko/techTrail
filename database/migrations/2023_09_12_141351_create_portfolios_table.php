@@ -13,12 +13,15 @@ return new class extends Migration
     {
         Schema::create('portfolios', function (Blueprint $table) {
             $table->id();
-            $table->string('image1')->nullable();
-            $table->string('image2')->nullable();
-            $table->string('image3')->nullable();
             $table->string('title')->nullable();
-            $table->string('website')->nullable();            
-            $table->text('description')->nullable();
+            $table->string('link')->nullable();
+
+            $table->integer('category_id');
+            $table->text('tag')->nullable();
+            $table->text('work_detail')->nullable();
+            $table->text('content')->nullable();
+
+            $table->unsignedBigInteger('status')->nullable();
             $table->timestamps();
         });
     }
