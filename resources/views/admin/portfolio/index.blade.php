@@ -19,8 +19,7 @@
 
                             <h4>All Portfolio</h4>
                             <div class="card-header-action">
-                                <a href="{{ route('admin.blog.create') }}" class="btn btn-primary" data-toggle="modal"
-                                    data-target="#create">Create More
+                                <a href="{{ route('admin.portfolio.create') }}" class="btn btn-primary">Create More
                                     <i class="fas fa-plus"></i></a>
                             </div>
                         </div>
@@ -38,7 +37,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        
+
                                     </tbody>
                                 </table>
                             </div>
