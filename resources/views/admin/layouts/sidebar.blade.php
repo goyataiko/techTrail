@@ -60,7 +60,7 @@
                 <ul class="dropdown-menu" style="display: none;">
                     <li><a class="nav-link" href="{{ route('admin.portfolio.index') }}">Posting List</a></li>
                     <li><a class="nav-link" href="{{ route('admin.portfolio-category.index') }}">Category</a></li>
-                    <li><a class="nav-link" href="#">Setting</a></li>
+                    <li><a class="nav-link" href="#">Section Setting</a></li>
                 </ul>
             </li>
             <li class="nav-item dropdown">
@@ -69,6 +69,7 @@
                 <ul class="dropdown-menu" style="display: none;">
                     <li><a class="nav-link" href="{{ route('admin.hero.index') }}">Posting List</a></li>
                     <li><a class="nav-link" href="{{ route('admin.blog-category.index') }}">Category</a></li>
+                    <li><a class="nav-link" href="#">Section Setting</a></li>
                 </ul>
             </li>
 
