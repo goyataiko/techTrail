@@ -1,103 +1,122 @@
 @extends('admin.layouts.layout')
 
 @section('content')
-<section class="section">
-    <div class="section-header">
-      <div class="section-header-back">
-        <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
-      </div>
-      <h1>Portfolio Item</h1>
-
-    </div>
-
-    <div class="section-body">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h4>Create Portfolio Item</h4>
+    <section class="section">
+        <div class="section-header">
+            <div class="section-header-back">
+                <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <div class="card-body">
-                <form action="#" method="POST" enctype="multipart/form-data">
-                    @csrf
-
-                    <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Image</label>
-                        <div class="col-sm-12 col-md-7">
-                          <div id="image-preview" class="image-preview">
-                            <label for="image-upload" id="image-label">Choose File</label>
-                            <input type="file" name="image" id="image-upload" />
-                          </div>
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Title</label>
-                      <div class="col-sm-12 col-md-7">
-                        <input type="text" name="title" class="form-control" value="">
-                      </div>
-                    </div>
-
-                    <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Category</label>
-                        <div class="col-sm-12 col-md-7">
-                          <select class="form-control selectric" name="category_id">
-                            <option>Select</option>
-                            {{-- @foreach ($categories as $category)
-                                <option value="{{$category->id}}">{{$category->name}}</option>
-                            @endforeach --}}
-                          </select>
-                        </div>
-                      </div>
-
-                    <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Description</label>
-                        <div class="col-sm-12 col-md-7">
-                          <textarea name="description" class="form-control summernote"></textarea>
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Client</label>
-                        <div class="col-sm-12 col-md-7">
-                          <input type="text" name="client" class="form-control" value="">
-                        </div>
-                    </div>
-
-                    <div class="form-group row mb-4">
-                        <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">Website</label>
-                        <div class="col-sm-12 col-md-7">
-                          <input type="text" name="website" class="form-control" value="">
-                        </div>
-                    </div>
-
-
-                    <div class="form-group row mb-4">
-                      <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3"></label>
-                      <div class="col-sm-12 col-md-7">
-                        <button class="btn btn-primary">Create</button>
-                      </div>
-                    </div>
-                </form>
-
-
-
+            <h1>Create New Post</h1>
+            <div class="section-header-breadcrumb">
+                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
+                <div class="breadcrumb-item"><a href="#">Posts</a></div>
+                <div class="breadcrumb-item">Create New Post</div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
+
+        <div class="section-body">
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Write Your Post</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
+                                <div class="col-sm-12 col-md-9 d-flex">
+                                    <div id="image-preview" class="image-preview mr-3">
+                                        <label for="image-upload" id="image-label">Choose File</label>
+                                        <input type="file" name="image" id="image-upload" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <select class="form-control selectric">
+                                        @foreach ($category as $cat)
+                                            <option>{{ $cat->name }}</option>
+                                        @endforeach
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control inputtags">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control inputtags">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control inputtags">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <textarea class="summernote"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created Time</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" class="form-control datepicker">
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <select class="form-control selectric">
+                                        <option value="1">Publish</option>
+                                        <option value="2">Draft</option>                                        
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
+                                <div class="col-sm-12 col-md-9">
+                                    <button class="btn btn-primary">Create Post</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 @endsection
 
 @push('scripts')
-  <script>
-    $(document).ready(function(){
-        $('#image-preview').css({
-            'background-image': 'url("")',
-            'background-size': 'cover',
-            'background-position': 'center center'
-        })
-    });
-  </script>
+    <script>
+        $(document).ready(function() {
+            $('#image-preview').css({
+                'background-image': 'url("")',
+                'background-size': 'cover',
+                'background-position': 'center center'
+            })
+
+        });
+    </script>
 @endpush
