@@ -304,6 +304,11 @@ table.dataTable.row-border > tbody > tr > th,
 table.dataTable.row-border > tbody > tr > td, table.dataTable.display > tbody > tr > th,
 table.dataTable.display > tbody > tr > td {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
+  vertical-align: middle;  
+}
+table.dataTable.display > tbody > tr > td > a {
+  text-decoration: none;
+  color: #767ebb;
 }
 table.dataTable.row-border > tbody > tr:first-child > th,
 table.dataTable.row-border > tbody > tr:first-child > td, table.dataTable.display > tbody > tr:first-child > th,
@@ -520,15 +525,10 @@ table.dataTable td {
   box-shadow: none;
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
-  color: white !important;
-  border: 1px solid #111;
-  background-color: #111;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #585858), color-stop(100%, #111)); /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(top, #585858 0%, #111 100%); /* Chrome10+,Safari5.1+ */
-  background: -moz-linear-gradient(top, #585858 0%, #111 100%); /* FF3.6+ */
-  background: -ms-linear-gradient(top, #585858 0%, #111 100%); /* IE10+ */
-  background: -o-linear-gradient(top, #585858 0%, #111 100%); /* Opera 11.10+ */
-  background: linear-gradient(to bottom, #585858 0%, #111 100%); /* W3C */
+  /* color: white !important; */
+  border: 1px solid #dbdbdb;
+  background-color: #dbdbdb;
+
 }
 .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   outline: none;
@@ -655,4 +655,19 @@ html.dark .dataTables_wrapper .dataTables_paginate .paginate_button:hover {
 }
 html.dark .dataTables_wrapper .dataTables_paginate .paginate_button:active {
   background: #3a3a3a;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+  padding-top: 0.85em;
+}
+
+.dataTables_paginate.paging_simple_numbers {
+  font-size: 16px;
+  padding-top: 0.85em;
+  display: flex;
+  gap: 20px
+}
+
+.paginate_button.previous {
+
 }
