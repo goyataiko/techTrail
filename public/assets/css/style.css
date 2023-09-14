@@ -1145,6 +1145,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 .table.table-bordered td, .table.table-bordered th {
   border-color: #f6f6f6;
+  border-bottom-color: #cbd0d0;
 }
 
 .table-links {
