@@ -27,17 +27,242 @@
 
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-striped" id="table-1">
+                                <table class="table table-bordered display" id="myDataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th width="10%" class="text-center">id</th>
-                                            <th width="90%">Category Name</th>
-                                            <th class="text-center">Edit</th>
-                                            <th class="text-center">Delete</th>
+                                            <th width="20px">id</th>
+                                            <th width="40px">Category</th>
+                                            <th width="80px">Image</th>
+                                            <th>Title</th>
+                                            <th width="75px">Created At</th>
+                                            <th width="50px">
+                                                <div class="text-center">
+                                                    Action
+                                                </div>
+                                            </th>
                                         </tr>
                                     </thead>
+                                    <tfoot>
+                                        <tr>
+                                        <tr>
+                                            <th>id</th>
+                                            <th>Category</th>
+                                            <th>Image</th>
+                                            <th>Title</th>
+                                            <th>Created At</th>
+                                            <th>
+                                                <div class="text-center">
+                                                    Action
+                                                </div>
+                                            </th>
+                                        </tr>
+                                        </tr>
+                                    </tfoot>
                                     <tbody>
-
+                                        <tr>
+                                            <td>1</td>
+                                            <td>Develope</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Junior Technical Author</td>
+                                            <td>2023/07/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td>Desgin</td>
+                                            <td>
+                                                <img width="70px" src="{{ asset('frontend/assets/images/about-image.png') }}">
+                                            </td>
+                                            <td>Technical Author</td>
+                                            <td>2023/06/25</td>
+                                            <td>
+                                                <div class="d-flex justify-content-center">
+                                                    <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div>
+                                                    <div class="btn btn-primary m-1"><i class='fas fa-folder-open'></i>
+                                                    </div>
+                                                    <div class="btn btn-danger m-1"><i class='fas fa-trash'></i></div>
+                                                </div>
+                                            </td>
+                                        </tr>
                                     </tbody>
                                 </table>
                             </div>

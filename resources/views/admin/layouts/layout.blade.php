@@ -14,7 +14,9 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <!-- CSS Libraries -->
-    <link rel="stylesheet" href="{{ asset('assets/css/datatable.css') }}">
+    {{-- https://datatables.net/manual/installation --}}
+    <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.css') }}">
+
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet">
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/selectric.css') }}">
@@ -74,6 +76,8 @@
     <script src="{{ asset('assets/js/plugins/daterangepicker.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/select2.full.min.js') }}"></script>
 
+    <!-- Datatables JS File -->
+    <script src="{{ asset('plugins/datatables/datatables.js') }}"></script>
 
     <!-- Template JS File -->
     <script src="{{ asset('assets/js/scripts.js') }}"></script>
@@ -97,7 +101,10 @@
         $(document).ready(function() {
             $("#datepicker").datepicker();
             $('.summernote').summernote();
+        });
 
+        $(document).ready(function() {
+            $('#myDataTable').DataTable();
         });
     </script>
 
