@@ -2,7 +2,7 @@
 
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container col-md-9">
-        <a class="navbar-brand mt-n2" href="index.html">
+        <a class="navbar-brand" href="/">
             <img src="{{asset('frontend/assets/images/logo-x-w.png')}}" alt="Tech Trail">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

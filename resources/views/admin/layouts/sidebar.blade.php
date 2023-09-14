@@ -31,7 +31,7 @@
 </nav>
 <div class="main-sidebar sidebar-style-2">
     <aside id="sidebar-wrapper">
-        <div class="sidebar-brand mx-auto my-4 pr-3">
+        <div class="sidebar-brand mx-auto my-4 pt-2 pr-3">
             <a href="/dashboard">
                 <img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="110">
             </a>
