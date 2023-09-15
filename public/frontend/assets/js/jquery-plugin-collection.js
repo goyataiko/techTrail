@@ -90,7 +90,7 @@ $(".bar_group__bar").each(function() {
  * Licensed under the MIT license (http://www.opensource.org/licenses/mit-license.php).
  * 2013/03/24
 */
-!function(e){e.fn.typer=function(t,n){return n=e.extend({},{char:"",delay:1300,duration:400,endless:!0,onType:e.noop,afterAll:e.noop,afterPhrase:e.noop},n||t),t=e.isPlainObject(t)?n.text:t,t=e.isArray(t)?t:t.split(" "),this.each(function(){var r,a=e(this),s={input:1,textarea:1}[this.tagName.toLowerCase()],i=!1,o=0;!function l(u){var h=({string:1,number:1}[typeof t]?t:t[u])+"",f=h.substr(o++,1);if("<"===f&&(i=!0),">"===f&&(i=!1),a[s?"val":"html"](h.substr(0,o)+(e.isFunction(n.char)?n.char():n.char||" ")),o<=h.length)i?l(u):r=setTimeout(l,n.duration/10,u),n.onType(r);else{if(o=0,++u===t.length&&!n.endless)return;u===t.length&&(u=0),r=setTimeout(l,n.delay,u),u===t.length-1&&n.afterAll(r),n.afterPhrase(r)}}(0)})}}(jQuery);
+!function(e){e.fn.typer=function(t,n){return n=e.extend({},{char:"",delay:2500,duration:600,endless:!0,onType:e.noop,afterAll:e.noop,afterPhrase:e.noop},n||t),t=e.isPlainObject(t)?n.text:t,t=e.isArray(t)?t:t.split(" "),this.each(function(){var r,a=e(this),s={input:1,textarea:1}[this.tagName.toLowerCase()],i=!1,o=0;!function l(u){var h=({string:1,number:1}[typeof t]?t:t[u])+"",f=h.substr(o++,1);if("<"===f&&(i=!0),">"===f&&(i=!1),a[s?"val":"html"](h.substr(0,o)+(e.isFunction(n.char)?n.char():n.char||" ")),o<=h.length)i?l(u):r=setTimeout(l,n.duration/10,u),n.onType(r);else{if(o=0,++u===t.length&&!n.endless)return;u===t.length&&(u=0),r=setTimeout(l,n.delay,u),u===t.length-1&&n.afterAll(r),n.afterPhrase(r)}}(0)})}}(jQuery);
 
 /*! Lity - v2.4.0 - 2019-08-10
 * http://sorgalla.com/lity/
