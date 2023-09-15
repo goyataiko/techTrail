@@ -7,9 +7,10 @@ section {
 }
 
 .section-padding {
-    padding-top: 150px;
+    padding-top: 70px;
     padding-bottom: 150px;
 }
+
 .videoHeader+.section-padding {
     padding-top: 10rem;
 }
@@ -301,7 +302,7 @@ Button-Styles
 /* -----------------------
 03. Header-Area
 ------------------------- */
-header {    
+header {
     transform: scale(0.9);
     transform-origin: left top;
     height: calc(100% / 0.9);
@@ -478,6 +479,11 @@ header {
 .filter-menu li.active {
     background: #6777ef;
     color: #fff;
+}
+
+.filter-menu.filter-left li:hover,
+.filter-menu.filter-left li.active {
+    background: #6777efba;
 }
 
 .portfolio-wrapper {
@@ -1232,9 +1238,8 @@ Footer-Area
 .videoHeader {
     position: relative;
     width: 100%;
-    height: 35rem;
+    height: 15rem;
     overflow: hidden;
-    margin-bottom: -5rem;
 }
 
 .videoHeader>video {
@@ -1254,26 +1259,76 @@ Footer-Area
 
 .videoHeader>.text {
     position: absolute;
-    top: 82%;
-    left: 30%;
+    /* top: 82%;
+    left: 30%; */
+    top: 65%;
+    left: 50%;
     transform: translate(-50%, -50%);
-    /* text-align: center; */
+    text-align: center;
 }
+
 .videoHeader>.text>h1 {
     color: white;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
-    letter-spacing: 0.3rem;
+    letter-spacing: -0.05rem;
+    margin-bottom: -0.1rem;
 }
+
 .videoHeader>.text>p {
     color: white;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: -0.05rem;
     /* letter-spacing: 0.3rem; */
 }
 
 
+.breadcrumbs {
+    padding: 15px 0;
+    background: #f4f4f4;
+    min-height: 64px;
+    font-size: 1rem;
+    font-weight: 600;
+}
 
+.breadcrumbs a {
+    color: #212592;
+}
+
+.breadcrumbs ol {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumbs ol li+li {
+    padding-left: 10px;
+}
+
+.breadcrumbs ol li+li::before {
+    display: inline-block;
+    padding-right: 10px;
+    color: #2f2f2f;
+    content: "/";
+}
+/* 
+@media (max-width: 992px) {
+
+    .breadcrumbs .d-flex {
+        display: block !important;
+    }
+
+    .breadcrumbs ol {
+        display: block;
+    }
+
+    .breadcrumbs ol li {
+        display: inline-block;
+    }
+} */
 
 
 
@@ -1285,32 +1340,6 @@ Footer-Area
     font-weight: 500;
 }
 
-.site-header .breadcrumbs ul {
-    list-style: none;
-    margin: 0px;
-    padding: 0px;
-    text-align: right;
-}
-
-.site-header .breadcrumbs ul li {
-    display: inline-block;
-    font-size: 24px;
-    color: #ffffff;
-}
-
-.site-header .breadcrumbs ul li:after {
-    content: "-";
-    margin: 0 30px;
-}
-
-.site-header .breadcrumbs ul li:last-child:after {
-    display: none;
-    margin-right: 0px;
-}
-
-.site-header .breadcrumbs ul li a {
-    color: #ffffff;
-}
 
 .quote-box {
     text-align: center;
@@ -1600,13 +1629,13 @@ Footer-Area
     height: 10px;
     background-color: #ccc;
     border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
+}
+
+::-webkit-scrollbar-thumb {
     background-color: #c4c4c4;
     border-radius: 5px;
-  }
-  
-  ::-webkit-scrollbar-track {
+}
+
+::-webkit-scrollbar-track {
     background-color: #eee;
-  }
+}
