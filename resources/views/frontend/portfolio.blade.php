@@ -10,30 +10,39 @@
         </div>
     </header> --}}
 
- 
+
     <div class="videoHeader">
         <video autoplay loop muted>
-            <source src="{{asset('frontend/assets/images/working.mp4')}}" type="video/mp4">
+            <source src="{{ asset('frontend/assets/images/working.mp4') }}" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="text">
-            <h1>Portfolio</h1>
+            <h1>ポートフォリオ</h1>
             <p>成長と学びの記録、そして未来へのステップ
             </p>
         </div>
     </div>
 
+    <nav class="breadcrumbs">
+        <div class="container col-md-9">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li>Portfolio</li>
+            </ol>
+        </div>
+    </nav>
+
     <!-- Portfolio-Area-Start -->
     <section class="portfolio-area section-padding col-md-9" id="portfolio-page">
         <div class="container">
             <div class="row">
-                <div class="col-sm-12">                    
-                    <ul class="filter-menu">                        
+                <div class="col-sm-12">
+                    <ul class="filter-menu filter-left">
                         <li class="active" data-filter="*">All Projects</li>
                         <li data-filter=".branding">Branding Design</li>
                         <li data-filter=".interface">User Interface</li>
                         <li data-filter=".experience">User Experience</li>
-                        <li data-filter=".development">Web Development</li>                    
+                        <li data-filter=".development">Web Development</li>
                     </ul>
                 </div>
             </div>
@@ -171,7 +180,7 @@
                         class="dir-part"></span></a>
             </div>
         </div> --}}
-        </div>      
+        </div>
     </section>
     <!-- Portfolio-Area-End -->
 @endsection
