@@ -50,7 +50,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="copyright">
-                        <p>Copyright 2023 <span>TechTrail</span>. All Rights Reserved.</p>
+                        <p>Copyright 2023 TechTrail. All Rights Reserved.</p>
                     </div>
                 </div>
             </div>
