@@ -1316,6 +1316,7 @@ Footer-Area
     color: #2f2f2f;
     content: "/";
 }
+
 /* 
 @media (max-width: 992px) {
 
@@ -1363,11 +1364,50 @@ Footer-Area
 14. Portfolio-Details
 -------------------------- */
 
-.blog-details .head-title,
-.portfolio-details .head-title {
-    font-size: 45px;
-    margin-bottom: 50px;
+.portfolio-details {
+    margin-top: 4rem;
+    margin-bottom: 7rem;
 }
+
+.portfolio-details .portfolio-info {
+    padding: 30px;
+    box-shadow: 0px 0 30px rgba(21, 21, 21, 0.08);
+    margin-top: -10px;
+    margin: -7px 0 0 7px;
+}
+
+.portfolio-details .portfolio-info h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.portfolio-details .portfolio-info ul {
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+}
+
+.portfolio-details .portfolio-info ul li+li {
+    margin-top: 10px;
+}
+
+.portfolio-details .portfolio-description {
+    margin: 30px 0 0 16px;
+}
+
+.portfolio-details .portfolio-description h2 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.portfolio-details .portfolio-description p {
+    padding: 0;
+}
+
 
 .image-block {
     /* width: calc(100% + 160px); */
@@ -1379,37 +1419,6 @@ Footer-Area
     border-radius: 10px;
     overflow: hidden;
 }
-
-.portfolio-details .portflio-info {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    background-color: #fff0eb;
-    flex-wrap: wrap;
-    padding: 25px 40px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-}
-
-.portfolio-details .portflio-info .single-info {
-    margin-right: 30px;
-    padding: 15px 0;
-}
-
-.portfolio-details .portflio-info .single-info:last-child {
-    margin-right: 0px;
-}
-
-.portfolio-details .portflio-info .single-info .title {
-    font-size: 16px;
-    margin-bottom: 5px;
-}
-
-/* .portfolio-details .portflio-info .single-info .title:before {
-    content: ".";
-    color: #6777ef;
-    margin-right: 5px;
-} */
 
 .description .gallery {
     list-style: none;
@@ -1429,12 +1438,6 @@ Footer-Area
 
 .description .gallery li:nth-child(n + 3) {
     width: 100%;
-}
-
-.portfolio-details .description .dots-list {
-    list-style: none;
-    padding: 10px 0 0 0;
-    margin: 0px 0 30px 0;
 }
 
 .description .dots-list li {

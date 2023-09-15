@@ -151,6 +151,43 @@
             ]
         });
 
+        /*-- Testimonail-Slider-Active --*/
+        $('.portfolio-slider').slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            centerMode: false,
+            autoplay: true,
+            vertical: false,
+            verticalSwiping: false,
+            speed: 1000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1170,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+
         // Portfolio Image Loded with Masonry
         var PortfolioMasonry = $('.portfolios');
         if (typeof imagesLoaded == 'function') {
