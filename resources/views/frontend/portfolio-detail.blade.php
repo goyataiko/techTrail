@@ -16,7 +16,8 @@
         <div class="container col-md-9">
             <ol>
                 <li><a href="/">Home</a></li>
-                <li>Portfolio</li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li>Portfolio Detail</li>
             </ol>
         </div>
     </nav>
