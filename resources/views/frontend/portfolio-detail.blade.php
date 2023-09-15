@@ -1,131 +1,49 @@
 @extends('frontend.layouts.layout')
 @section('content')
-    <header class="site-header">
-        <div class="container">
-                
+    <div class="videoHeader">
+        <video autoplay loop muted>
+            <source src="{{ asset('frontend/assets/images/working.mp4') }}" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+        <div class="text">
+            <h1>ポートフォリオ</h1>
+            <p>成長と学びの記録、そして未来へのステップ
+            </p>
         </div>
-    </header>
+    </div>
 
-    <section class="breadcrumbs">
-        <div class="container">
-
-            <div class="d-flex justify-content-between align-items-center">
-                <h2>Portfolio Details</h2>
-                <ol>
-                    <li><a href="/">Home</a></li>
-                    <li>Portfolio Details</li>
-                </ol>
-            </div>
-
+    <nav class="breadcrumbs">
+        <div class="container col-md-9">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li>Portfolio Detail</li>
+            </ol>
         </div>
-    </section>
+    </nav>
 
 
     <!-- Portfolio-Area-Start -->
-<section class="portfolio-details section-padding" id="portfolio-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="head-title">9 Things I Love About Shaving My Head During.</h2>
-                <figure class="image-block">
-                    <img src="images/portfolio-block.jpg" alt="">
-                </figure>
-                <div class="portflio-info">
-                    <div class="single-info">
-                        <h4 class="title">Client</h4>
-                        <p>SquareSparc Ltd.</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Date</h4>
-                        <p>8 January, 2019</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Website</h4>
-                        <p>www.fooleo.com.uk</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Role</h4>
-                        <p>Web Design & Web Development</p>
-                    </div>
-                </div>
-                <div class="description">
-                    <h2>That and normal and we've class. Explain attained.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem porro ex repellat nobis
-                        maxime odio et, dolore fuga excepturi culpa, officiis voluptate aspernatur similique
-                        officia nihil exercitationem qui corporis iste assumenda eum quaerat? Porro amet
-                        repellat molestias eos iusto suscipit quos ex beatae aut voluptate deserunt dicta esse
-                        ullam ipsa nihil minima odio vitae, architecto totam, praesentium impedit excepturi
-                        ipsam.</p>
-                    <ul class="gallery">
-                        <li><img src="images/gallery-1.jpg" alt="" class="img-fluid w-100"></li>
-                        <li><img src="images/gallery-2.jpg" alt="" class="img-fluid w-100"></li>
-                    </ul>
-                    <h3>Process Story</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta et veniam omnis,
-                        voluptatem qui dolorem nulla provident totam saepe, odit quibusdam dignissimos tempora
-                        autem ut illo obcaecati ducimus sint repudiandae! Hic eos nam aperiam fugit?
-                        Perspiciatis explicabo ab harum. Sed ducimus veniam voluptatibus qui ea, atque sint eum
-                        quae molestiae quod officiis, at enim ab necessitatibus laborum! Dolores necessitatibus
-                        a earum perspiciatis ut consectetur corrupti omnis cum fugit, explicabo dolorem
-                        similique deleniti inventore natus! Quaerat sit soluta enim at reiciendis?.</p>
-                    <ul class="dots-list">
-                        <li>First refinement become it over a may an that harmonic every away.</li>
-                        <li>Clarinet she or here, separated hides. With work a and so pay different chooses
-                            answer.</li>
-                        <li>Never analyzed the of boss's films death, heaven cache name any judgment, all.</li>
-                    </ul>
-                    <p>Hic eos nam aperiam fugit? Perspiciatis explicabo ab harum. Sed ducimus veniam
-                        voluptatibus qui ea, atque sint eum quae molestiae quod officiis, at enim ab
-                        necessitatibus laborum! Dolores necessitatibus a earum perspiciatis ut consectetur
-                        corrupti omnis cum fugit, explicabo dolorem similique deleniti inventore natus! Quaerat
-                        sit soluta .</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi libero suscipit
-                        praesentium perferendis possimus, ex dicta eius ea soluta sunt. Sapiente nulla,
-                        consequuntur ipsam saepe ad numquam blanditiis fugiat animi. Harum fugit incidunt
-                        nostrum eligendi doloremque vero possimus illum consequuntur quae sint officia
-                        repudiandae porro maxime cupiditate dolor magnam totam sit natus id neque quod.
-                        Molestias illo repudiandae laudantium illum perspiciatis nisi quasi amet corrupti
-                        .</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Portfolio-Area-End -->
-    <!-- ======= Portfolio Details Section ======= -->
-    {{-- <section id="portfolio-details" class="portfolio-details">
+    <section class="portfolio-details">
         <div class="container">
 
-            <div class="row gy-4">
-
-                <div class="col-lg-8">
-                    <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
-                            </div>
-
-                            <div class="swiper-slide">
-                                <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
-                            </div>
-
-                        </div>
-                        <div class="swiper-pagination"></div>
+            <div class="row justify-content-center">
+                {{-- 이미지 --}}
+                <div class="col-md-5">
+                    <div class="portfolio-slider">
+                        <img src="{{ asset('portfolioImage\larajobportal.png') }}" alt="">
+                        <img src="{{ asset('portfolioImage\larajobportal2.png') }}" alt="">
                     </div>
                 </div>
-
-                <div class="col-lg-4">
+                {{-- 설명 --}}
+                <div class="col-md-5">
                     <div class="portfolio-info">
                         <h3>Project information</h3>
                         <ul>
-                            <li><strong>Category</strong>: Web design</li>
-                            <li><strong>Client</strong>: ASU Company</li>
-                            <li><strong>Project date</strong>: 01 March, 2020</li>
+                            <li><strong>タイトル</strong>: ジョブポータル</li>
+                            <li><strong>カテゴリー</strong>: Web Develop</li>
+                            <li><strong>使用ツール</strong>: html, css, js, php, laravel, photoshop, figma</li>
+                            <li><strong>制作内容</strong>: ディレクション, ワイヤーフレーム作成, ヒアリング取材, 原稿作成サポート, オリジナルデザイン, HTML5/CSS5コーディング, レスポンシブコーディング</li>
                             <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
                         </ul>
                     </div>
@@ -134,16 +52,20 @@
                         <p>
                             Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia
                             quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim.
-                            Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla
-                            at esse enim cum deserunt eius.
+                            Voluptatem
+                            officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim
+                            cum
+                            deserunt eius.
                         </p>
                     </div>
                 </div>
-
             </div>
 
-        </div>
-    </section> --}}
-    <!-- End Portfolio Details Section -->
 
+
+        </div>
+
+        </div>
+    </section>
+    <!-- Portfolio-Area-End -->
 @endsection
