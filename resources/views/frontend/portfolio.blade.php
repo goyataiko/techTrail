@@ -13,7 +13,7 @@
 
     <div class="videoHeader">
         <video autoplay loop muted>
-            <source src="{{ asset('frontend/assets/images/working.mp4') }}" type="video/mp4">
+            <source src="{{ asset('frontend/assets/images/header.mp4') }}" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="text">
@@ -37,11 +37,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <ul class="filter-menu filter-left">
+                    <ul class="filter-menu filter-portPage">
                         <li class="active" data-filter="*">All Projects</li>
+                        <span>|</span>
                         <li data-filter=".branding">Branding Design</li>
+                        <span>|</span>
                         <li data-filter=".interface">User Interface</li>
+                        <span>|</span>
                         <li data-filter=".experience">User Experience</li>
+                        <span>|</span>
                         <li data-filter=".development">Web Development</li>
                     </ul>
                 </div>

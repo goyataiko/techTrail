@@ -160,32 +160,10 @@
             autoplay: true,
             vertical: false,
             verticalSwiping: false,
+            autoplaySpeed: 6000,
             speed: 1000,
             slidesToShow: 1,
-            slidesToScroll: 1,
-            responsive: [
-                {
-                    breakpoint: 1170,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                },
-                {
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                },
-                {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
+            slidesToScroll: 1,            
         });
 
         // Portfolio Image Loded with Masonry
