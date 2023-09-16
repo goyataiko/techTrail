@@ -1415,10 +1415,10 @@ Footer-Area
 .portfolio-details .portfolio-info {
     padding: 30px;
     padding-bottom: 15px;
-    box-shadow: 0px 12px 12px rgba(10, 10, 10, 0.1);
+    box-shadow: 0px 12px 12px rgba(10, 10, 10, 0.05);
     margin-top: -10px;
-    margin: -7px 0 0 7px;
-    border: 1px solid #8e8e8e30;
+    margin: -3px 0 0 7px;
+    border: 1px solid #8e8e8e78;
 }
 
 .portfolio-details .portfolio-info h3 {
