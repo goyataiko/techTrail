@@ -21,6 +21,7 @@
 
     @include('frontend.layouts.navbar')
 
+    <!-- Main-Start -->
     <div class="main_wrapper" data-bs-spy="scroll" data-bs-target="#main_menu_area" data-bs-root-margin="0px 0px -40%"
         data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary" tabindex="0">
 
@@ -28,7 +29,7 @@
 
         @include('frontend.layouts.footer')
     </div>
-
+    <!-- Main-End -->
 
     <script src="{{ asset('frontend/assets/js/vendor/jquery-min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>

@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container col-md-9">
         <a class="navbar-brand" href="/">
-            <img src="{{asset('frontend/assets/images/logo-x-w.png')}}" alt="Tech Trail">
+            <img src="{{ asset('frontend/assets/images/logo-x-w.png') }}" alt="Tech Trail">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,19 +18,28 @@
                     <a class="nav-link" href="/#about-page">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#portfolio-page">Portfolio <i class="fas fa-angle-down"></i></a>
-                    <ul class="sub_menu">
-                        <li><a href="/portfolio">Portfolio Grid</a></li>
-                    </ul>
+                    @if (request()->path() === '/')
+                        <a class="nav-link" href="/#portfolio-page">Portfolio <i
+                                class="fas fa-angle-down"></i></a>
+                        <ul class="sub_menu">
+                            <li><a href="/portfolio">Portfolio Grid</a></li>
+                        </ul>
+                    @else
+                        <a class="nav-link" href="/portfolio">Portfolio</a>
+                    @endif
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/#skills-page">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#blog-page">Blog <i class="fas fa-angle-down"></i></a>
-                    <ul class="sub_menu">
-                        <li><a href="/blog">Blog Grid</a></li>
-                    </ul>
+                    @if (request()->path() === '/')
+                        <a class="nav-link" href="/#blog-page">Blog <i class="fas fa-angle-down"></i></a>
+                        <ul class="sub_menu">
+                            <li><a href="/blog">Blog Grid</a></li>
+                        </ul>
+                    @else
+                        <a class="nav-link" href="/blog">Blog</a>
+                    @endif
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="/#contact-page">Contact</a>
@@ -39,6 +48,9 @@
         </div>
     </div>
 </nav>
+
+
+
 
 
 <!-- Navbar-Area-End -->

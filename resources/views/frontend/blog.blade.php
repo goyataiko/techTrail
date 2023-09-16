@@ -1,23 +1,26 @@
 @extends('frontend.layouts.layout')
 @section('content')
 
-<header class="site-header parallax-bg">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-7">
-                <h2 class="title">Blog</h2>
-            </div>
-            <div class="col-sm-5">
-                <div class="breadcrumbs">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>Blog</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+<div class="videoHeader blog-video">
+    <video autoplay loop muted>
+        <source src="{{ asset('frontend/assets/images/header3.mp4') }}" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <div class="text">
+        <h1>ブログ</h1>
+        <p>成長と学びの記録、そして未来へのステップ
+        </p>
     </div>
-</header>
+</div>
+
+<nav class="breadcrumbs">
+    <div class="container col-md-9">
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>Blog</li>
+        </ol>
+    </div>
+</nav>
 
 <!-- Portfolio-Area-Start -->
 <section class="blog-area section-padding">
