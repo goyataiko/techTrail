@@ -6,7 +6,7 @@
             <div class="col-md-12 col-lg-3 widget">
                 <div class="text-box">
                     <figure class="footer-logo">
-                        <img src="images/logo.png" alt="">
+                        <img src="{{ asset('frontend/assets/images/logo-x-w.png') }}" alt="">
                     </figure>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, libero. </p>
                     <ul class="d-flex flex-wrap">
