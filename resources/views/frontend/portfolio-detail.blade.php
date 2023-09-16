@@ -44,7 +44,7 @@
                         </div>
                         <div class="pcard">
                             <div class="pcard-header">
-                                <i class='fas fa-image'></i>
+                                <i class='fas fa-images'></i>
                                 Dashboard
                             </div>
                             <div class="pcard-body">
