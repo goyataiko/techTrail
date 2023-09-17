@@ -1,4 +1,3 @@
-
 <!-- Blog-Area-Start -->
 
 <section class="blog-area section-padding-top col-md-10" id="blog-page">
@@ -18,9 +17,97 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="blog-slider">
-                    <div class="single-blog">
+                    <!-- Single-Blog-Contents-Start -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="pcard">
+                            <a href="#">
+                                <div class="pcard-body">
+                                    <div class="pcard-image">
+                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                    </div>
+                                    <div class="pcard-content">
+                                        <div class="pcard-text">
+                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
+                                            <div class="desc">
+                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single-Blog-Contents-End -->
+                    <!-- Single-Blog-Contents-Start -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="pcard">
+                            <a href="#">
+                                <div class="pcard-body">
+                                    <div class="pcard-image">
+                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                    </div>
+                                    <div class="pcard-content">
+                                        <div class="pcard-text">
+                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
+                                            <div class="desc">
+                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single-Blog-Contents-End -->
+                    <!-- Single-Blog-Contents-Start -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="pcard">
+                            <a href="#">
+                                <div class="pcard-body">
+                                    <div class="pcard-image">
+                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                    </div>
+                                    <div class="pcard-content">
+                                        <div class="pcard-text">
+                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
+                                            <div class="desc">
+                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single-Blog-Contents-End -->
+                    <!-- Single-Blog-Contents-Start -->
+                    <div class="col-xl-4 col-md-6">
+                        <div class="pcard">
+                            <a href="#">
+                                <div class="pcard-body">
+                                    <div class="pcard-image">
+                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                    </div>
+                                    <div class="pcard-content">
+                                        <div class="pcard-text">
+                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
+                                            <div class="desc">
+                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Single-Blog-Contents-End -->
+                    {{-- <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-1.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Great things never come from.</a></h3>
@@ -28,12 +115,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-2.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-2.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Don’t stop when you’re tired. Stop
@@ -42,12 +130,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-3.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-3.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Success doesn’t just find you.</a>
@@ -56,12 +145,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-4.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-4.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Sometimes later becomes never.</a>
@@ -70,12 +160,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-5.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Don’t wait for opportunity. Create
@@ -84,12 +175,13 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
                     </div>
                     <div class="single-blog">
                         <figure class="blog-image">
-                            <img src="{{asset('frontend/assets/images/blog-6.jpg')}}" alt="">
+                            <img src="{{ asset('frontend/assets/images/blog-6.jpg') }}" alt="">
                         </figure>
                         <div class="blog-content">
                             <h3 class="title"><a href="blog-details.html">Your limitation-it’s only your
@@ -98,9 +190,10 @@
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
                                     consequuntur provident iusto cumque . </p>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
+                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
+                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
             </div>
         </div>
