@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\BlogCategoryController;
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\HeroController;
 use App\Http\Controllers\Admin\PortfolioCategoryController;
@@ -56,5 +57,6 @@ Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], 
     Route::resource('portfolio', PortfolioController::class);
     Route::resource('portfolio-category', PortfolioCategoryController::class);
 
+    Route::resource('blog', BlogController::class);
     Route::resource('blog-category', BlogCategoryController::class);
 });
