@@ -20,124 +20,146 @@
     </nav>
 
     <!-- Blog-Area-Start -->
-    <section class="blog-area section-padding col-md-9">
+    <section class="blog-area section-padding col-sm-10 col-lg-8 col-xl-10">
         <div class="container">
             <div class="row">
+
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">
-                        <div class="pcard-header">
-                            <i class='fas fa-folder-open'></i>
-                            Main
-                        </div>
-                        <div class="pcard-body">
-                            <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}" alt="">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-6.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Great things never come from.</a></h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                        <a href="#">                            
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-6.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span> <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-2.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Don’t stop when you’re tired. Stop
-                                    when.</a></h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                    <div class="pcard">
+                        <a href="#">
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-4.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span>
-                                <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-3.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Success doesn’t just find you.</a></h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                    <div class="pcard">
+                        <a href="#">     
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span>
-                                <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-4.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Sometimes later becomes never.</a></h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                    <div class="pcard">
+                        <a href="#">                            
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span>
-                                <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Don’t wait for opportunity. Create it.</a>
-                            </h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                    <div class="pcard">
+                        <a href="#">
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-2.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span>
-                                <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+                <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
-                    <div class="single-blog">
-                        <figure class="blog-image">
-                            <img src="{{ asset('frontend/assets/images/blog-6.jpg') }}" alt="">
-                        </figure>
-                        <div class="blog-content">
-                            <h3 class="title"><a href="blog-details.html">Your limitation-it’s only your
-                                    imagination.</a></h3>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus
-                                    consequuntur provident iusto cumque . </p>
+                    <div class="pcard">
+                        <a href="#">     
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-3.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <a href="#" class="button-primary-trans mouse-dir">Read More <span
-                                    class="dir-part"></span>
-                                <i class="fal fa-arrow-right"></i></a>
-                        </div>
+                        </a>
                     </div>
                 </div>
+                <!-- Single-Blog-Contents-End -->
+
+
+
             </div>
             <div class="row">
                 <div class="col-sm-12 text-center">
@@ -162,18 +184,3 @@
     </section>
     <!-- Blog-Area-End -->
 @endsection
-
-@push('scripts')
-    <script>
-        const scaleImage = document.querySelector('.scaleImage');
-        let scaleValue = 1.0;
-        // console.log(scaleValue);
-        window.addEventListener('scroll', function() {
-            //현 스크롤 위치
-            const scrollTop = window.scrollY || document.documentElement.scrollTop;
-            scaleValue = 1 + scrollTop * 0.001;
-
-            scaleImage.style.transform = `scale(${scaleValue})`;
-        });
-    </script>
-@endpush
