@@ -27,7 +27,7 @@
                 <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">
-                        <a href="#">                            
+                        <a href="/blog-detail">
                             <div class="pcard-body">
                                 <div class="pcard-image">
                                     <img src="{{ asset('frontend/assets/images/blog-6.jpg') }}">
@@ -71,7 +71,7 @@
                 <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">
-                        <a href="#">     
+                        <a href="#">
                             <div class="pcard-body">
                                 <div class="pcard-image">
                                     <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
@@ -94,7 +94,7 @@
                 <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">
-                        <a href="#">                            
+                        <a href="#">
                             <div class="pcard-body">
                                 <div class="pcard-image">
                                     <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
@@ -138,7 +138,7 @@
                 <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">
-                        <a href="#">     
+                        <a href="#">
                             <div class="pcard-body">
                                 <div class="pcard-image">
                                     <img src="{{ asset('frontend/assets/images/blog-3.jpg') }}">
