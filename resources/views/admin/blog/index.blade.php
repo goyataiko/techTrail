@@ -58,12 +58,11 @@
                                         </tr>
                                         </tr>
                                     </tfoot>
-                                    <tbody
-                                    >
+                                    <tbody>
                                         <tr>
                                             <td>1</td>
                                             <td><a href="#">Develope</a></td>
-                                            <td  class="text-center"><a href="#">
+                                            <td class="text-center"><a href="#">
                                                     <img width="70px"
                                                         src="{{ asset('frontend/assets/images/about-image.png') }}"></a>
                                             </td>
@@ -81,7 +80,7 @@
                                         <tr>
                                             <td>2</td>
                                             <td><a href="#">Desgin</a></td>
-                                            <td  class="text-center"><a href="#">
+                                            <td class="text-center"><a href="#">
                                                     <img width="70px"
                                                         src="{{ asset('frontend/assets/images/about-image.png') }}"></a>
                                             </td>

@@ -22,8 +22,6 @@
     <!-- Blog-Area-Start -->
     <section class="blog-area section-padding col-sm-10 col-lg-8 col-xl-10">
         <div class="container">
-
-
             <div class="col-sm-12">
                 <ul class="filter-menu filter-portPage">
                     <li class="active" data-filter="*">All Projects</li>
@@ -38,9 +36,7 @@
                 </ul>
             </div>
 
-
             <div class="row">
-
                 <!-- Single-Blog-Contents-Start -->
                 <div class="col-xl-4 col-md-6">
                     <div class="pcard">

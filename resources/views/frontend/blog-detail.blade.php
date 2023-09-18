@@ -53,7 +53,6 @@
         <!-- Quote-Area-Start -->
         <div class="quote-area col-md-8 mx-auto">
             <h5><a href="#">Branding Design</a> カテゴリーの他の文</h5>
-
             <ul>
                 <li><a href="#">得たという真面目ない堕落でなりて</a></li>
                 <li><a href="#">人にそのうちこのためをあっとみたのだ。</a></li>
@@ -66,7 +65,6 @@
             </div>
         </div>
         <!-- Quote-Area-End -->
-
 
         <div class="col-sm-12 mb-5">
             <h5 class="text-center pb-2">他のカテゴリー</h5>

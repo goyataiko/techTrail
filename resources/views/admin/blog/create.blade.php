@@ -32,7 +32,8 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
                                 <div class="col-sm-12 col-md-9 d-flex">
-                                    <input type="file" name="images" class="real-upload" accept="image/*" required multiple>
+                                    <input type="file" name="images" class="real-upload" accept="image/*" required
+                                        multiple>
                                     <div class="upload image-preview">
                                         <label>Choose File</label>
                                     </div>
@@ -47,7 +48,7 @@
                                 <div class="col-sm-12 col-md-9">
                                     <select name="category_id" class="form-control selectric">
                                         @foreach ($category as $cat)
-                                            <option value="{{ $cat->id }}" >{{ $cat->name }}</option>
+                                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
                                         @endforeach
                                     </select>
                                 </div>
@@ -96,8 +97,5 @@
         </div>
     </section>
 
-    <script>
-
-    </script>
+    <script></script>
 @endsection
-
