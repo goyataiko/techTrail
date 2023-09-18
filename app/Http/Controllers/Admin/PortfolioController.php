@@ -15,9 +15,9 @@ class PortfolioController extends Controller
      */
     public function index()
     {
-        // $table = Portfolio::get();
-        return view('admin.portfolio.index');
-        // return view('admin.portfolio.index', compact('table'));
+        $table = Portfolio::get();
+        // return view('admin.portfolio.index');
+        return view('admin.portfolio.index', compact('table'));
     }
 
     /**
@@ -42,11 +42,12 @@ class PortfolioController extends Controller
         $create->site_link = $request->site_link;
         $create->plan_link = $request->plan_link;
         $create->description = $request->description;
+        $create->created_at = $request->created_at;
         $create->status = $request->status;
 
+        // dd($create);
         $create->save();
 
-        // dd($create);
         // dd($request->all());
 
 

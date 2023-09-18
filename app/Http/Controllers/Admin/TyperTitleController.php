@@ -40,7 +40,7 @@ class TyperTitleController extends Controller
         $create->save();
 
         toastr()->success('Created successfully!');
-        return redirect('admin/typerTitle');
+        return back();
     }
 
     /**

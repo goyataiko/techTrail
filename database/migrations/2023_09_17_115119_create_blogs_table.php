@@ -17,12 +17,14 @@ return new class extends Migration
             
             // 이미지 따로 연동
 
-            $table->tinyInteger('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->text('description')->nullable();
             // tag 따로연동
 
             $table->tinyInteger('status')->nullable();
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('blog_categories')->onDelete('cascade');
         });
     }
 
