@@ -7,7 +7,6 @@ use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
 use App\Models\PortfolioImage;
 use Illuminate\Http\Request;
-use File;
 use Illuminate\Support\Facades\Storage;
 
 
