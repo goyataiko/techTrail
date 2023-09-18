@@ -22,95 +22,99 @@
                             <h4>Write Your Post</h4>
                         </div>
                         <div class="card-body">
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="title" class="form-control">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
-                                <div class="col-sm-12 col-md-9 d-flex">
-                                    <input type="file" name="images" class="real-upload" accept="image/*" required
-                                        multiple>
-                                    <div class="upload image-preview">
-                                        <label>Choose File</label>
-                                    </div>
-                                    <div class="preview-box">
-                                        <ul class="image-preview-t"></ul>
+                            <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
+                                @csrf
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="title" class="form-control">
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <select name="category_id" class="form-control selectric">
-                                        @foreach ($category as $cat)
-                                            <option value="{{ $cat->id }}">{{ $cat->name }}</option>
-                                        @endforeach
-                                    </select>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
+                                    <div class="col-sm-12 col-md-9 d-flex">
+                                        <input type="file" name="images[]" class="real-upload" accept="image/*" required
+                                            multiple>
+                                        <div class="upload image-preview">
+                                            <label>Choose File</label>
+                                        </div>
+                                        <div class="preview-box">
+                                            <ul class="image-preview-t"></ul>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tool</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="tool" class="form-control inputtags">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Category</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <select name="category_id" class="form-control selectric">
+                                            @foreach ($category as $cat)
+                                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="work_detail" class="form-control inputtags">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tool</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="tool" class="form-control">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="site_link" class="form-control inputtags">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="work_detail" class="form-control">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Plan Link</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="plan_link" class="form-control inputtags">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="site_link" class="form-control">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <textarea name="description" class="summernote"></textarea>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Plan Link</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="plan_link" class="form-control">
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created Time</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="created_at" class="form-control datepicker">
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <textarea name="description" class="summernote"></textarea>
+                                    </div>
                                 </div>
-                            </div>
 
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <select name="status" class="form-control selectric">
-                                        <option value="1">Draft</option>
-                                        <option value="2">Publish</option>
-                                    </select>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created
+                                        Time</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="created_at" class="form-control datepicker">
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
-                                <div class="col-sm-12 col-md-9">
-                                    <button class="btn btn-primary">Create Post</button>
+
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <select name="status" class="form-control selectric">
+                                            <option value="1">Draft</option>
+                                            <option value="2">Publish</option>
+                                        </select>
+                                    </div>
                                 </div>
-                            </div>
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <button type="submit" class="btn btn-primary">Create Post</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

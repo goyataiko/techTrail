@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Portfolio extends Model
+class PortfolioImage extends Model
 {
     use HasFactory;
 
-    public function images()
+    public function Portfolio()
     {
-        return $this->hasMany(PortfolioImage::class);
+        return $this->belongsTo(Portfolio::class);
     }
 }
