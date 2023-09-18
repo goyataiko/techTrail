@@ -31,6 +31,7 @@
                                     <thead>
                                         <tr>
                                             <th width="20px">id</th>
+                                            <th width="20px">Status</th>
                                             <th width="40px">Category</th>
                                             <th width="80px">Image</th>
                                             <th>Title</th>
@@ -46,6 +47,7 @@
                                         <tr>
                                         <tr>
                                             <th>id</th>
+                                            <th>Status</th>
                                             <th>Category</th>
                                             <th>Image</th>
                                             <th>Title</th>
@@ -61,6 +63,9 @@
                                     <tbody>
                                         <tr>
                                             <td>1</td>
+                                            <td>
+                                                <div class="badge badge-info">Draft</div>
+                                            </td>
                                             <td><a href="#">Develope</a></td>
                                             <td class="text-center"><a href="#">
                                                     <img width="70px"
@@ -79,6 +84,9 @@
                                         </tr>
                                         <tr>
                                             <td>2</td>
+                                            <td>
+                                                <div class="badge badge-secondary">Published</div>
+                                            </td>
                                             <td><a href="#">Desgin</a></td>
                                             <td class="text-center"><a href="#">
                                                     <img width="70px"

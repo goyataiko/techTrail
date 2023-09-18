@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('title')->nullable();
 
             // 이미지는 따로 연동
-            $table->tinyInteger('category_id');
+            $table->unsignedBigInteger('category_id');
             $table->text('tool')->nullable();
             $table->text('work_detail')->nullable();
 
@@ -26,6 +26,8 @@ return new class extends Migration
             $table->text('description')->nullable();
             $table->tinyInteger('status')->nullable();
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('portfolio_categories')->onDelete('cascade');
         });
     }
 

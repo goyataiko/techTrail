@@ -9,8 +9,8 @@
             <h1>Create New Post</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="/admin">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="/admin/portfolio">Posts</a></div>
-                <div class="breadcrumb-item">Create New Post</div>
+                <div class="breadcrumb-item"><a href="/admin/portfolio">Portfolio</a></div>
+                <div class="breadcrumb-item">Create New Portfolio</div>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Write Your Post</h4>
+                            <h4>Write Your Portfolio</h4>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
@@ -34,7 +34,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
                                     <div class="col-sm-12 col-md-9 d-flex">
-                                        <input type="file" name="images[]" class="real-upload" accept="image/*" required
+                                        <input type="file" name="images[]" class="real-upload" accept="image/*"
                                             multiple>
                                         <div class="upload image-preview">
                                             <label>Choose File</label>
