@@ -4,7 +4,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: "游ゴシック体", 'Poppins', YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
     /* 1 */
     -ms-text-size-adjust: 100%;
     /* 2 */
@@ -18,7 +18,6 @@ body {
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.8em;
@@ -53,7 +52,6 @@ h6 {
     font-weight: 800;
     margin: 0 0 15px;
     line-height: 1.2em;
-    font-family: 'Poppins', sans-serif;
     color: #190844;
 }
 
@@ -263,7 +261,6 @@ code,
 kbd,
 pre,
 samp {
-    font-family: monospace, monospace;
     font-size: 1em;
 }
 

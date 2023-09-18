@@ -16,10 +16,10 @@ return new class extends Migration
             $table->string('title')->nullable();
             
             // 이미지 따로 연동
-            // tag 따로연동
 
             $table->tinyInteger('category_id');
             $table->text('description')->nullable();
+            // tag 따로연동
 
             $table->tinyInteger('status')->nullable();
             $table->timestamps();
