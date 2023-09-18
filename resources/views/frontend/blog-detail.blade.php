@@ -1,119 +1,86 @@
 @extends('frontend.layouts.layout')
 @section('content')
-
-<header class="site-header parallax-bg">
-    <div class="container">
-        <div class="row d-flex align-items-center">
-            <div class="col-sm-8">
-                <h2 class="title">Portfolio Details</h2>
-            </div>
-            <div class="col-sm-4">
-                <div class="breadcrumbs">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li>Portfolio</li>
-                    </ul>
-                </div>
-            </div>
+    <div class="imageHeader">
+        <img class="scaleImage" src="{{ asset('frontend/assets/images/header.jpg') }}" alt="header">
+        <div class="overlay"></div>
+        <div class="text">
+            <h1>ブログ</h1>
+            <p>成長と学びの記録、そして未来へのステップ
+            </p>
         </div>
     </div>
-</header>
 
-<!-- Portfolio-Area-Start -->
-<section class="portfolio-details section-padding" id="portfolio-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h2 class="head-title">9 Things I Love About Shaving My Head During.</h2>
-                <figure class="image-block">
-                    <img src="{{asset('frontend/assets/images/portfolio-block.jpg')}}" alt="">
-                </figure>
-                <div class="portflio-info">
-                    <div class="single-info">
-                        <h4 class="title">Client</h4>
-                        <p>SquareSparc Ltd.</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Date</h4>
-                        <p>8 January, 2019</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Website</h4>
-                        <p>www.fooleo.com.uk</p>
-                    </div>
-                    <div class="single-info">
-                        <h4 class="title">Role</h4>
-                        <p>Web Design & Web Development</p>
-                    </div>
-                </div>
+    <nav class="breadcrumbs">
+        <div class="container col-md-9">
+            <ol>
+                <li><a href="/">Home</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li>Blog Detail</li>
+            </ol>
+        </div>
+    </nav>
+
+    <section class="col-md-6">
+        <!-- Blog-Area-Start -->
+        <div class="container blog-post">
+            <div class="row">
                 <div class="description">
-                    <h2>That and normal and we've class. Explain attained.</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem porro ex repellat nobis
-                        maxime odio et, dolore fuga excepturi culpa, officiis voluptate aspernatur similique
-                        officia nihil exercitationem qui corporis iste assumenda eum quaerat? Porro amet
-                        repellat molestias eos iusto suscipit quos ex beatae aut voluptate deserunt dicta esse
-                        ullam ipsa nihil minima odio vitae, architecto totam, praesentium impedit excepturi
-                        ipsam.</p>
-                    <ul class="gallery">
-                        <li><img src="images/gallery-1.jpg" alt="" class="img-fluid w-100"></li>
-                        <li><img src="images/gallery-2.jpg" alt="" class="img-fluid w-100"></li>
-                    </ul>
-                    <h3>Process Story</h3>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta et veniam omnis,
-                        voluptatem qui dolorem nulla provident totam saepe, odit quibusdam dignissimos tempora
-                        autem ut illo obcaecati ducimus sint repudiandae! Hic eos nam aperiam fugit?
-                        Perspiciatis explicabo ab harum. Sed ducimus veniam voluptatibus qui ea, atque sint eum
-                        quae molestiae quod officiis, at enim ab necessitatibus laborum! Dolores necessitatibus
-                        a earum perspiciatis ut consectetur corrupti omnis cum fugit, explicabo dolorem
-                        similique deleniti inventore natus! Quaerat sit soluta enim at reiciendis?.</p>
+                    <p>彼らは今日ずっと漠然たる発見人というもののためが考えんた。いよいよ場合に束縛違いはきっとある吟味たますだけをすまてみないをさえ忠告繰りたませて、全くには知っないないですない。書物に乗っですものははなはだ多数にともかくますないべき。もう嘉納さんで批評国家そう買収をいうまい教師この大名私か存在にというご満足ですなたなて、その時間も私かがた新聞の申しが、久原さんのので辺の私を別にご誤認と執っから私見識にご学問をすように近頃お衰弱に怖がっありますて、必ずしもたとい切望に立ち入りんながらみますのに信じんだ。
+                        <br><br>
+                    </p>
+
+                    <h3>あるいはなおごベルグソンで<br>
+                        見るものはそう大変とするたば、</h3>
+                    <p>その個人には飛びでてという書籍をするば始めたん。その時説の時大きな軍隊は私ごろを思うたかと嘉納さんが足りるだ、言葉の偶然ありってご招待たないでて、知識のところを常住坐臥よりほかまでのがたが事実しので得ると、多少の今であるけれどもそのためのむしろ聴いましですとあっなけれのだけれども、よろしゅうたらませばこうご重き与えまい訳ですでした。ただ主義か貧乏か自白がしでて、事実末概念をしが得るた以上にご病気の時分が見えないで。今日をはいよいよ帰ってもったずなけれでしば、どうももし飛びて持もまだなくないのた。
+                    </p>
                     <ul class="dots-list">
-                        <li>First refinement become it over a may an that harmonic every away.</li>
-                        <li>Clarinet she or here, separated hides. With work a and so pay different chooses
-                            answer.</li>
-                        <li>Never analyzed the of boss's films death, heaven cache name any judgment, all.</li>
+                        <li>ただお意味へ読んてもいたのうて、申には</li>
+                        <li>無論あなたか歩くてあるれるましませ要らられんると知れて</li>
+                        <li>自分も畳んていんた。どうぞただいまはおそらく画といういるなけれと</li>
                     </ul>
-                    <p>Hic eos nam aperiam fugit? Perspiciatis explicabo ab harum. Sed ducimus veniam
-                        voluptatibus qui ea, atque sint eum quae molestiae quod officiis, at enim ab
-                        necessitatibus laborum! Dolores necessitatibus a earum perspiciatis ut consectetur
-                        corrupti omnis cum fugit, explicabo dolorem similique deleniti inventore natus! Quaerat
-                        sit soluta .</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo animi libero suscipit
-                        praesentium perferendis possimus, ex dicta eius ea soluta sunt. Sapiente nulla,
-                        consequuntur ipsam saepe ad numquam blanditiis fugiat animi. Harum fugit incidunt
-                        nostrum eligendi doloremque vero possimus illum consequuntur quae sint officia
-                        repudiandae porro maxime cupiditate dolor magnam totam sit natus id neque quod.
-                        Molestias illo repudiandae laudantium illum perspiciatis nisi quasi amet corrupti
-                        .</p>
+                    <br>
+                    <img src="{{ asset('frontend/assets/images/portfolio-block.jpg') }}" alt="">
+                    <p>ここからは今上でもそれのご反対もない聴いもらいだたら。私もぼうっと話ののでご中止は叱らが来なるないないけれども、十二の主義に実際立ちなという留学たと、それでこの自分の在来に使うれるて、私かが私のがたが記憶を逃れていたのたでしょと反駁描くて戦争いうならますう。自信がだから岩崎さんをもっともこういうなかっのたですなけれ。
+                    </p>
+                    <p>
+                        （すると安危が持っ時なたないばでしは上げよないませば、）そう云いた個性に、toの絵だけ申しからありという、間柄の活動は翌日の限りなど認め云っ事を申したて融通児関してならなにおいてお自分でものた。あなたはついに材料に見えるでように出て来るなけれのございばそれでもわざわざ驚がた当てるででしょ。しかしどう三本は人格から掘りて、場合によくしあるうとあるて、ないでないてしかしご挨拶から起るたた。通りの以後が、どんな一道を当時をするかも、今上がこう今一五二本を願っばかりの心が、私か申し込んござい推薦が書いませ前は必ずしもくっついせるのたば、いやしくも全く会で高いので、こういうのにやっもので貧乏です好い認めでた。
+                    </p>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- Portfolio-Area-End -->
+        <!-- Blog-Area-End -->
 
-<!-- Quote-Area-Start -->
-<section class="quote-area section-padding-bottom">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="quote-box">
-                    <div class="row ">
-                        <div class="col-lg-6 offset-lg-3">
-                            <div class="quote-content">
-                                <h3 class="title">Your Journey Today</h3>
-                                <div class="desc">
-                                    <p>Still top of and the drops. What don't issued character god, no ports,
-                                        credit question.</p>
-                                </div>
-                                <a href="#" class="button-orange mouse-dir">Get Started <span class="dir-part"></span></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Quote-Area-Start -->
+        <div class="quote-area col-md-8 mx-auto">
+            <h5><a href="#">Branding Design</a> カテゴリーの他の文</h5>
+
+            <ul>
+                <li><a href="#">得たという真面目ない堕落でなりて</a></li>
+                <li><a href="#">人にそのうちこのためをあっとみたのだ。</a></li>
+                <li><a href="#">私にがたにいういるて三カ年を二度は</a></li>
+            </ul>
+            <div class="tags" style="margin-left: -3px">
+                <a href="#" class="btn border">tag 1</a>
+                <a href="#" class="btn border">tag 2</a>
+                <a href="#" class="btn border">tag 3</a>
             </div>
         </div>
-    </div>
-</section>
-<!-- Quote-Area-End -->
+        <!-- Quote-Area-End -->
 
+
+        <div class="col-sm-12 mb-5">
+            <h5 class="text-center pb-2">他のカテゴリー</h5>
+            <ul class="filter-menu filter-portPage">
+                <li>All Posts</li>
+                <span>|</span>
+                <li>Branding Design</li>
+                <span>|</span>
+                <li>User Interface</li>
+                <span>|</span>
+                <li>User Experience</li>
+                <span>|</span>
+                <li>Web Development</li>
+            </ul>
+        </div>
+    </section>
 @endsection
