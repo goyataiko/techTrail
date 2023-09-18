@@ -37,8 +37,8 @@
                                 Main
                             </div>
                             <div class="pcard-body">
-                                <a href="{{ 'portfolioImage\larajobportal.png' }}" data-lity >
-                                    <img src="{{ asset('portfolioImage\larajobportal.png') }}" alt="">
+                                <a href="{{ 'portfolio_image\larajobportal.png' }}" data-lity >
+                                    <img src="{{ asset('portfolio_image\larajobportal.png') }}" alt="">
                                 </a>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                                 Dashboard
                             </div>
                             <div class="pcard-body">
-                                <img src="{{ asset('portfolioImage\larajobportal2.png') }}" data-lity>
+                                <img src="{{ asset('portfolio_image\larajobportal2.png') }}" data-lity>
                             </div>
                         </div>                        
                     </div>

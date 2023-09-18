@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
+use App\Models\PortfolioImage;
 use Illuminate\Http\Request;
 
 class PortfolioController extends Controller
@@ -33,7 +34,36 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $create = new Portfolio;
+        $create->title = $request->title;
+        $create->category_id = $request->category_id;
+        $create->tool = $request->tool;
+        $create->work_detail = $request->work_detail;
+        $create->site_link = $request->site_link;
+        $create->plan_link = $request->plan_link;
+        $create->description = $request->description;
+        $create->status = $request->status;
+
+        $create->save();
+
+        // dd($create);
+        // dd($request->all());
+
+
+        // 복수 이미지
+        $this_id = $create->id;
+        if ($request->hasFile('images')) {
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/images/portfolio_images/'.$this_id);
+                $portfolio_image = new PortfolioImage;
+                $portfolio_image->portfolio_id = $this_id;
+                $portfolio_image->image_path = $path;
+                $portfolio_image->save();
+            }
+        }
+
+        toastr()->success('Created successfully!');
+        return redirect('/admin/portfolio');
     }
 
     /**
