@@ -70,17 +70,24 @@
                                                     @else
                                                         <div class="badge badge-secondary">Published</div>
                                                     @endif
-                                                </td>                                                
-                                                <td><a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->category->name }}</a></td>
+                                                </td>
+                                                <td><a
+                                                        href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->category->name }}</a>
+                                                </td>
                                                 <td class="text-center">
-                                                    @if ($ta->images->first()->image_path)                                                        
-                                                    <a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">
-                                                        <img width="70px" src="{{ Storage::url( $ta->images->first()->image_path) }}">
-                                                    </a>
+                                                    @if ($ta->images->first()->image_path)
+                                                        <a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">
+                                                            <img width="70px"
+                                                                src="{{ Storage::url($ta->images->first()->image_path) }}">
+                                                        </a>
                                                     @endif
                                                 </td>
-                                                <td><a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->title }}</a></td>
-                                                <td><a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y.M.d') }}</a></td>
+                                                <td><a
+                                                        href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->title }}</a>
+                                                </td>
+                                                <td><a
+                                                        href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y.M.d') }}</a>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <div class="btn border m-1"><i class='fas fa-folder-open'></i>

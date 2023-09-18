@@ -22,7 +22,8 @@
                             <h4>Write Your Portfolio</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.portfolio.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.portfolio.store') }}" method="post"
+                                enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
@@ -34,8 +35,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Images</label>
                                     <div class="col-sm-12 col-md-9 d-flex">
-                                        <input type="file" name="images[]" class="real-upload" accept="image/*"
-                                            multiple>
+                                        <input type="file" name="images[]" class="real-upload" accept="image/*" multiple>
                                         <div class="upload image-preview">
                                             <label>Choose File</label>
                                         </div>
@@ -121,5 +121,4 @@
             </div>
         </div>
     </section>
-
 @endsection

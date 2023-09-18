@@ -44,7 +44,6 @@
                                             <ul class="image-preview-t">
                                                 @foreach ($table->images as $image)
                                                     <li>
-                                                        {{-- @dd($image->image_path) --}}
                                                         <img src="{{ Storage::url($image->image_path) }}" alt="">
                                                     </li>
                                                 @endforeach
