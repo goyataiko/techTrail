@@ -7,6 +7,8 @@ use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
 use App\Models\PortfolioImage;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+
 
 class PortfolioController extends Controller
 {
@@ -55,7 +57,7 @@ class PortfolioController extends Controller
         $this_id = $create->id;
         if ($request->hasFile('images')) {
             foreach ($request->file('images') as $image) {
-                $path = $image->store('public/images/portfolio_images/'.$this_id);
+                $path = $image->store('public/images/portfolio_images/' . $this_id);
                 $portfolio_image = new PortfolioImage;
                 $portfolio_image->portfolio_id = $this_id;
                 $portfolio_image->image_path = $path;
@@ -99,6 +101,14 @@ class PortfolioController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        //폴더채로 이미지 삭제
+        $FolderPath = 'public/images/portfolio_images/' . $id;
+        Storage::deleteDirectory($FolderPath);
+
+        //이미지 DB 포함 모든 DB삭제
+        Portfolio::find($id)->delete();
+
+        toastr()->success('Deleted successfully!');
+        return back();
     }
 }

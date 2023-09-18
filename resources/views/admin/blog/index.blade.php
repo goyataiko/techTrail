@@ -96,10 +96,53 @@
                                             <td><a href="#">2023/06/25</a></td>
                                             <td>
                                                 <div class="d-flex justify-content-center">
-                                                    {{-- <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div> --}}
                                                     <div class="btn border m-1"><i class='fas fa-folder-open'></i>
                                                     </div>
-                                                    <div class="btn border m-1"><i class='fas fa-trash'></i></div>
+
+
+                                                    <!-- Button trigger modal -->
+                                                    <div class="btn border m-1" data-toggle="modal"
+                                                        data-target="#delete{{ $ta->id }}">
+                                                        <i class='fas fa-trash'></i>
+                                                    </div>
+
+                                                    <!-- Modal -->
+                                                    <div class="modal fade" id="delete{{ $ta->id }}" tabindex="-1"
+                                                        role="dialog" aria-labelledby="exampleModalLabel"
+                                                        aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLabel">
+                                                                        Delete Confimation</h5>
+                                                                    <button type="button" class="close"
+                                                                        data-dismiss="modal" aria-label="Close">
+                                                                        <span aria-hidden="true">&times;</span>
+                                                                    </button>
+                                                                </div>
+                                                                <div class="modal-body text-left">
+                                                                    Post <span class="badge badge-primary">ID:
+                                                                        {{ $ta->id }} </span> will be
+                                                                    deleted.<br>
+                                                                    Are you sure you want to proceed?
+                                                                </div>
+                                                                <form
+                                                                    action="{{ route('admin.portfolio.destroy', [$ta->id]) }}"
+                                                                    method="post">@csrf
+                                                                    @method('DELETE')
+                                                                    <div class="modal-footer">
+                                                                        <button type="button" class="btn btn-secondary"
+                                                                            data-dismiss="modal"
+                                                                            aria-label="Close">Close</button>
+
+                                                                        <button type="submit" class="btn btn-primary">
+                                                                            Yes, Delete it.</button>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- End Modal -->
                                                 </div>
                                             </td>
                                         </tr>

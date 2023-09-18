@@ -249,6 +249,10 @@ select.form-control:not([size]):not([multiple]) {
 .form-group {
   margin-bottom: 25px;
 }
+.form-group a {
+  color: #fff;
+  text-decoration: none;
+}
 .form-group .control-label,
 .form-group > label {
   font-weight: 600;
@@ -3624,4 +3628,8 @@ li {
 
 ::-webkit-scrollbar-track {
   background-color: #eee;
+}
+
+.modal-backdrop {
+  display: none !important;
 }
