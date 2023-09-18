@@ -80,7 +80,10 @@ class PortfolioController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = PortfolioCategory::all();
+        $table = Portfolio::find($id);
+
+        return view('admin.portfolio.edit', compact('category', 'table'));
     }
 
     /**

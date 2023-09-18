@@ -6,11 +6,11 @@
             <div class="section-header-back">
                 <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
-            <h1>Create New Post</h1>
+            <h1>Edit The Post</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="/admin">Dashboard</a></div>
                 <div class="breadcrumb-item"><a href="/admin/portfolio">Portfolio</a></div>
-                <div class="breadcrumb-item">Create New Portfolio</div>
+                <div class="breadcrumb-item">Edit Portfolio</div>
             </div>
         </div>
 
@@ -19,7 +19,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Write Your Portfolio</h4>
+                            <h4>Edit Your Portfolio</h4>
                         </div>
                         <div class="card-body">
                             <form action="{{ route('admin.portfolio.store') }}" method="post"
@@ -28,7 +28,8 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="title" class="form-control">
+                                        <input type="text" name="title" class="form-control"
+                                            value="{{ $table->title }}">
                                     </div>
                                 </div>
 
@@ -39,8 +40,14 @@
                                         <div class="upload image-preview">
                                             <label>Choose File</label>
                                         </div>
-                                        <div class="preview-box">
-                                            <ul class="image-preview-t"></ul>
+                                        <div>
+                                            <ul class="image-preview-t">
+                                                @foreach ($table->images as $image)
+                                                    <li>
+                                                        <img src="{{ Storage::url($image->image_path) }}" alt="">
+                                                    </li>
+                                                @endforeach
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -59,35 +66,39 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tool</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="tool" class="form-control">
+                                        <input type="text" name="tool" class="form-control"
+                                            value="{{ $table->tool }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="work_detail" class="form-control">
+                                        <input type="text" name="work_detail" class="form-control"
+                                            value="{{ $table->work_detail }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="site_link" class="form-control">
+                                        <input type="text" name="site_link" class="form-control"
+                                            value="{{ $table->site_link }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Plan Link</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="plan_link" class="form-control">
+                                        <input type="text" name="plan_link" class="form-control"
+                                            value="{{ $table->plan_link }}">
                                     </div>
                                 </div>
 
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <textarea name="description" class="summernote"></textarea>
+                                        <textarea name="description" class="summernote">{{ $table->description }}</textarea>
                                     </div>
                                 </div>
 
@@ -95,7 +106,8 @@
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created
                                         Time</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="created_at" class="form-control datepicker">
+                                        <input type="text" name="created_at" class="form-control datepicker"
+                                            value="{{ $table->created_at->format('Y-m-d') }}">
                                     </div>
                                 </div>
 
@@ -103,8 +115,12 @@
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Status</label>
                                     <div class="col-sm-12 col-md-9">
                                         <select name="status" class="form-control selectric">
-                                            <option value="1">Draft</option>
-                                            <option value="2">Publish</option>
+                                            <option value="1" {{ $table->status === 1 ? 'selected' : '' }}>
+                                                Draft
+                                            </option>
+                                            <option value="2" {{ $table->status === 2 ? 'selected' : '' }}>
+                                                Publish
+                                            </option>
                                         </select>
                                     </div>
                                 </div>
@@ -121,4 +137,6 @@
             </div>
         </div>
     </section>
+
+    <script></script>
 @endsection
