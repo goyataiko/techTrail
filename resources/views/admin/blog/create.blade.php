@@ -9,7 +9,7 @@
             <h1>Create New Post</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="/admin">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="/admin/portfolio">Posts</a></div>
+                <div class="breadcrumb-item"><a href="/admin/blog">Blog</a></div>
                 <div class="breadcrumb-item">Create New Post</div>
             </div>
         </div>
@@ -54,37 +54,16 @@
                             </div>
 
                             <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tool</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="tool" class="form-control inputtags">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Work Detail</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="work_detail" class="form-control inputtags">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Site Link</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="site_link" class="form-control inputtags">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Plan Link</label>
-                                <div class="col-sm-12 col-md-9">
-                                    <input type="text" name="plan_link" class="form-control inputtags">
-                                </div>
-                            </div>
-
-                            <div class="form-group row mb-4">
                                 <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
                                 <div class="col-sm-12 col-md-9">
                                     <textarea name="description" class="summernote"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-group row mb-4">
+                                <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
+                                <div class="col-sm-12 col-md-9">
+                                    <input type="text" name="tag" class="form-control inputtags">
                                 </div>
                             </div>
 

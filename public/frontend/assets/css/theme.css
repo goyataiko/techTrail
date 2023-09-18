@@ -228,7 +228,6 @@ Button-Styles
     margin-right: 0;
 }
 
-.main_menu .navbar-nav li .active,
 .main_menu .navbar-nav li:hover>a {
     color: #6777ef;
 }
@@ -457,6 +456,12 @@ header {
     padding: 0;
     text-align: center;
     width: 100%;
+}
+
+@media (max-width: 768px){
+    .filter-menu span {
+        display: none;
+    }
 }
 
 .filter-menu li {
@@ -932,6 +937,11 @@ blockquote {
 /* ----------------------
 11. Blog-Area
 ------------------------ */
+.blog-post {
+    margin: 40px 0;
+    line-height: 2.5;
+}
+
 .blog-slider .slick-list {
     margin-left: -15px;
     margin-right: -15px;
@@ -1504,7 +1514,8 @@ Footer-Area
     font-size: 15px;
 }
 
-.portfolio-details .portfolio-info {
+.portfolio-details .portfolio-info,
+.quote-area {
     padding: 30px;
     padding-bottom: 15px;
     box-shadow: 0px 12px 12px rgba(10, 10, 10, 0.05);
@@ -1521,17 +1532,41 @@ Footer-Area
     border-bottom: 1px solid #eee;
 }
 
-.portfolio-details .portfolio-info ul {
+.quote-area {
+    margin: 5rem 0.25rem;    
+}
+
+.quote-area h5 {
+    font-size: 17px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #8e8e8e78;
+}
+
+.quote-area a {
+    color: #282828;
+}
+
+.quote-area a:hover {
+    color: #6777ef;
+}
+
+
+.portfolio-details .portfolio-info ul,
+.quote-area ul {
     list-style: none;
     padding: 0;
     font-size: 15px;
 }
 
-.portfolio-details .portfolio-info ul li+li {
+.portfolio-details .portfolio-info ul li+li,
+.quote-area ul li+li {
     margin-top: 10px;
 }
 
-.portfolio-details .portfolio-info .btn {
+.portfolio-details .portfolio-info .btn,
+.quote-area .btn {
     font-size: 14px;
     margin: 0 0.25rem;
     padding: 4px 7px;

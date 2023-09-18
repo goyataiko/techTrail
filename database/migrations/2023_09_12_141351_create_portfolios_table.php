@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('site_link')->nullable();
             $table->string('plan_link')->nullable();
 
+            // 이미지는 따로 연동
+
             $table->tinyInteger('category_id');
             $table->text('tool')->nullable();
             $table->text('work_detail')->nullable();
