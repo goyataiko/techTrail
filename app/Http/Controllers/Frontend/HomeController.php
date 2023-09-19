@@ -18,9 +18,6 @@ class HomeController extends Controller
 
         $portfolio_category = PortfolioCategory::all();
 
-        //모든 포트폴리오 보이도록 할때는 이것 이용
-        // $selectedPortfolios = Portfolio::where('status', 2)->get();
-        
         //카테고리별로 n개씩 보이도록 설정
         $selectedPortfolios = collect();
         foreach ($portfolio_category as $category) {
@@ -29,7 +26,7 @@ class HomeController extends Controller
                 ->orderBy('created_at', 'desc')
                 ->take(3)
                 ->get();
-        
+
             $selectedPortfolios = $selectedPortfolios->merge($portfoliosInCategory);
         }
 
@@ -39,6 +36,19 @@ class HomeController extends Controller
             'hero',
             'typerTitles',
 
+            'portfolio_category',
+            'selectedPortfolios',
+        ));
+    }
+
+    public function portfolio()
+    {
+        $portfolio_category = PortfolioCategory::all();
+
+        //모든 포트폴리오 보이도록 할때는 이것 이용
+        $selectedPortfolios = Portfolio::where('status', 2)->get();
+
+        return view('frontend.portfolio', compact(
             'portfolio_category',
             'selectedPortfolios',
         ));

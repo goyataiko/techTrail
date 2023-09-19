@@ -73,8 +73,8 @@ class PortfolioController extends Controller
      * Display the specified resource.
      */
     public function show(string $id)
-    {
-        //
+    {        
+        return view('frontend.portfolio-detail', compact('id'));        
     }
 
     /**
