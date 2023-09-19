@@ -45,7 +45,8 @@
                                 <img src="{{ Storage::url($item->images->first()->image_path) }}" alt="">
                             </figure>
                             <div class="portfolio-content">
-                                <a href="{{ route('admin.portfolio.show', [$item->id]) }}" class="icon"><i class="fas fa-plus"></i></a>
+                                <a href="{{ route('admin.portfolio.show', [$item->id]) }}" class="icon"><i
+                                        class="fas fa-plus"></i></a>
                                 <h4 class="title"><a href="{{ route('admin.portfolio.show', [$item->id]) }}">
                                         {{ $item->title }}</a></h4>
                                 <div class="desc">
