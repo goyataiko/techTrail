@@ -17,11 +17,15 @@ class HomeController extends Controller
         $typerTitles = TyperTitle::all();
 
         $portfolio_category = PortfolioCategory::all();
-        // $selectedPortfolios = Portfolio::all();
+
+        //모든 포트폴리오 보이도록 할때는 이것 이용
+        // $selectedPortfolios = Portfolio::where('status', 2)->get();
         
+        //카테고리별로 n개씩 보이도록 설정
         $selectedPortfolios = collect();
         foreach ($portfolio_category as $category) {
             $portfoliosInCategory = Portfolio::where('category_id', $category->id)
+                ->where('status', 2)
                 ->orderBy('created_at', 'desc')
                 ->take(3)
                 ->get();
