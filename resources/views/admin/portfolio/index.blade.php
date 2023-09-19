@@ -75,7 +75,7 @@
                                                         href="{{ route('admin.portfolio.edit', [$ta->id]) }}">{{ $ta->category->name }}</a>
                                                 </td>
                                                 <td class="text-center">
-                                                    @if ($ta->images->first()->image_path)
+                                                    @if (isset($ta->images->first()->image_path))
                                                         <a href="{{ route('admin.portfolio.edit', [$ta->id]) }}">
                                                             <img width="70px"
                                                                 src="{{ Storage::url($ta->images->first()->image_path) }}">

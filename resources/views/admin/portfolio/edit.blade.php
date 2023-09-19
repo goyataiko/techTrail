@@ -22,9 +22,10 @@
                             <h4>Edit Your Portfolio</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.portfolio.store') }}" method="post"
+                            <form action="{{ route('admin.portfolio.update', [$table->id]) }}" method="post"
                                 enctype="multipart/form-data">
                                 @csrf
+                                @method('PUT')
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
                                     <div class="col-sm-12 col-md-9">
