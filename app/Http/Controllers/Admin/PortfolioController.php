@@ -93,7 +93,37 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+
+        $portfolio = Portfolio::find($id);
+
+        if ($request->hasFile('images')) {
+            //이미지 있는지 확인 후 있으면, 이미지 삭제
+            $FolderPath = 'public/images/portfolio_images/' . $id;
+            Storage::deleteDirectory($FolderPath);
+
+            // 이미지 레코드 삭제
+            foreach ($portfolio->images as $image) {
+                $image->delete();
+            }
+
+            //새로운 파일 레코드 추가
+            foreach ($request->file('images') as $image) {
+                $path = $image->store('public/images/portfolio_images/' . $id);
+                $portfolio_image = new PortfolioImage;
+                $portfolio_image->portfolio_id = $id;
+                $portfolio_image->image_path = $path;
+                $portfolio_image->save();
+            }
+        };
+
+        //여타 post 데이터 업데이트
+        $inserted_data = $request->all();
+        unset($inserted_data['_token']);
+        unset($inserted_data['_method']);
+        Portfolio::find($id)->update($inserted_data);
+
+        toastr()->success('Updated successfully!', 'Congrats');
+        return redirect('admin/portfolio');
     }
 
     /**
