@@ -53,4 +53,11 @@ class HomeController extends Controller
             'selectedPortfolios',
         ));
     }
+
+    public function portfolio_detail(string $id)
+    {
+        $table = Portfolio::find($id);
+        // dd($table);
+        return view('frontend.portfolio-detail', compact('table'));
+    }
 }

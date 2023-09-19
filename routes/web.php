@@ -29,13 +29,10 @@ Route::get('/blog', function () {
 });
 
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
+Route::get('/portfolio/{id}', [HomeController::class, 'portfolio_detail'])->name('portfolio.detail');
 
 Route::get('/blog-detail', function () {
     return view('frontend.blog-detail');
-});
-
-Route::get('/portfolio-detail', function () {
-    return view('frontend.portfolio-detail');
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');

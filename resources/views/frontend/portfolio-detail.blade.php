@@ -31,18 +31,21 @@
                 {{-- 이미지 --}}
                 <div class="col-md-5">
                     <div class="portfolio-slider">
-                        <div class="pcard">
-                            <div class="pcard-header">
-                                <i class='fas fa-images'></i>
-                                Main
+                        @foreach ($table->images as $image)
+                            <div class="pcard">
+                                <div class="pcard-header">
+                                    <i class='fas fa-images'></i>
+                                    {{ $image->name }}
+                                </div>
+                                <div class="pcard-body">
+                                    <a href="{{ Storage::url($image->image_path) }}" data-lity>
+                                        <img src="{{ Storage::url($image->image_path) }}" alt="">
+                                    </a>
+                                </div>
                             </div>
-                            <div class="pcard-body">
-                                <a href="{{ 'portfolio_image\larajobportal.png' }}" data-lity >
-                                    <img src="{{ asset('portfolio_image\larajobportal.png') }}" alt="">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="pcard">
+                        @endforeach
+
+                        {{-- <div class="pcard">
                             <div class="pcard-header">
                                 <i class='fas fa-images'></i>
                                 Dashboard
@@ -50,31 +53,33 @@
                             <div class="pcard-body">
                                 <img src="{{ asset('portfolio_image\larajobportal2.png') }}" data-lity>
                             </div>
-                        </div>                        
+                        </div> --}}
                     </div>
                 </div>
                 {{-- 설명 --}}
                 <div class="col-md-5">
                     <div class="portfolio-info">
                         <h3>
-                            <span>Web Develop </span><br>
-                            Project information </h3>
+                            {{ $table->category->name }}<br>
+                            Project information
+                        </h3>
                         <ul>
-                            {{-- <li><strong>タイトル</strong>: ジョブポータル</li> --}}
-                            {{-- <li><strong>カテゴリー</strong>: Web Develop</li> --}}
-                            <li><strong>使用ツール</strong>: html, css, js, php, laravel, photoshop, figma</li>
-                            <li><strong>制作内容</strong>: ディレクション, ワイヤーフレーム作成, ヒアリング取材, 原稿作成サポート, オリジナルデザイン, HTML5/CSS5コーディング,
-                                レスポンシブコーディング</li>
-                            <li><strong>Project URL</strong>: <a href="#" class="btn">site link</a>
-                                <a href="#" class="btn">plan data</a>
-                            </li>
-                            {{-- <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li> --}}
+                            <li><strong>使用ツール</strong>: {{ $table->tool }}</li>
+                            <li><strong>制作内容</strong>: {{ $table->work_detail }}</li>
+                            @if (!empty($table->site_link))
+                                <li><strong>Project URL</strong>:
+                                    <a href="{{ $table->site_link }}" class="btn">site link</a>
+                                    @if (!empty($table->plan_link))
+                                        <a href="{{ $table->plan_link }}" class="btn">plan data</a>
+                                    @endif
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     <div class="portfolio-description">
-                        <h2>キャリアの扉を開く求人ポータル</h2>
+                        <h2>{{ $table->title }}</h2>
                         <p>
-                            LaraJobPortalは、求職者と採用者をつなげる革新的なウェブプラットフォームです。求職者は理想の職を見つけ、採用者は優れた人材を探すためのツールとして、LaraJobPortalを活用できます。ユーザーフレンドリーなデザインと高度な機能を備えたLaraJobPortalは、あなたのキャリアの扉を開くお手伝いをします。
+                            {!! $table->description !!}
                         </p>
                     </div>
                 </div>
