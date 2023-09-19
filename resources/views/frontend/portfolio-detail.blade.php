@@ -77,9 +77,9 @@
                         </ul>
                     </div>
                     <div class="portfolio-description">
-                        <h2>{{$table->title}}</h2>
+                        <h2>{{ $table->title }}</h2>
                         <p>
-                            {!!$table->description!!}
+                            {!! $table->description !!}
                         </p>
                     </div>
                 </div>
