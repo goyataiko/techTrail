@@ -27,7 +27,7 @@
         <div class="portfolio-wrapper">
             <div class="row portfolios">
 
-                @foreach ($selectedPortfolios as $item)                
+                @foreach ($selectedPortfolios as $item)
                     <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $item->category->slug }}">
                         <div class="single-portfolio">
                             <figure class="portfolio-image">
@@ -60,6 +60,12 @@
                     </div>
                 </div> --}}
 
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12 text-center mt-4">
+                <a href="{{ route('portfolio') }}" class="load-more mouse-dir">View More <i
+                        class="fal fa-sync"></i><span class="dir-part"></span></a>
             </div>
         </div>
     </div>

@@ -28,9 +28,7 @@ Route::get('/blog', function () {
     return view('frontend.blog');
 });
 
-Route::get('/portfolio', function () {
-    return view('frontend.portfolio');
-});
+Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 
 Route::get('/blog-detail', function () {
     return view('frontend.blog-detail');
@@ -50,7 +48,7 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__ . '/auth.php';
 
-Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function (){
+Route::group(['middleware' => ['auth'], 'prefix' => 'admin', 'as' => 'admin.'], function () {
     Route::resource('hero', HeroController::class);
     Route::resource('typer-title', TyperTitleController::class);
 

@@ -1,16 +1,5 @@
 @extends('frontend.layouts.layout')
 @section('content')
-    {{-- <header class="site-header">
-        <div class="container">
-            <div class="row d-flex align-items-center">
-                <div class="col-sm-7">
-                    <h2 class="title">Portfolio</h2>
-                </div>
-            </div>
-        </div>
-    </header> --}}
-
-
     <div class="videoHeader port-video">
         <video autoplay loop muted>
             <source src="{{ asset('frontend/assets/images/header.mp4') }}" type="video/mp4">
@@ -39,19 +28,35 @@
                 <div class="col-sm-12">
                     <ul class="filter-menu filter-portPage">
                         <li class="active" data-filter="*">All Projects</li>
-                        <span>|</span>
-                        <li data-filter=".branding">Branding Design</li>
-                        <span>|</span>
-                        <li data-filter=".interface">User Interface</li>
-                        <span>|</span>
-                        <li data-filter=".experience">User Experience</li>
-                        <span>|</span>
-                        <li data-filter=".development">Web Development</li>
+                        @foreach ($portfolio_category as $category)
+                            <span>|</span>
+                            <li data-filter=".{{ $category->slug }}">{{ $category->name }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="row portfolios">
-                <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item branding">
+
+
+                @foreach ($selectedPortfolios as $item)
+                    <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $item->category->slug }}">
+                        <div class="single-portfolio">
+                            <figure class="portfolio-image">
+                                <img src="{{ Storage::url($item->images->first()->image_path) }}" alt="">
+                            </figure>
+                            <div class="portfolio-content">
+                                <a href="{{ route('admin.portfolio.show', [$item->id]) }}" class="icon"><i
+                                        class="fas fa-plus"></i></a>
+                                <h4 class="title"><a href="{{ route('admin.portfolio.show', [$item->id]) }}">
+                                        {{ $item->title }}</a></h4>
+                                <div class="desc">
+                                    <p>{!! Str::limit(strip_tags($item->description), 100) !!}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+                {{-- <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item branding">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
                             <img src="{{ asset('frontend/assets/images/portfolio-1.jpg') }}" alt="">
@@ -64,126 +69,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item interface">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-2.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-2.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Fitzgerald Stanton</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item branding">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-3.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-3.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Ines Campbell</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item interface experience">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-4.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-4.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Wendi Michael</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item branding development experience">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-5.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-5.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Guerrero Woodard</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item interface">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-6.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-6.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Prince Phelps</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item development">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-7.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-7.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Gayle Gaines</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.4s" class="col-md-6 col-lg-4 filter-item experience">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-8.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-8.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Janice Wilder</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div data-wow-delay="0.5s" class="col-md-6 col-lg-4 filter-item development">
-                    <div class="single-portfolio">
-                        <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-9.jpg') }}" alt="">
-                        </figure>
-                        <div class="portfolio-content">
-                            <a href="images/portfolio-9.jpg" data-lity class="icon"><i class="fas fa-plus"></i></a>
-                            <h4 class="title"><a href="portfolio-details.html">Branding Design</a></h4>
-                            <div class="desc">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> --}}
+
             </div>
             {{-- <div class="row">
-            <div class="col-sm-12 text-center">
-                <a href="#" class="load-more mouse-dir">Load More <i class="fal fa-sync"></i><span
-                        class="dir-part"></span></a>
-            </div>
-        </div> --}}
+                <div class="col-sm-12 text-center">
+                    <a href="#" class="load-more mouse-dir">Load More <i class="fal fa-sync"></i><span
+                            class="dir-part"></span></a>
+                </div>
+            </div> --}}
         </div>
     </section>
     <!-- Portfolio-Area-End -->
