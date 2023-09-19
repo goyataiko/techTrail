@@ -45,9 +45,9 @@
                                 <img src="{{ Storage::url($item->images->first()->image_path) }}" alt="">
                             </figure>
                             <div class="portfolio-content">
-                                <a href="{{ route('admin.portfolio.show', [$item->id]) }}" class="icon"><i
+                                <a href="{{ route('portfolio.detail', [$item->id]) }}" class="icon"><i
                                         class="fas fa-plus"></i></a>
-                                <h4 class="title"><a href="{{ route('admin.portfolio.show', [$item->id]) }}">
+                                <h4 class="title"><a href="{{ route('portfolio.detail', [$item->id]) }}">
                                         {{ $item->title }}</a></h4>
                                 <div class="desc">
                                     <p>{!! Str::limit(strip_tags($item->description), 100) !!}</p>
