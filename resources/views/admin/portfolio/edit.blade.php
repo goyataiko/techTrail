@@ -58,7 +58,9 @@
                                     <div class="col-sm-12 col-md-9">
                                         <select name="category_id" class="form-control selectric">
                                             @foreach ($category as $cat)
-                                                <option value="{{ $cat->id }}">{{ $cat->name }}</option>
+                                                <option value="{{ $cat->id }}"
+                                                    {{ $table->category_id === $cat->id ? 'selected' : '' }}
+                                                    >{{ $cat->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
