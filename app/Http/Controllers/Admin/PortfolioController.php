@@ -59,6 +59,7 @@ class PortfolioController extends Controller
             foreach ($request->file('images') as $image) {
                 $path = $image->store('public/images/portfolio_images/' . $this_id);
                 $portfolio_image = new PortfolioImage;
+                $portfolio_image->name = $image->getClientOriginalName();
                 $portfolio_image->portfolio_id = $this_id;
                 $portfolio_image->image_path = $path;
                 $portfolio_image->save();
@@ -110,6 +111,7 @@ class PortfolioController extends Controller
             foreach ($request->file('images') as $image) {
                 $path = $image->store('public/images/portfolio_images/' . $id);
                 $portfolio_image = new PortfolioImage;
+                $portfolio_image->name = $image->getClientOriginalName();
                 $portfolio_image->portfolio_id = $id;
                 $portfolio_image->image_path = $path;
                 $portfolio_image->save();
