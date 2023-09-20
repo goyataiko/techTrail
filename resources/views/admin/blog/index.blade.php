@@ -61,70 +61,77 @@
                                         </tr>
                                     </tfoot>
                                     <tbody>
-                                        <tr>
-                                            <td>1</td>
-                                            <td>
-                                                <div class="badge badge-secondary">Published</div>
-                                            </td>
-                                            <td><a href="#">Desgin</a></td>
-                                            <td class="text-center"><a href="#">
-                                                    <img width="70px"
-                                                        src="{{ asset('frontend/assets/images/about-image.png') }}"></a>
-                                            </td>
-                                            <td><a href="#">Technical Author</a></td>
-                                            <td><a href="#">2023/06/25</a></td>
-                                            <td>
-                                                <div class="d-flex justify-content-center">
-                                                    <div class="btn border m-1"><i class='fas fa-folder-open'></i>
-                                                    </div>
+                                        @foreach ($table as $ta)
+                                            <tr>
+                                                <td>{{ $ta->id }}</td>
+                                                <td>
+                                                    @if ($ta->status === 1)
+                                                        <div class="badge badge-info">Draft</div>
+                                                    @else
+                                                        <div class="badge badge-secondary">Published</div>
+                                                    @endif
+                                                </td>
+                                                <td><a href="#">{{ $ta->category->name }}</a></td>
+                                                <td class="text-center">
+                                                    @if (isset($ta->image))
+                                                        <a href="#">
+                                                            <img width="70px"
+                                                                src="{{ Storage::url($ta->image) }}">
+                                                        </a>
+                                                    @endif
+                                                </td>
+                                                <td><a href="#">{{ $ta->title }}</a></td>
+                                                <td><a href="#">{{ $ta->created_at->format('Y/m/d') }}</a></td>
+                                                <td>
+                                                    <div class="d-flex justify-content-center">
+                                                        <div class="btn border m-1"><i class='fas fa-folder-open'></i>
+                                                        </div>
 
 
-                                                    <!-- Button trigger modal -->
-                                                    <div class="btn border m-1" data-toggle="modal"
-                                                        data-target="#delete1">
-                                                        <i class='fas fa-trash'></i>
-                                                    </div>
+                                                        <!-- Button trigger modal -->
+                                                        <div class="btn border m-1" data-toggle="modal"
+                                                            data-target="#delete1">
+                                                            <i class='fas fa-trash'></i>
+                                                        </div>
 
-                                                    <!-- Modal -->
-                                                    <div class="modal fade" id="delete1" tabindex="-1"
-                                                        role="dialog" aria-labelledby="exampleModalLabel"
-                                                        aria-hidden="true">
-                                                        <div class="modal-dialog modal-dialog-centered" role="document">
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <h5 class="modal-title" id="exampleModalLabel">
-                                                                        Delete Confimation</h5>
-                                                                    <button type="button" class="close"
-                                                                        data-dismiss="modal" aria-label="Close">
-                                                                        <span aria-hidden="true">&times;</span>
-                                                                    </button>
-                                                                </div>
-                                                                <div class="modal-body text-left">
-                                                                    Post <span class="badge badge-primary">ID:
-                                                                        id </span> will be
-                                                                    deleted.<br>
-                                                                    Are you sure you want to proceed?
-                                                                </div>
-                                                                <form
-                                                                    action="#"
-                                                                    method="post">@csrf
-                                                                    @method('DELETE')
-                                                                    <div class="modal-footer">
-                                                                        <button type="button" class="btn btn-secondary"
-                                                                            data-dismiss="modal"
-                                                                            aria-label="Close">Close</button>
-
-                                                                        <button type="submit" class="btn btn-primary">
-                                                                            Yes, Delete it.</button>
+                                                        <!-- Modal -->
+                                                        <div class="modal fade" id="delete1" tabindex="-1" role="dialog"
+                                                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-header">
+                                                                        <h5 class="modal-title" id="exampleModalLabel">
+                                                                            Delete Confimation</h5>
+                                                                        <button type="button" class="close"
+                                                                            data-dismiss="modal" aria-label="Close">
+                                                                            <span aria-hidden="true">&times;</span>
+                                                                        </button>
                                                                     </div>
-                                                                </form>
+                                                                    <div class="modal-body text-left">
+                                                                        Post <span class="badge badge-primary">ID:
+                                                                            id </span> will be
+                                                                        deleted.<br>
+                                                                        Are you sure you want to proceed?
+                                                                    </div>
+                                                                    <form action="#" method="post">@csrf
+                                                                        @method('DELETE')
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-secondary"
+                                                                                data-dismiss="modal"
+                                                                                aria-label="Close">Close</button>
+
+                                                                            <button type="submit" class="btn btn-primary">
+                                                                                Yes, Delete it.</button>
+                                                                        </div>
+                                                                    </form>
+                                                                </div>
                                                             </div>
                                                         </div>
+                                                        <!-- End Modal -->
                                                     </div>
-                                                    <!-- End Modal -->
-                                                </div>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                            </tr>
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>
