@@ -119,7 +119,9 @@
                                                                         deleted.<br>
                                                                         Are you sure you want to proceed?
                                                                     </div>
-                                                                    <form action="{{ route('admin.blog.destroy', [$ta->id]) }}" method="post">@csrf
+                                                                    <form
+                                                                        action="{{ route('admin.blog.destroy', [$ta->id]) }}"
+                                                                        method="post">@csrf
                                                                         @method('DELETE')
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-secondary"
