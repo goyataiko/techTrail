@@ -5,9 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogCategory;
-use App\Models\BlogImage;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;
 
 class BlogController extends Controller
@@ -83,20 +82,20 @@ class BlogController extends Controller
         $blog = Blog::find($id);
 
         // dd($request->hasFile('image'));
-        if ($request->hasFile('image')) {            
+        if ($request->hasFile('image')) {
             if ($blog->image) {
                 Storage::delete($blog->image);
             }
             $path = $request->file('image')->store('public/images/blog_images/');
             $blog->image = $path;
-        }        
+        }
 
         $blog->title = $request->title;
         $blog->category_id = $request->category_id;
         $blog->description = $request->description;
         $blog->created_at = $request->created_at;
         $blog->status = $request->status;
-    
+
         $blog->save();
 
         toastr()->success('Updated successfully!', 'Congrats');
@@ -108,6 +107,13 @@ class BlogController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $blog = Blog::find($id);
+
+        Storage::delete($blog->image);
+
+        Blog::find($id)->delete();
+
+        toastr()->success('Deleted successfully!');
+        return back();
     }
 }
