@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title')->nullable();
+            $table->string('image')->nullable();
             
-            // 이미지 따로 연동
-
             $table->unsignedBigInteger('category_id');
             $table->text('description')->nullable();
             // tag 따로연동
