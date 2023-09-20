@@ -66,7 +66,10 @@ class BlogController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $category = BlogCategory::all();
+        $table = Blog::find($id);
+
+        return view('admin.blog.edit', compact('table', 'category'));
     }
 
     /**
