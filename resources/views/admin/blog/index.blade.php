@@ -75,8 +75,7 @@
                                                 <td class="text-center">
                                                     @if (isset($ta->image))
                                                         <a href="#">
-                                                            <img width="70px"
-                                                                src="{{ Storage::url($ta->image) }}">
+                                                            <img width="70px" src="{{ Storage::url($ta->image) }}">
                                                         </a>
                                                     @endif
                                                 </td>
