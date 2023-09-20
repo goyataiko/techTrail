@@ -49,18 +49,18 @@
         <!-- Blog-Area-End -->
 
         <!-- Quote-Area-Start -->
-        <div class="quote-area col-md-8 mx-auto">
+        <div class="quote-area col-md-8 mx-auto text-center">
             <h5><a href="#">Branding Design</a> カテゴリーの他の文</h5>
             <ul>
                 <li><a href="#">得たという真面目ない堕落でなりて</a></li>
                 <li><a href="#">人にそのうちこのためをあっとみたのだ。</a></li>
                 <li><a href="#">私にがたにいういるて三カ年を二度は</a></li>
             </ul>
-            <div class="tags" style="margin-left: -3px">
+            {{-- <div class="tags" style="margin-left: -3px">
                 <a href="#" class="btn border">tag 1</a>
                 <a href="#" class="btn border">tag 2</a>
                 <a href="#" class="btn border">tag 3</a>
-            </div>
+            </div> --}}
         </div>
         <!-- Quote-Area-End -->
 
