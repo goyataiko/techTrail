@@ -71,7 +71,9 @@
                                                         <div class="badge badge-secondary">Published</div>
                                                     @endif
                                                 </td>
-                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->category->name }}</a></td>
+                                                <td><a
+                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->category->name }}</a>
+                                                </td>
                                                 <td class="text-center">
                                                     @if (isset($ta->image))
                                                         <a href="{{ route('admin.blog.edit', [$ta->id]) }}">
@@ -79,8 +81,12 @@
                                                         </a>
                                                     @endif
                                                 </td>
-                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->title }}</a></td>
-                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y/m/d') }}</a></td>
+                                                <td><a
+                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->title }}</a>
+                                                </td>
+                                                <td><a
+                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y/m/d') }}</a>
+                                                </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <div class="btn border m-1"><i class='fas fa-folder-open'></i>
@@ -89,12 +95,13 @@
 
                                                         <!-- Button trigger modal -->
                                                         <div class="btn border m-1" data-toggle="modal"
-                                                            data-target="#delete1">
+                                                            data-target="#delete{{ $ta->id }}">
                                                             <i class='fas fa-trash'></i>
                                                         </div>
 
                                                         <!-- Modal -->
-                                                        <div class="modal fade" id="delete1" tabindex="-1" role="dialog"
+                                                        <div class="modal fade" id="delete{{ $ta->id }}"
+                                                            tabindex="-1" role="dialog"
                                                             aria-labelledby="exampleModalLabel" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                                 <div class="modal-content">
@@ -108,11 +115,11 @@
                                                                     </div>
                                                                     <div class="modal-body text-left">
                                                                         Post <span class="badge badge-primary">ID:
-                                                                            id </span> will be
+                                                                            {{ $ta->id }} </span> will be
                                                                         deleted.<br>
                                                                         Are you sure you want to proceed?
                                                                     </div>
-                                                                    <form action="#" method="post">@csrf
+                                                                    <form action="{{ route('admin.blog.destroy', [$ta->id]) }}" method="post">@csrf
                                                                         @method('DELETE')
                                                                         <div class="modal-footer">
                                                                             <button type="button" class="btn btn-secondary"
