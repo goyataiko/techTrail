@@ -64,27 +64,6 @@
                                         <tr>
                                             <td>1</td>
                                             <td>
-                                                <div class="badge badge-info">Draft</div>
-                                            </td>
-                                            <td><a href="#">Develope</a></td>
-                                            <td class="text-center"><a href="#">
-                                                    <img width="70px"
-                                                        src="{{ asset('frontend/assets/images/about-image.png') }}"></a>
-                                            </td>
-                                            <td><a href="#">Junior Technical Author</a></td>
-                                            <td><a href="#">2023/07/25</a></td>
-                                            <td>
-                                                <div class="d-flex justify-content-center">
-                                                    {{-- <div class="btn btn-success m-1"><i class='fas fa-edit'></i></div> --}}
-                                                    <div class="btn border m-1"><i class='fas fa-folder-open'></i>
-                                                    </div>
-                                                    <div class="btn border m-1"><i class='fas fa-trash'></i></div>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>
                                                 <div class="badge badge-secondary">Published</div>
                                             </td>
                                             <td><a href="#">Desgin</a></td>
@@ -102,12 +81,12 @@
 
                                                     <!-- Button trigger modal -->
                                                     <div class="btn border m-1" data-toggle="modal"
-                                                        data-target="#delete{{ $ta->id }}">
+                                                        data-target="#delete1">
                                                         <i class='fas fa-trash'></i>
                                                     </div>
 
                                                     <!-- Modal -->
-                                                    <div class="modal fade" id="delete{{ $ta->id }}" tabindex="-1"
+                                                    <div class="modal fade" id="delete1" tabindex="-1"
                                                         role="dialog" aria-labelledby="exampleModalLabel"
                                                         aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -122,12 +101,12 @@
                                                                 </div>
                                                                 <div class="modal-body text-left">
                                                                     Post <span class="badge badge-primary">ID:
-                                                                        {{ $ta->id }} </span> will be
+                                                                        id </span> will be
                                                                     deleted.<br>
                                                                     Are you sure you want to proceed?
                                                                 </div>
                                                                 <form
-                                                                    action="{{ route('admin.portfolio.destroy', [$ta->id]) }}"
+                                                                    action="#"
                                                                     method="post">@csrf
                                                                     @method('DELETE')
                                                                     <div class="modal-footer">

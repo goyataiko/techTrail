@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\BlogImage;
 use Illuminate\Http\Request;
 
 class BlogController extends Controller
@@ -31,23 +32,23 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
-        // 블로그 글 저장
-        $blog = Blog::create([
-            'title' => $request->input('title'),
-            'content' => $request->input('content'),
-            // 다른 필드들 추가
-        ]);
+        $create = new Blog;
 
-        // 이미지 업로드 및 관계 설정
-        if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
-                $path = $image->store('blog_images'); // 이미지를 저장할 경로 설정
-                $blog->images()->create(['image_path' => $path]);
-            }
+        $create->title = $request->title;
+        $create->category_id = $request->category_id;
+        $create->description = $request->description;
+        $create->created_at = $request->created_at;
+        $create->status = $request->status;
+
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('public/images/blog_images/');
+            $create->image = $path;
         }
+        
+        $create->save();
 
-        // 블로그 글 작성 완료 후 리다이렉트 또는 메시지 반환
-        return redirect()->route('blogs.index')->with('success', '블로그 글이 작성되었습니다.');
+        toastr()->success('Created successfully!');
+        return redirect('/admin/blog');
     }
 
     /**
