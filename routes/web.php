@@ -31,6 +31,9 @@ Route::get('/blog', function () {
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 Route::get('/portfolio/{id}', [HomeController::class, 'portfolio_detail'])->name('portfolio.detail');
 
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{id}', [HomeController::class, 'blog_detail'])->name('blog.detail');
+
 Route::get('/blog-detail', function () {
     return view('frontend.blog-detail');
 });

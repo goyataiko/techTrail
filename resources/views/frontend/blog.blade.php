@@ -26,86 +26,39 @@
                 <div class="col-sm-12">
                     <ul class="filter-menu filter-portPage">
                         <li class="active" data-filter="*">All Projects</li>
-                        <span>|</span>
-                        <li data-filter=".branding">Branding Design</li>
-                        <span>|</span>
-                        <li data-filter=".interface">User Interface</li>
-                        <span>|</span>
-                        <li data-filter=".experience">User Experience</li>
-                        <span>|</span>
-                        <li data-filter=".development">Web Development</li>
+                        @foreach ($category as $ca)
+                            <span>|</span>
+                            <li data-filter=".{{ $ca->slug }}">{{ $ca->name }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             {{-- portfolios, filter-item으로 js와 연결되어있음. --}}
             <div class="row portfolios">
-                <!-- single-post-Start -->
-                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
-                    <div class="pcard">
-                        <a href="#">
-                            <div class="pcard-body">
-                                <div class="pcard-image">
-                                    <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}">
-                                </div>
-                                <div class="pcard-content">
-                                    <div class="pcard-text">
-                                        <h6>東京オリンピックが開催</h6>
-                                        <div class="desc">
-                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                            </p>
+                @foreach ($table as $ta)
+                    <!-- single-post-Start -->
+                    <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item {{ $ta->category->slug }}">
+                        <div class="pcard">
+                            <a href="{{ route('blog.detail', [$ta->id]) }}">
+                                <div class="pcard-body">
+                                    <div class="pcard-image">
+                                        <img src="{{ Storage::url($ta->image) }}">
+                                    </div>
+                                    <div class="pcard-content">
+                                        <div class="pcard-text">
+                                            <h6>{{ $ta->title }}</h6>
+                                            <div class="desc">
+                                                <p>{!! Str::limit(strip_tags($ta->description), 100) !!}
+                                                </p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!-- single-post-End -->
-                <!-- single-post-Start -->
-                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
-                    <div class="pcard">
-                        <a href="#">
-                            <div class="pcard-body">
-                                <div class="pcard-image">
-                                    <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}">
-                                </div>
-                                <div class="pcard-content">
-                                    <div class="pcard-text">
-                                        <h6>東京オリンピックが開催</h6>
-                                        <div class="desc">
-                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- single-post-End -->
-                <!-- single-post-Start -->
-                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
-                    <div class="pcard">
-                        <a href="#">
-                            <div class="pcard-body">
-                                <div class="pcard-image">
-                                    <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}">
-                                </div>
-                                <div class="pcard-content">
-                                    <div class="pcard-text">
-                                        <h6>東京オリンピックが開催</h6>
-                                        <div class="desc">
-                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-                <!-- single-post-End -->
-                
+                    <!-- single-post-End -->
+                @endforeach
             </div>
         </div>
     </section>

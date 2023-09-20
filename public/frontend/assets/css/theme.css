@@ -458,7 +458,7 @@ header {
     width: 100%;
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
     .filter-menu span {
         display: none;
     }
@@ -1536,7 +1536,7 @@ Footer-Area
 }
 
 .quote-area {
-    margin: 5rem 0.25rem;    
+    margin: 5rem 0.25rem;
 }
 
 .quote-area h5 {
@@ -1595,6 +1595,14 @@ Footer-Area
 
 .portfolio-details .portfolio-description p {
     padding: 0;
+}
+
+.description h1,
+.description h2,
+.description h3,
+.description h4,
+.description h5 {
+    line-height: 1.6 !important;
 }
 
 .slide-inner {

@@ -27,19 +27,19 @@
         <div class="portfolio-wrapper">
             <div class="row portfolios">
 
-                @foreach ($selectedPortfolios as $item)
-                    <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $item->category->slug }}">
+                @foreach ($selectedPortfolios as $ta)
+                    <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $ta->category->slug }}">
                         <div class="single-portfolio">
                             <figure class="portfolio-image">
-                                <img src="{{ Storage::url($item->images->first()->image_path) }}" alt="">
+                                <img src="{{ Storage::url($ta->images->first()->image_path) }}" alt="">
                             </figure>
                             <div class="portfolio-content">
-                                <a href="{{ route('portfolio.detail', [$item->id]) }}" class="icon"><i
+                                <a href="{{ route('portfolio.detail', [$ta->id]) }}" class="icon"><i
                                         class="fas fa-plus"></i></a>
                                 <h4 class="title"><a
-                                        href="{{ route('portfolio.detail', [$item->id]) }}">{{ $item->title }}</a></h4>
-                                <div class="desc"><a href="{{ route('portfolio.detail', [$item->id]) }}">
-                                        <p>{!! Str::limit(strip_tags($item->description), 100) !!}</p>
+                                        href="{{ route('portfolio.detail', [$ta->id]) }}">{{ $ta->title }}</a></h4>
+                                <div class="desc"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
+                                        <p>{!! Str::limit(strip_tags($ta->description), 100) !!}</p>
                                     </a>
                                 </div>
                             </div>
