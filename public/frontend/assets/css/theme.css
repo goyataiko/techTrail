@@ -1054,13 +1054,53 @@ blockquote {
 /*------------------------
 6. Navigation-&-Pagination
 -------------------------*/
+
+.page-item {
+    border-radius: 5px;
+    background: #f1f1f1;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    line-height: 40px;
+    position: relative;
+    z-index: 1;
+    color: #141414;
+}
+
+.page-link,
+.page-item.disabled {
+    background-color: #f1f1f1;
+    border: none;
+    color: #141414;
+    transition: 0.3s ease;
+}
+
+.page-item.disabled>.page-link {
+    background-color: #f1f1f1;
+}
+
+.page-item span,
+.page-item a {
+    border-radius: 5px;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.page-link:hover {
+    background: #6777ef;
+    color: #ffffff;
+}
+
+
 .navigation,
 .pagination {
     width: 100%;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 30px;
 }
 
 .nav-links {
