@@ -77,7 +77,7 @@ class HomeController extends Controller
     {
         $category = BlogCategory::all();
 
-        $table = Blog::where('status', 2)->get();
+        $table = Blog::where('status', 2)->latest()->paginate(6);
 
         return view('frontend.blog', compact(
             'category',

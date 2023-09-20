@@ -60,7 +60,11 @@
                     <!-- single-post-End -->
                 @endforeach
             </div>
-        </div>
+            <div class="row">
+                <div class="paginate d-flex justify-content-center">
+                    {{ $table->links() }}
+                </div>
+            </div>
     </section>
     <!-- Blog-Area-End -->
 @endsection
