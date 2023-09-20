@@ -41,7 +41,7 @@
                         </div>
                         <!-- Single-Blog-Contents-End -->
                     @endforeach
-                    
+
                     {{-- <div class="single-blog">
                         <figure class="blog-image">
                             <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}" alt="">
