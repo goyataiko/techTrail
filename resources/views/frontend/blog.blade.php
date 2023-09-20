@@ -20,7 +20,7 @@
     </nav>
 
     <!-- Blog-Area-Start -->
-    <section class="section-padding col-md-9">
+    <section class="section-padding col-sm-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -40,7 +40,7 @@
             {{-- portfolios, filter-item으로 js와 연결되어있음. --}}
             <div class="row portfolios">
                 <!-- single-post-Start -->
-                <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item branding">
+                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
                     <div class="pcard">
                         <a href="#">
                             <div class="pcard-body">
@@ -61,6 +61,51 @@
                     </div>
                 </div>
                 <!-- single-post-End -->
+                <!-- single-post-Start -->
+                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
+                    <div class="pcard">
+                        <a href="#">
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- single-post-End -->
+                <!-- single-post-Start -->
+                <div data-wow-delay="0.3s" class="col-xl-4 col-md-6 filter-item branding">
+                    <div class="pcard">
+                        <a href="#">
+                            <div class="pcard-body">
+                                <div class="pcard-image">
+                                    <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}">
+                                </div>
+                                <div class="pcard-content">
+                                    <div class="pcard-text">
+                                        <h6>東京オリンピックが開催</h6>
+                                        <div class="desc">
+                                            <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- single-post-End -->
+                
             </div>
         </div>
     </section>
