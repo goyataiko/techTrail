@@ -9,8 +9,8 @@
             <h1>Create New Post</h1>
             <div class="section-header-breadcrumb">
                 <div class="breadcrumb-item active"><a href="/admin">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="/admin/portfolio">Portfolio</a></div>
-                <div class="breadcrumb-item">Create New Portfolio</div>
+                <div class="breadcrumb-item"><a href="/admin/blog">Blog</a></div>
+                <div class="breadcrumb-item">Create New Blog</div>
             </div>
         </div>
 
@@ -19,11 +19,10 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Write Your Portfolio</h4>
+                            <h4>Write Your Blog</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.blog.store') }}" method="post"
-                                enctype="multipart/form-data">
+                            <form action="{{ route('admin.blog.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
@@ -63,7 +62,7 @@
                                     </div>
                                 </div>
 
-                                
+
                                 {{-- <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Tags</label>
                                     <div class="col-sm-12 col-md-9">
