@@ -22,7 +22,8 @@
                             <h4>Edit Your Blog</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.blog.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.blog.update', [$table->id]) }}" method="post" enctype="multipart/form-data">
+                                @method('PUT')
                                 @csrf
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Title</label>
@@ -104,7 +105,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
                                     <div class="col-sm-12 col-md-9">
-                                        <button type="submit" class="btn btn-primary">Edit Post</button>
+                                        <button type="submit" class="btn btn-primary">Update</button>
                                     </div>
                                 </div>
                             </form>

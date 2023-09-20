@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Hero;
 use Illuminate\Http\Request;
-use File;
+use Illuminate\Support\Facades\File;
 
 class HeroController extends Controller
 {
