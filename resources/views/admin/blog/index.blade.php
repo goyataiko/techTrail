@@ -71,16 +71,16 @@
                                                         <div class="badge badge-secondary">Published</div>
                                                     @endif
                                                 </td>
-                                                <td><a href="#">{{ $ta->category->name }}</a></td>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->category->name }}</a></td>
                                                 <td class="text-center">
                                                     @if (isset($ta->image))
-                                                        <a href="#">
+                                                        <a href="{{ route('admin.blog.edit', [$ta->id]) }}">
                                                             <img width="70px" src="{{ Storage::url($ta->image) }}">
                                                         </a>
                                                     @endif
                                                 </td>
-                                                <td><a href="#">{{ $ta->title }}</a></td>
-                                                <td><a href="#">{{ $ta->created_at->format('Y/m/d') }}</a></td>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->title }}</a></td>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y/m/d') }}</a></td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
                                                         <div class="btn border m-1"><i class='fas fa-folder-open'></i>

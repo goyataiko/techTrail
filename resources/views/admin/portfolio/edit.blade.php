@@ -131,7 +131,6 @@
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2"></label>
                                     <div class="col-sm-12 col-md-9">
                                         <button type="submit" class="btn btn-primary">Edit Post</button>
-                                        <button class="btn btn-primary ml-2"><a href="#">View Post</a></button>
                                     </div>
                                 </div>
                             </form>
