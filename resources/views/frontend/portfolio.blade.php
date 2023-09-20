@@ -28,9 +28,9 @@
                 <div class="col-sm-12">
                     <ul class="filter-menu filter-portPage">
                         <li class="active" data-filter="*">All Projects</li>
-                        @foreach ($portfolio_category as $category)
+                        @foreach ($category as $ca)
                             <span>|</span>
-                            <li data-filter=".{{ $category->slug }}">{{ $category->name }}</li>
+                            <li data-filter=".{{ $ca->slug }}">{{ $ca->name }}</li>
                         @endforeach
                     </ul>
                 </div>
@@ -38,19 +38,19 @@
             <div class="row portfolios">
 
 
-                @foreach ($selectedPortfolios as $item)
-                    <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $item->category->slug }}">
+                @foreach ($selectedPortfolios as $ta)
+                    <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item {{ $ta->category->slug }}">
                         <div class="single-portfolio">
                             <figure class="portfolio-image">
-                                <img src="{{ Storage::url($item->images->first()->image_path) }}" alt="">
+                                <img src="{{ Storage::url($ta->images->first()->image_path) }}" alt="">
                             </figure>
                             <div class="portfolio-content">
-                                <a href="{{ route('portfolio.detail', [$item->id]) }}" class="icon"><i
+                                <a href="{{ route('portfolio.detail', [$ta->id]) }}" class="icon"><i
                                         class="fas fa-plus"></i></a>
-                                <h4 class="title"><a href="{{ route('portfolio.detail', [$item->id]) }}">
-                                        {{ $item->title }}</a></h4>
+                                <h4 class="title"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
+                                        {{ $ta->title }}</a></h4>
                                 <div class="desc">
-                                    <p>{!! Str::limit(strip_tags($item->description), 100) !!}</p>
+                                    <p>{!! Str::limit(strip_tags($ta->description), 100) !!}</p>
                                 </div>
                             </div>
                         </div>

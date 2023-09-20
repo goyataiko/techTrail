@@ -24,16 +24,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/blog', function () {
-    return view('frontend.blog');
-});
-
 Route::get('/portfolio', [HomeController::class, 'portfolio'])->name('portfolio');
 Route::get('/portfolio/{id}', [HomeController::class, 'portfolio_detail'])->name('portfolio.detail');
 
-Route::get('/blog-detail', function () {
-    return view('frontend.blog-detail');
-});
+Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
+Route::get('/blog/{id}', [HomeController::class, 'blog_detail'])->name('blog.detail');
+
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

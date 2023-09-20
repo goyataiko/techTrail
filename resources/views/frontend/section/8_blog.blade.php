@@ -17,94 +17,31 @@
         <div class="row">
             <div class="col-sm-12">
                 <div class="blog-slider">
-                    <!-- Single-Blog-Contents-Start -->
-                    <div class="col-xl-4 col-md-6">
-                        <div class="pcard">
-                            <a href="#">
-                                <div class="pcard-body">
-                                    <div class="pcard-image">
-                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
-                                    </div>
-                                    <div class="pcard-content">
-                                        <div class="pcard-text">
-                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
-                                            <div class="desc">
-                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                                </p>
+                    @foreach ($blogs as $ta)
+                        <!-- Single-Blog-Contents-Start -->
+                        <div class="col-xl-4 col-md-6">
+                            <div class="pcard">
+                                <a href="{{ route('blog.detail', [$ta->id]) }}">
+                                    <div class="pcard-body">
+                                        <div class="pcard-image">
+                                            <img src="{{ Storage::url($ta->image) }}">
+                                        </div>
+                                        <div class="pcard-content">
+                                            <div class="pcard-text">
+                                                <h6>{{ $ta->title }}</h6>
+                                                <div class="desc">
+                                                    <p>{!! Str::limit(strip_tags($ta->description), 100) !!}
+                                                    </p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </a>
+                                </a>
+                            </div>
                         </div>
-                    </div>
-                    <!-- Single-Blog-Contents-End -->
-                    <!-- Single-Blog-Contents-Start -->
-                    <div class="col-xl-4 col-md-6">
-                        <div class="pcard">
-                            <a href="#">
-                                <div class="pcard-body">
-                                    <div class="pcard-image">
-                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
-                                    </div>
-                                    <div class="pcard-content">
-                                        <div class="pcard-text">
-                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
-                                            <div class="desc">
-                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single-Blog-Contents-End -->
-                    <!-- Single-Blog-Contents-Start -->
-                    <div class="col-xl-4 col-md-6">
-                        <div class="pcard">
-                            <a href="#">
-                                <div class="pcard-body">
-                                    <div class="pcard-image">
-                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
-                                    </div>
-                                    <div class="pcard-content">
-                                        <div class="pcard-text">
-                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
-                                            <div class="desc">
-                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single-Blog-Contents-End -->
-                    <!-- Single-Blog-Contents-Start -->
-                    <div class="col-xl-4 col-md-6">
-                        <div class="pcard">
-                            <a href="#">
-                                <div class="pcard-body">
-                                    <div class="pcard-image">
-                                        <img src="{{ asset('frontend/assets/images/blog-5.jpg') }}">
-                                    </div>
-                                    <div class="pcard-content">
-                                        <div class="pcard-text">
-                                            <h6>東京オリンピッンピクが開催オリンピックが開催</h6>
-                                            <div class="desc">
-                                                <p>オリンピックは4年に一度開催される国際的なスポーツ大会であり、世界中から多くの選手が集まる。東京オリンピックは、コロナ禍で延期されたものの、多くの人々の熱い思いが詰まった大会となった。
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- Single-Blog-Contents-End -->
+                        <!-- Single-Blog-Contents-End -->
+                    @endforeach
+
                     {{-- <div class="single-blog">
                         <figure class="blog-image">
                             <img src="{{ asset('frontend/assets/images/blog-1.jpg') }}" alt="">

@@ -249,6 +249,12 @@ select.form-control:not([size]):not([multiple]) {
 .form-group {
   margin-bottom: 25px;
 }
+
+.dropdown-item, .dropdown-item {
+  color: #282828 !important;
+  text-decoration: none;
+}
+
 .form-group a {
   color: #fff;
   text-decoration: none;
@@ -3628,8 +3634,4 @@ li {
 
 ::-webkit-scrollbar-track {
   background-color: #eee;
-}
-
-.modal-backdrop {
-  display: none !important;
 }

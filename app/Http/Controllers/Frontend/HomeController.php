@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
+use App\Models\BlogCategory;
 use App\Models\Hero;
 use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
@@ -15,6 +17,8 @@ class HomeController extends Controller
     {
         $hero = Hero::first();
         $typerTitles = TyperTitle::all();
+
+        //------------ portfolio관련 --------------//
 
         $portfolio_category = PortfolioCategory::all();
 
@@ -32,24 +36,32 @@ class HomeController extends Controller
 
         // dd($selectedPortfolios);
 
+        //------------ Blog 관련 --------------//
+
+        $blogs = Blog::where('status', 2)->orderBy('created_at', 'desc')
+            ->take(6)->get();
+
+
         return view('frontend.home', compact(
             'hero',
             'typerTitles',
 
             'portfolio_category',
             'selectedPortfolios',
+
+            'blogs',
         ));
     }
 
     public function portfolio()
     {
-        $portfolio_category = PortfolioCategory::all();
+        $category = PortfolioCategory::all();
 
         //모든 포트폴리오 보이도록 할때는 이것 이용
         $selectedPortfolios = Portfolio::where('status', 2)->get();
 
         return view('frontend.portfolio', compact(
-            'portfolio_category',
+            'category',
             'selectedPortfolios',
         ));
     }
@@ -59,5 +71,24 @@ class HomeController extends Controller
         $table = Portfolio::find($id);
         // dd($table);
         return view('frontend.portfolio-detail', compact('table'));
+    }
+
+    public function blog()
+    {
+        $category = BlogCategory::all();
+
+        $table = Blog::where('status', 2)->get();
+
+        return view('frontend.blog', compact(
+            'category',
+            'table',
+        ));
+    }
+
+    public function blog_detail(string $id)
+    {
+        $table = Blog::find($id);
+        // dd($table);
+        return view('frontend.blog-detail', compact('table'));
     }
 }
