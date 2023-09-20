@@ -71,8 +71,8 @@
                                                         <div class="badge badge-secondary">Published</div>
                                                     @endif
                                                 </td>
-                                                <td><a
-                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->category->name }}</a>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">
+                                                        {{ $ta->category->name }}</a>
                                                 </td>
                                                 <td class="text-center">
                                                     @if (isset($ta->image))
@@ -81,11 +81,11 @@
                                                         </a>
                                                     @endif
                                                 </td>
-                                                <td><a
-                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->title }}</a>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">
+                                                        {{ $ta->title }}</a>
                                                 </td>
-                                                <td><a
-                                                        href="{{ route('admin.blog.edit', [$ta->id]) }}">{{ $ta->created_at->format('Y/m/d') }}</a>
+                                                <td><a href="{{ route('admin.blog.edit', [$ta->id]) }}">
+                                                        {{ $ta->created_at->format('Y/m/d') }}</a>
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
