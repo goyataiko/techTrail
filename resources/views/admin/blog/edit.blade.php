@@ -22,7 +22,8 @@
                             <h4>Edit Your Blog</h4>
                         </div>
                         <div class="card-body">
-                            <form action="{{ route('admin.blog.update', [$table->id]) }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('admin.blog.update', [$table->id]) }}" method="post"
+                                enctype="multipart/form-data">
                                 @method('PUT')
                                 @csrf
                                 <div class="form-group row mb-4">
@@ -58,8 +59,8 @@
                                         <select name="category_id" class="form-control selectric">
                                             @foreach ($category as $cat)
                                                 <option value="{{ $cat->id }}"
-                                                    {{ $table->category_id === $cat->id ? 'selected' : '' }}
-                                                    >{{ $cat->name }}</option>
+                                                    {{ $table->category_id === $cat->id ? 'selected' : '' }}>
+                                                    {{ $cat->name }}</option>
                                             @endforeach
                                         </select>
                                     </div>
@@ -85,7 +86,8 @@
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Created
                                         Time</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="created_at" class="form-control datepicker" value="{{ $table->created_at->format('Y-m-d') }}">
+                                        <input type="text" name="created_at" class="form-control datepicker"
+                                            value="{{ $table->created_at->format('Y-m-d') }}">
                                     </div>
                                 </div>
 

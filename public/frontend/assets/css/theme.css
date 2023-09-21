@@ -450,12 +450,29 @@ header {
 /* --------------------
 06. Portfolio-Area
 ---------------------- */
-.filter-menu {
+.filter-menu,
+.ca-menu {
     list-style: none;
     margin: -15px 0 40px 0;
     padding: 0;
     text-align: center;
     width: 100%;
+}
+
+.ca-menu {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.ca-menu a {
+    color: #282828;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.ca-menu a:hover {
+    color: #6777ef;
 }
 
 @media (max-width: 768px) {

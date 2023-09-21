@@ -47,16 +47,12 @@
 
         <div class="col-sm-12 mb-5">
             <h5 class="text-center pb-2">他のカテゴリー</h5>
-            <ul class="filter-menu filter-portPage">
-                <li>All Posts</li>
-                <span>|</span>
-                <li>Branding Design</li>
-                <span>|</span>
-                <li>User Interface</li>
-                <span>|</span>
-                <li>User Experience</li>
-                <span>|</span>
-                <li>Web Development</li>
+            <ul class="ca-menu">
+                <li> <a href="{{ route('blog', ['id' => 0]) }}">All Posts </a> </li>
+                @foreach ($category as $ca)
+                    <span>|</span>
+                    <li> <a href="{{ route('blog', ['id' => $ca->id]) }}"> {{ $ca->name }}</a></li>
+                @endforeach
             </ul>
         </div>
     </section>
