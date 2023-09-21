@@ -73,8 +73,9 @@ class HomeController extends Controller
         return view('frontend.portfolio-detail', compact('table'));
     }
 
-    public function blog()
+    public function blog(Request $request)
     {
+        $category_id = $request->id;
         $category = BlogCategory::all();
 
         $table = Blog::where('status', 2)->latest()->paginate(6);
@@ -82,13 +83,18 @@ class HomeController extends Controller
         return view('frontend.blog', compact(
             'category',
             'table',
+            'category_id',
         ));
     }
 
     public function blog_detail(string $id)
     {
+        $category = BlogCategory::all();
         $table = Blog::find($id);
         // dd($table);
-        return view('frontend.blog-detail', compact('table'));
+        return view('frontend.blog-detail', compact(
+            'category',
+            'table',
+        ));
     }
 }

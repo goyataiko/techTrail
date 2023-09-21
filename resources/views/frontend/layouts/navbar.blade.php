@@ -19,11 +19,7 @@
                 </li>
                 <li class="nav-item">
                     @if (request()->path() === '/')
-                        <a class="nav-link" href="/#portfolio-page">Portfolio <i
-                                class="fas fa-angle-down"></i></a>
-                        <ul class="sub_menu">
-                            <li><a href="/portfolio">Portfolio Grid</a></li>
-                        </ul>
+                        <a class="nav-link" href="/#portfolio-page">Portfolio</a>
                     @else
                         <a class="nav-link" href="/portfolio">Portfolio</a>
                     @endif
@@ -33,10 +29,7 @@
                 </li>
                 <li class="nav-item">
                     @if (request()->path() === '/')
-                        <a class="nav-link" href="/#blog-page">Blog <i class="fas fa-angle-down"></i></a>
-                        <ul class="sub_menu">
-                            <li><a href="/blog">Blog Grid</a></li>
-                        </ul>
+                        <a class="nav-link" href="/#blog-page">Blog</a>
                     @else
                         <a class="nav-link" href="/blog">Blog</a>
                     @endif
