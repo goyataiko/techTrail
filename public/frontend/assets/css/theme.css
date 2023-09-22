@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@400;500;600&display=swap');
 
 body {
     overflow-x: hidden;
-    font-family: "游ゴシック体", 'Poppins', YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
+    font-family: "游ゴシック体", 'Montserrat', YuGothic, "游ゴシック", "Yu Gothic", sans-serif;
 }
 
 section {
@@ -875,7 +875,40 @@ blockquote {
 10. Contact-Form-Area
 --------------------------- */
 .contact-form {
-    margin-top: 8px;
+    margin-top: 60px;
+    /* background-color: #fff; */
+    border-radius: 10px;
+}
+
+.contact-form h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #6777ef;
+    margin: 0;
+}
+
+.card-header {
+    padding: 15px 25px 10px;
+}
+
+.card-body {
+    padding: 10px 25px 20px;
+}
+
+.card-body label {
+    text-align: right;
+    padding: 0 0 8px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.card-body button {
+    padding: 10px 25px;
+    font-size: 14px;
 }
 
 .input-box {
@@ -1180,7 +1213,7 @@ blockquote {
 Footer-Area
 --------------------- */
 .footer-area {
-    padding-top: 90px;
+    /* padding-top: 90px; */
     /* padding-bottom: 30px; */
     background-color: #000;
 }
@@ -1805,7 +1838,7 @@ Footer-Area
 }
 
 @media (max-width: 580px) {
-  .accordion {
+    .accordion {
         margin: 20px 0px 0px 0px;
     }
 }
@@ -1830,6 +1863,61 @@ Footer-Area
 
 .progress-bar.initial {
     width: 20%;
+}
+
+#blog-page.section-padding-top {
+    padding-top: 150px;
+}
+
+
+.footer-contact {
+    margin-top: 120px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.footer-contact>.overlay {
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    z-index: -1;
+}
+
+.footer-contact .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info {
+    margin-top: 110px;
+}
+
+.footer-contact h3 {
+    color: #fff;
+    font-size: 60px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.footer-contact h6 {
+    color: #fff;
+    font-size: 24px;
+}
+
+.footer-contact p {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #fff;
+}
+
+.contact-info i {
+    color: #fff;
+    margin: 0 10px;
 }
 
 ::-webkit-scrollbar {
