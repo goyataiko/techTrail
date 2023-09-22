@@ -1,4 +1,3 @@
-
 <!-- Contact-Area-Start -->
 
 <section class="footer-contact" id="contact">
@@ -18,38 +17,37 @@
                         <h4>Contact</h4>
                     </div>
                     <div class="card-body">
-                        <form action="#" method="post"
-                            @csrf
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-2">Email</label>
-                                <div class="col-sm-12 col-md-10">
-                                    <input type="text" name="email" class="form-control">
-                                </div>
+                        <form action="#" method="post" @csrf <div class="form-group row mb-4">
+                            <label class="col-form-label col-2">Email</label>
+                            <div class="col-sm-12 col-md-10">
+                                <input type="text" name="email" class="form-control">
                             </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-2">Title</label>
-                                <div class="col-sm-12 col-md-10">
-                                    <input type="text" name="title" value="{{old('title')}}" class="form-control">
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-2">Content</label>
-                                <div class="col-sm-12 col-md-10">
-                                    <textarea name="content" class="form-control"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group row mb-4">
-                                <label class="col-form-label col-2"></label>
-                                <div class="col-sm-12 col-md-10">
-                                    <button class="button-primary mouse-dir" type="submit">Send Now <span class="dir-part"></span></button>
-                                </div>
-                            </div>
-                        </form>
                     </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2">Title</label>
+                        <div class="col-sm-12 col-md-10">
+                            <input type="text" name="title" value="{{ old('title') }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2">Content</label>
+                        <div class="col-sm-12 col-md-10">
+                            <textarea name="content" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2"></label>
+                        <div class="col-sm-12 col-md-10">
+                            <button class="button-primary mouse-dir" type="submit">Send Now <span
+                                    class="dir-part"></span></button>
+                        </div>
+                    </div>
+                    </form>
                 </div>
-
             </div>
+
         </div>
+    </div>
     </div>
 </section>
 <!-- Contact-Area-End -->
