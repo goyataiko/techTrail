@@ -7,7 +7,7 @@
                 <div class="row">
                     <h3 class="title">Skills</h3>
                 </div>
-                <div class="row skills wow" data-wow-delay="0.5s" >
+                <div class="row skills wow fadeInUp" data-wow-delay="0.2s">
 
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
