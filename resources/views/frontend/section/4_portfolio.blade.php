@@ -7,8 +7,8 @@
                 <div class="section-title">
                     <h3 class="title">Latest Portfolio</h3>
                     <div class="desc">
-                        <p>Earum quos animi numquam excepturi eveniet explicabo repellendus rem esse. Quae quasi
-                            odio enim.</p>
+                        <p>技術の探求、学び、成長を共有する場です。開発者の深層心理からインス技術の探求、学び、成長を共有する場です。
+                        </p>
                     </div>
                 </div>
             </div>

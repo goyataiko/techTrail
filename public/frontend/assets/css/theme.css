@@ -99,7 +99,7 @@ Button-Styles
     display: inline-block;
     width: 170px;
     height: 60px;
-    background-color: #190844;
+    background-color: #332b49;
     text-align: center;
     line-height: 60px;
     font-size: 20px;
@@ -108,7 +108,7 @@ Button-Styles
 }
 
 .button-dark:hover {
-    color: #190844;
+    color: #332b49;
 }
 
 .button-primary.mouse-dir .dir-part,
@@ -139,6 +139,12 @@ Button-Styles
     border: 1px solid #6777ef;
     font-size: 16px;
     font-weight: 600;
+}
+
+.about-text .button-primary-trans {
+    padding: 10px 25px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .button-primary-trans .icon {
@@ -235,7 +241,7 @@ Button-Styles
 }
 
 .menu_fix .navbar-nav li a {
-    color: #190844;
+    color: #332b49;
 }
 
 .main_menu .menu_icon {
@@ -264,7 +270,7 @@ Button-Styles
 }
 
 .menu_fix .menu_icon li a {
-    color: #190844;
+    color: #332b49;
 }
 
 .main_menu .sub_menu {
@@ -287,7 +293,7 @@ Button-Styles
 }
 
 .main_menu .sub_menu>li>a {
-    color: #190844;
+    color: #332b49;
     margin: 0;
     line-height: 0;
 }
@@ -617,8 +623,13 @@ blockquote {
 /* ----------------------
 07. Skill-Area
 ----------------------- */
+.skills-area.section-padding-top {
+    padding-top: 120px;
+}
+
 .skills-area .single-image {
-    padding-left: 70px;
+    padding-left: 60px;
+    padding-top: 10px;
 }
 
 .skills-area .single-image img {
@@ -642,8 +653,8 @@ blockquote {
 
 .bar_group__bar.thick {
     width: 0%;
-    height: 15px;
-    background: #558bff;
+    height: 10px;
+    background: #6777ef;
     -webkit-transition: width 1s;
     -o-transition: width 1s;
     transition: width 1s;
@@ -717,7 +728,7 @@ blockquote {
 }
 
 .bar_group .elastic {
-    background: #558bff;
+    background: #6777ef;
     -webkit-transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
     -o-transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
     transition-timing-function: cubic-bezier(0.5, 0.25, 0.375, 1.335);
@@ -796,7 +807,7 @@ blockquote {
 }
 
 .icon-info h6 a {
-    color: #190844;
+    color: #332b49;
 }
 
 .icon-info h6 a:hover {
@@ -993,7 +1004,7 @@ blockquote {
 }
 
 .single-blog .title a {
-    color: #190844;
+    color: #332b49;
     padding: 10px 0px;
 }
 
@@ -1758,7 +1769,7 @@ Footer-Area
 }
 
 .copyright p span {
-    color: #190844;
+    color: #332b49;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
@@ -1784,6 +1795,37 @@ Footer-Area
     background: #ff895e
 }
 
+.accordion-item i {
+    margin-right: 15px;
+    color: #6777ef;
+}
+
+.accordion {
+    margin: 20px 0px 0px 20px;
+}
+
+@media (max-width: 580px) {
+  .accordion {
+        margin: 20px 0px 0px 0px;
+    }
+}
+
+.skill {
+    margin-bottom: 1rem;
+}
+
+.skill p {
+    margin-bottom: 0.5rem;
+}
+
+.skill-texts {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
 
 ::-webkit-scrollbar {
     width: 15px;

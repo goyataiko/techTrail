@@ -5,62 +5,145 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="section-title">
-                            <h3 class="title">Skills</h3>
-                            <div class="desc">
-                                <p>Earum quos animi numquam excepturi eveniet explicabo repellendus rem esse.
-                                    Quae quasi
-                                    odio enim.</p>
+                    <h3 class="title">Skills</h3>
+                </div>
+                <div class="row skills">
+
+                    <div class="accordion" id="accordionExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <i class="fas fa-laptop-code"></i>
+                                    FrontEnd Developer
+                                </button>
+                            </h2>
+                            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Bootstrap</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">JavaScript</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Git</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <i class="fas fa-layer-group"></i>
+                                    BackEnd Developer
+                                </button>
+                            </h2>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">PHP</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Laravel</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">MySql</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <i class="fas fa-swatchbook"></i>
+                                    Desinger
+                                </button>
+                            </h2>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                                data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Illustrator</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Photoshop</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Figma</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row skills">
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.3s" data-max="100">
-                            <div class="title">Web Design</div>
-                            <div class="bar_group__bar thick elastic" data-value="95" data-color="#558bff"
-                                data-tooltip="true" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.5s" data-max="100">
-                            <div class="title">Graphic Design</div>
-                            <div class="bar_group__bar thick elastic" data-value="85" data-color="#fecc90"
-                                data-tooltip="true" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.3s" data-max="100">
-                            <div class="title">Web Developement</div>
-                            <div class="bar_group__bar thick elastic" data-value="70" data-color="#ff885e"
-                                data-tooltip="true" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.5s" data-max="100">
-                            <div class="title">Application Development</div>
-                            <div class="bar_group__bar thick elastic" data-value="90" data-color="#282828"
-                                data-tooltip="true" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.3s" data-max="100">
-                            <div class="title">Analytical Abilities</div>
-                            <div class="bar_group__bar thick elastic" data-value="80" data-tooltip="true"
-                                data-color="#190844" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="bar_group wow fadeInUp" data-wow-delay="0.5s" data-max="100">
-                            <div class="title">Problem Solbing</div>
-                            <div class="bar_group__bar thick elastic" data-value="65" data-tooltip="true"
-                                data-color="#9dd3ff" data-show-values="false" data-unit="%"></div>
-                        </div>
-                    </div>
+
                 </div>
             </div>
+
             <div class="col-lg-6 d-none d-lg-block">
                 <figure class="single-image text-right wow fadeInRight">
                     <img src="{{ asset('frontend/assets/images/skill.jpg') }}" alt="">
