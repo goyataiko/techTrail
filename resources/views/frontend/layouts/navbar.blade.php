@@ -18,17 +18,14 @@
                     <a class="nav-link" href="/#about-page">About</a>
                 </li>
                 <li class="nav-item">
-                    @if (request()->path() === '/')
+                    @if (isset($hero))
                         <a class="nav-link" href="/#portfolio-page">Portfolio</a>
                     @else
                         <a class="nav-link" href="/portfolio">Portfolio</a>
                     @endif
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="/#skills-page">Skills</a>
-                </li>
-                <li class="nav-item">
-                    @if (request()->path() === '/')
+                    @if (isset($hero))
                         <a class="nav-link" href="/#blog-page">Blog</a>
                     @else
                         <a class="nav-link" href="/blog">Blog</a>
