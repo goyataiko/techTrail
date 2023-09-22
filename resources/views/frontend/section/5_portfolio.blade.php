@@ -33,13 +33,11 @@
                             <figure class="portfolio-image">
                                 <img src="{{ Storage::url($ta->images->first()->image_path) }}" alt="">
                             </figure>
-                            <div class="portfolio-content">
-                                <a href="{{ route('portfolio.detail', [$ta->id]) }}" class="icon"><i
-                                        class="fas fa-plus"></i></a>
+                            <div class="portfolio-content">                                
                                 <h4 class="title"><a
                                         href="{{ route('portfolio.detail', [$ta->id]) }}">{{ $ta->title }}</a></h4>
                                 <div class="desc"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
-                                        <p>{!! Str::limit(strip_tags($ta->description), 100) !!}</p>
+                                        <p>{!! Str::limit(strip_tags($ta->description), 50) !!}</p>
                                     </a>
                                 </div>
                             </div>
