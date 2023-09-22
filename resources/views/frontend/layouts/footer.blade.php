@@ -1,50 +1,62 @@
+<!-- Contact-Area-Start -->
+
+<section class="footer-contact" id="contact">
+    <div class="overlay" style="background: url('{{ asset('frontend/assets/images/footer.jpg') }}') 50% 50%"></div>
+    <div class="container">
+        <div class="row">
+            <div class="contact-info col-lg-4">
+                <p>Contact</p>
+                <h3>Let's Work<br>
+                    Together.</h3>
+                <h6><a href="#"><i class="fab fa-github"></i>Git Hub</a></h6>
+            </div>
+            <div class="contact-form col-lg-7">
+
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Contact</h4>
+                    </div>
+                    <div class="card-body">
+                        <form action="#" method="post" @csrf <div class="form-group row mb-4">
+                            <label class="col-form-label col-2">Email</label>
+                            <div class="col-sm-12 col-md-10">
+                                <input type="text" name="email" class="form-control">
+                            </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2">Title</label>
+                        <div class="col-sm-12 col-md-10">
+                            <input type="text" name="title" value="{{ old('title') }}" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2">Content</label>
+                        <div class="col-sm-12 col-md-10">
+                            <textarea name="content" class="form-control"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row mb-4">
+                        <label class="col-form-label col-2"></label>
+                        <div class="col-sm-12 col-md-10">
+                            <button class="button-primary mouse-dir" type="submit">Send Now <span
+                                    class="dir-part"></span></button>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</section>
+<!-- Contact-Area-End -->
+
+
 <!-- Footer-Area-Start -->
 
 <footer class="footer-area">
-    <div class="container">
-        <div class="row footer-widgets">
-            <div class="col-md-12 col-lg-3 widget">
-                <div class="text-box">
-                    <figure class="footer-logo">
-                        <img src="{{ asset('frontend/assets/images/logo-x-w.png') }}" alt="">
-                    </figure>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, libero. </p>
-                    <ul class="d-flex flex-wrap">
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-behance"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-md-4 col-lg-2 offset-lg-1 widget">
-                <h3 class="widget-title">Useful Link</h3>
-                <ul class="nav-menu">
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 col-lg-3 widget">
-                <h3 class="widget-title">Contact Info</h3>
-                <ul>
-                    <li>17232 Broadway Suite 308, Jackson Heights, 11372, NY, United States.</li>
-                    <li><a href="#">+1347-430-9510</a></li>
-                    <li><a href="#">websolutionus1@gmail.com</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4 col-lg-3 widget">
-                <h3 class="widget-title">Help</h3>
-                <ul class="nav-menu">
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">404 Page</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Documentation</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
+
     <div class="footer-bottom">
         <div class="container">
             <div class="row">

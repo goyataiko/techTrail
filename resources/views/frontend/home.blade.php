@@ -9,6 +9,6 @@
 {{-- @include('frontend.section.6_experience')
 @include('frontend.section.7_testimonial') --}}
 @include('frontend.section.8_blog')
-@include('frontend.section.9_contact')
+{{-- @include('frontend.section.9_contact') --}}
 
 @endsection

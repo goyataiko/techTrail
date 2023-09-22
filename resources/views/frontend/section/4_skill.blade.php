@@ -40,15 +40,6 @@
                                             <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
-                                    <div class="skill">
-                                        <div class="skill-texts">
-                                            <p class="progress-text">Git</p>
-                                            <span class="progress-number">90%</span>
-                                        </div>
-                                        <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>
@@ -101,7 +92,7 @@
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                                     data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                                     <i class="fas fa-swatchbook"></i>
-                                    Desinger
+                                    Tools
                                 </button>
                             </h2>
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
@@ -110,7 +101,16 @@
 
                                     <div class="skill">
                                         <div class="skill-texts">
-                                            <p class="progress-text">Illustrator</p>
+                                            <p class="progress-text">Git</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>                                    
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">Photoshop</p>
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
@@ -119,7 +119,7 @@
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
-                                            <p class="progress-text">Photoshop</p>
+                                            <p class="progress-text">Illustrator</p>
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
