@@ -13,20 +13,20 @@
                 <div class="about-text">
                     <h3 class="title wow fadeInUp" data-wow-delay="0.3s">About Me</h3>
                     <div class="sub-title wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos repellendus
-                            sapiente, quae et eos dolorum.</p>
+                        <p>技術の探求、学び、成長を共有する場です。</p>
                     </div>
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Consectetur adipisicing elit. Laborum, magni libero
-                            similique, laboriosam, delectus reiciendis minima minus dolorem sit fuga rerum atque
-                            vel quaerat ipsum perspiciatis neque maxime recusandae fugit</p>
-                        <p>Ipsum dolor sit amet, consectetur adipisicing elit. Laborum, magni libero
-                            similique, laboriosam, delectus reiciendis minima minus dolorem sit fuga rerum atque
-                            vel quaerat ipsum perspiciatis neque maxime recusandae fugit.</p>
+                        <p>技術の探求、学び、成長を共有する場です。開発者の深層心理からインス技術の探求、学び、成長を共有する場です。開発者の深層心理からインスピレーションを受け、新たなスキルを磨き、未来を切り開いていきましょう。技術の探求、学び、成長を共有する場です。開発者の深層心理からインスピレーションを受け、新たなスキルを磨き、未来を切り開いていきましょう。</p>
+                        
                     </div>
                     <a href="#" class="button-primary-trans mouse-dir wow fadeInUp" data-wow-delay="0.5s">
                         <span class="icon"><i class="fal fa-download"></i></span>
-                        <span class="text">Download Resume</span>
+                        <span class="text">Resume</span>
+                        <span class="dir-part"></span>
+                    </a>
+                    <a href="#" class="button-primary-trans mouse-dir wow fadeInUp ms-2" data-wow-delay="0.5s">
+                        <span class="icon"><i class="fal fa-download"></i></span>
+                        <span class="text">Career</span>
                         <span class="dir-part"></span>
                     </a>
                 </div>
