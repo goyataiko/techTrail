@@ -49,8 +49,9 @@
                                         class="fas fa-plus"></i></a>
                                 <h4 class="title"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
                                         {{ $ta->title }}</a></h4>
-                                <div class="desc">
-                                    <p>{!! Str::limit(strip_tags($ta->description), 100) !!}</p>
+                                <div class="desc"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
+                                        <p>{!! Str::limit(strip_tags($ta->description), 60) !!}</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>

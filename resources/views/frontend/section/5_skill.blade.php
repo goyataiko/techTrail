@@ -7,7 +7,7 @@
                 <div class="row">
                     <h3 class="title">Skills</h3>
                 </div>
-                <div class="row skills">
+                <div class="row skills wow" data-wow-delay="0.5s" >
 
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
@@ -28,7 +28,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -37,7 +37,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -46,7 +46,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -71,7 +71,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -80,7 +80,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -89,7 +89,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -114,7 +114,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -123,7 +123,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
@@ -132,7 +132,7 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" style="width: 90%" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -154,3 +154,25 @@
 </section>
 
 <!-- Skills-Area-End -->
+
+@push('scripts')
+    <script>
+        const progressBars = document.querySelectorAll('.progress-bar');
+
+        // Loop through each progress bar and set its initial width to 0%
+        progressBars.forEach((bar) => {
+            bar.style.width = '0%';
+
+            // Add an animation class to start the animation
+            bar.classList.add('initial');
+
+            // Get the data-percent value
+            const percent = bar.getAttribute('data-percent');
+
+            // Use a setTimeout to delay adding the actual percentage width
+            setTimeout(() => {
+                bar.style.width = percent + '%';
+            }, 100);
+        });
+    </script>
+@endpush

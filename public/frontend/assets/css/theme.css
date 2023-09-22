@@ -1825,6 +1825,11 @@ Footer-Area
 
 .progress-bar {
     border-radius: 5px;
+    transition: width 2s ease-in-out;
+}
+
+.progress-bar.initial {
+    width: 20%;
 }
 
 ::-webkit-scrollbar {
