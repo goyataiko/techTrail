@@ -9,7 +9,6 @@
                 </div>
                 <div class="row skills">
 
-
                     <div class="accordion" id="accordionExample">
                         <div class="accordion-item">
                             <h2 class="accordion-header" id="headingOne">
@@ -108,7 +107,7 @@
                             <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
                                 data-bs-parent="#accordionExample">
                                 <div class="accordion-body">
-                                    
+
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Illustrator</p>
@@ -144,8 +143,6 @@
 
                 </div>
             </div>
-
-
 
             <div class="col-lg-6 d-none d-lg-block">
                 <figure class="single-image text-right wow fadeInRight">
