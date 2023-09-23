@@ -14,7 +14,7 @@
 
                 <div class="card">
                     <div class="card-header">
-                        <h4>メール連絡フォーム</h4>
+                        <h4>メール送信フォーム</h4>
                     </div>
                     <div class="card-body">
                         <form action="{{ route('contact') }}" method="post">
@@ -22,36 +22,37 @@
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-2">Email</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input type="text" name="email" class="form-control" value="{{ old('email') }}">
+                                    <input type="text" name="email" class="form-control"
+                                        value="{{ old('email') }}">
                                     @if ($errors->has('email'))
                                         <code>{{ $errors->first('email') }}</code>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
-                                <label class="col-form-label col-2">Subject</label>
+                                <label class="col-form-label col-2">Name</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <input type="text" name="subject" value="{{ old('subject') }}"
+                                    <input type="text" name="name" value="{{ old('name') }}"
                                         class="form-control">
-                                    @if ($errors->has('subject'))
-                                        <code>{{ $errors->first('subject') }}</code>
+                                    @if ($errors->has('name'))
+                                        <code>{{ $errors->first('name') }}</code>
                                     @endif
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-2">Message</label>
                                 <div class="col-sm-12 col-md-10">
-                                    <textarea name="message" class="form-control" value="{{ old('message') }}"></textarea>
+                                    <textarea name="message" class="form-control">{{ old('message') }}</textarea>
                                     @if ($errors->has('message'))
-                                    <code>{{ $errors->first('message') }}</code>
-                                @endif
+                                        <code>{{ $errors->first('message') }}</code>
+                                    @endif
                                 </div>
                             </div>
                             <div class="form-group row mb-4">
                                 <label class="col-form-label col-2"></label>
                                 <div class="col-sm-12 col-md-10">
-                                    <button class="button-primary mouse-dir">Send Now <span
-                                            class="dir-part"></span></button>
+                                    <button id="sendButton" type="submit" class="button-primary mouse-dir">Send Now
+                                        <span class="dir-part"></span></button>
                                 </div>
                             </div>
                         </form>
@@ -82,3 +83,20 @@
     </div>
 </footer>
 <!-- Footer-Area-End -->
+
+<script>
+    const button = document.getElementById("sendButton");
+
+    button.addEventListener("click", function() {
+
+        setTimeout(() => {
+            button.disabled = true;
+            button.innerHTML = "Sending..."
+        }, 400);
+
+        setTimeout(() => {
+            button.disabled = false;
+            button.innerHTML = "Send Now "
+        }, 4000);
+    });
+</script>

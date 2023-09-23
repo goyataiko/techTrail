@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactToMeMail extends Mailable
+class ContactMail extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -28,9 +28,8 @@ class ContactToMeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "※확인!!" . $this->mailData['subject'],
+            subject: "【TechTrail】お問い合わせありがとうございます。",
             to: env('MAIL_FROM_ADDRESS'),
-            from: $this->mailData['email'],
         );
     }
 
@@ -40,7 +39,7 @@ class ContactToMeMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            markdown: 'mail.contact-to-me-mail',
+            markdown: 'mail.contact-mail',
         );
     }
 
