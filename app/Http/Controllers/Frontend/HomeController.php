@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
-use App\Mail\ContactToMeMail;
+use App\Mail\ContactMail;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Hero;
@@ -105,11 +105,11 @@ class HomeController extends Controller
     {
         $request->validate([
             'email' => ['required', 'email', ],
-            'subject' => ['required', 'max:150', ],
+            'name' => ['required', 'max:50', ],
             'message' => ['required', 'max:2000', ],
         ]);
-
-        Mail::send(new ContactToMeMail($request->all()));
+        // dd($request->all());
+        Mail::to($request->email)->send(new ContactMail($request->all()));
 
         toastr()->success('メールを送信しました。');
         return redirect('/#contact');
