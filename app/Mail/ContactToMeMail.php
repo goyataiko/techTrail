@@ -28,7 +28,7 @@ class ContactToMeMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: "※확인!!".$this->mailData['subject'],
+            subject: "※확인!!" . $this->mailData['subject'],
             to: env('MAIL_FROM_ADDRESS'),
             from: $this->mailData['email'],
         );
