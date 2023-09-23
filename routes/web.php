@@ -30,6 +30,7 @@ Route::get('/portfolio/{id}', [HomeController::class, 'portfolio_detail'])->name
 Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
 Route::get('/blog/{id}', [HomeController::class, 'blog_detail'])->name('blog.detail');
 
+Route::post('/contact', [HomeController::class, 'contact'])->name('contact');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

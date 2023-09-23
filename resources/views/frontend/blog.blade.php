@@ -20,7 +20,7 @@
     </nav>
 
     <!-- Blog-Area-Start -->
-    <section class="section-padding col-sm-10">
+    <section class="blog-section-padding col-sm-10">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
