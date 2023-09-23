@@ -64,7 +64,7 @@
 }
 
 a {
-  color: #6777ef;
+  color: #6777ef !important;
   font-weight: 500;
   transition: all 0.5s;
   -webkit-transition: all 0.5s;

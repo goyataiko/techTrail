@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Frontend;
 
 use App\Http\Controllers\Controller;
+use App\Mail\ContactToMeMail;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Hero;
@@ -10,6 +11,7 @@ use App\Models\Portfolio;
 use App\Models\PortfolioCategory;
 use App\Models\TyperTitle;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -96,5 +98,20 @@ class HomeController extends Controller
             'category',
             'table',
         ));
+    }
+
+
+    public function contact(Request $request)
+    {
+        $request->validate([
+            'email' => ['required', 'email', ],
+            'subject' => ['required', 'max:150', ],
+            'message' => ['required', 'max:2000', ],
+        ]);
+
+        Mail::send(new ContactToMeMail($request->all()));
+
+        toastr()->success('メールを送信しました。');
+        return redirect('/#contact');
     }
 }
