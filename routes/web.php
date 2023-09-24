@@ -9,6 +9,9 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Models\Blog;
+use App\Models\BlogCategory;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +24,52 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
+Route::get('/n1test-before', function(){
+    DB::enableQueryLog();
+
+
+    $blog_category = BlogCategory::all();
+
+    $selectedBlogs = collect();
+    foreach ($blog_category as $category) {
+        $BlogsInCategory = Blog::where('category_id', $category->id)
+            ->take(1)
+            ->get();
+
+        $selectedBlogs = $selectedBlogs->merge($BlogsInCategory);
+    }
+    
+    echo('Result');
+    dump($selectedBlogs->toArray());
+    
+    echo('Query');
+    dump(DB::getQueryLog());
+});
+
+Route::get('/n1test-after', function(){
+    DB::enableQueryLog();
+
+
+    $selectedBlogs = BlogCategory::with(['blogs' => function ($query) {
+        $query->take(1);
+    }])->get();    
+
+    $selectedBlogs->each(function ($category) {
+        $category->blogs = $category->blogs->take(1);
+    });
+    
+    echo('Result');
+    dump($selectedBlogs->toArray());
+    
+    echo('Query');
+    dump(DB::getQueryLog());
+});
+
+
+
+
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
