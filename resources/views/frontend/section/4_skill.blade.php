@@ -25,19 +25,19 @@
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Bootstrap</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">80%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="80" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">JavaScript</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">70%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="70" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 
@@ -59,34 +59,34 @@
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">PHP</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">60%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="60" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Laravel</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">80%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="80" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">MySql</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">60%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="60" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">DB 設計</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">75%</span>
                                         </div>
                                         <div class="progress">
                                             <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
@@ -114,34 +114,34 @@
                                             <span class="progress-number">90%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="90" aria-valuemax="100"></div>
                                         </div>
                                     </div>                                    
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Photoshop</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">70%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="70" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Illustrator</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">80%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="80" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Figma</p>
-                                            <span class="progress-number">90%</span>
+                                            <span class="progress-number">85%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="85" aria-valuemax="100"></div>
                                         </div>
                                     </div>
 

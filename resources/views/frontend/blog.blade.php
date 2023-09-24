@@ -5,10 +5,11 @@
         <div class="overlay"></div>
         <div class="text">
             <h1>ブログ</h1>
-            <p>成長と学びの記録、そして未来へのステップ
+            <p>デジタルの世界での成長と洞察。<br>キャリア、ブランディング、テクノロジーに関する視点を提供します。
             </p>
         </div>
     </div>
+
 
     <nav class="breadcrumbs">
         <div class="container col-md-9">
@@ -20,7 +21,7 @@
     </nav>
 
     <!-- Blog-Area-Start -->
-    <section class="blog-section-padding col-sm-10">
+    <section class="portfolio-area section-padding col-md-9" id="portfolio-page">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -34,6 +35,7 @@
                     </ul>
                 </div>
             </div>
+
             {{-- portfolios, filter-item으로 js와 연결되어있음. --}}
             <div class="row portfolios">
                 @foreach ($table as $ta)
@@ -66,6 +68,7 @@
                     {{ $table->links() }}
                 </div>
             </div>
+        </div>
     </section>
     <!-- Blog-Area-End -->
 @endsection
