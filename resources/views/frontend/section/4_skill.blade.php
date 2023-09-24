@@ -83,6 +83,15 @@
                                             <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
                                         </div>
                                     </div>
+                                    <div class="skill">
+                                        <div class="skill-texts">
+                                            <p class="progress-text">DB 設計</p>
+                                            <span class="progress-number">90%</span>
+                                        </div>
+                                        <div class="progress">
+                                            <div class="progress-bar" data-percent="75" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
 
                                 </div>
                             </div>
