@@ -1,6 +1,8 @@
 <!-- Hero-Area-Start -->
 
-<header class="header-area parallax-bg" id="home-page" style="background-image: url('{{ asset($hero->image) }}')">
+<header class="header-area parallax-bg" id="home-page">
+    <img class="headerImage" src="{{ asset($hero->image) }}" alt="header">
+    <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
