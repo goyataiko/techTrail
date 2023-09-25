@@ -8,7 +8,7 @@
                 <p>Contact</p>
                 <h3>Let's Work<br>
                     Together.</h3>
-                <h6><a href="#"><i class="fab fa-github"></i>Git Hub</a></h6>
+                <h6><a href="https://github.com/goyataiko"><i class="fab fa-github"></i>Git Hub</a></h6>
             </div>
             <div class="contact-form col-lg-7">
 

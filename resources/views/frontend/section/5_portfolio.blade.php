@@ -5,9 +5,9 @@
         <div class="row">
             <div class="col-lg-6 offset-lg-3 text-center">
                 <div class="section-title">
-                    <h3 class="title">Latest Portfolio</h3>
+                    <h3 class="title">Recent Portfolios</h3>
                     <div class="desc">
-                        <p>技術の探求、学び、成長を共有する場です。開発者の深層心理からインス技術の探求、学び、成長を共有する場です。
+                        <p>デジタルのクリエイティビティの舞台。ウェブデザイン、ブランドデザイン、Web開発の世界をご覧ください。
                         </p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                             <figure class="portfolio-image">
                                 <img src="{{ Storage::url($ta->images->first()->image_path) }}" alt="">
                             </figure>
-                            <div class="portfolio-content">                                
+                            <div class="portfolio-content">
                                 <h4 class="title"><a
                                         href="{{ route('portfolio.detail', [$ta->id]) }}">{{ $ta->title }}</a></h4>
                                 <div class="desc"><a href="{{ route('portfolio.detail', [$ta->id]) }}">
