@@ -13,4 +13,9 @@ class BlogCategory extends Model
     {
         return $this->hasMany(Blog::class, 'category_id');
     }
+
+    public function limited_blogs()
+    {
+        return $this->blogs->slice(0, 1);
+    }
 }

@@ -11,6 +11,8 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Models\Blog;
 use App\Models\BlogCategory;
+use App\Models\Portfolio;
+use App\Models\PortfolioCategory;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
@@ -26,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/n1test-before', function(){
+Route::get('/n1test-before', function () {
     DB::enableQueryLog();
 
 
@@ -35,35 +37,54 @@ Route::get('/n1test-before', function(){
     $selectedBlogs = collect();
     foreach ($blog_category as $category) {
         $BlogsInCategory = Blog::where('category_id', $category->id)
-            ->take(1)
-            ->get();
+            ->take(1)->get();
 
         $selectedBlogs = $selectedBlogs->merge($BlogsInCategory);
     }
-    
-    echo('Result');
+
+    echo ('Result');
     dump($selectedBlogs->toArray());
-    
-    echo('Query');
+
+    echo ('Query');
     dump(DB::getQueryLog());
 });
 
-Route::get('/n1test-after', function(){
+
+Route::get('/n1test-after', function () {
     DB::enableQueryLog();
 
+    $blog_category = BlogCategory::with('blogs')->get();
 
-    $selectedBlogs = BlogCategory::with(['blogs' => function ($query) {
-        $query->take(1);
-    }])->get();    
+    $selectedBlogs = collect();
+    foreach ($blog_category as $category) {
+        $selectedBlogs = $selectedBlogs->merge($category->limited_blogs());
+    }
 
-    $selectedBlogs->each(function ($category) {
-        $category->blogs = $category->blogs->take(1);
-    });
-    
-    echo('Result');
+    echo ('Result');
     dump($selectedBlogs->toArray());
-    
-    echo('Query');
+
+    echo ('Query');
+    dump(DB::getQueryLog());
+});
+
+Route::get('/n1test-2', function () {
+    DB::enableQueryLog();
+
+    $portfolio_category = PortfolioCategory::with(['portfolios' => function ($query) {
+        $query->where('status', 2)
+            ->orderBy('created_at', 'desc');
+    }])->get();
+
+    // dd($portfolio_category);
+
+    foreach ($portfolio_category as $p) {
+        dump($p->limited_portfolios()->toArray());
+    }
+
+    echo ('Result');
+    dump($portfolio_category->toArray());
+
+    echo ('Query');
     dump(DB::getQueryLog());
 });
 

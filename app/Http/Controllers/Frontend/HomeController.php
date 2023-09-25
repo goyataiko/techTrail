@@ -22,20 +22,16 @@ class HomeController extends Controller
 
         //------------ portfolio관련 --------------//
 
-        $portfolio_category = PortfolioCategory::all();
+        $portfolio_category = PortfolioCategory::with(['portfolios' => function ($query) {
+            $query->where('status', 2)
+                ->orderBy('created_at', 'desc');
+        }])->get();
 
-        //카테고리별로 n개씩 보이도록 설정
         $selectedPortfolios = collect();
         foreach ($portfolio_category as $category) {
-            $portfoliosInCategory = Portfolio::where('category_id', $category->id)
-                ->where('status', 2)
-                ->orderBy('created_at', 'desc')
-                ->take(3)
-                ->get();
-
-            $selectedPortfolios = $selectedPortfolios->merge($portfoliosInCategory);
+            $selectedPortfolios = $selectedPortfolios->merge($category->limited_portfolios());
         }
-
+        
         // dd($selectedPortfolios);
 
         //------------ Blog 관련 --------------//
