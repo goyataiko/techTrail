@@ -342,23 +342,6 @@ header {
     transition: transform 0.1s linear;
 }
 
-/* .imageHeader>img.scaleImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 62%;
-    transition: transform 0.1s linear;
-}
-
-.videoHeader>.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.82);
-} */
-
 #particles-js {
     position: absolute;
     left: 0;
