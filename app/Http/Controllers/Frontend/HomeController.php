@@ -22,6 +22,9 @@ class HomeController extends Controller
 
         //------------ portfolio관련 --------------//
 
+        // n+1문제 관련, 
+        // https://github.com/goyataiko/techTrail/issues/77
+
         $portfolio_category = PortfolioCategory::with(['portfolios' => function ($query) {
             $query->where('status', 2)
                 ->orderBy('created_at', 'desc');
@@ -31,7 +34,7 @@ class HomeController extends Controller
         foreach ($portfolio_category as $category) {
             $selectedPortfolios = $selectedPortfolios->merge($category->limited_portfolios());
         }
-        
+
         // dd($selectedPortfolios);
 
         //------------ Blog 관련 --------------//
@@ -100,9 +103,9 @@ class HomeController extends Controller
     public function contact(Request $request)
     {
         $request->validate([
-            'email' => ['required', 'email', ],
-            'name' => ['required', 'max:50', ],
-            'message' => ['required', 'max:2000', ],
+            'email' => ['required', 'email',],
+            'name' => ['required', 'max:50',],
+            'message' => ['required', 'max:2000',],
         ]);
         // dd($request->all());
         Mail::to($request->email)->send(new ContactMail($request->all()));
