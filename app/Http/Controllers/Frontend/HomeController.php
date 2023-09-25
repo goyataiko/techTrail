@@ -24,7 +24,7 @@ class HomeController extends Controller
 
         // n+1문제 관련, 
         // https://github.com/goyataiko/techTrail/issues/77
-        
+
         $portfolio_category = PortfolioCategory::with(['portfolios' => function ($query) {
             $query->where('status', 2)
                 ->orderBy('created_at', 'desc');
