@@ -1,6 +1,6 @@
 <!-- Hero-Area-Start -->
 
-<header class="header-area parallax-bg" id="home-page" style="background: url('{{ asset($hero->image) }}') 50% 0">
+<header class="header-area parallax-bg" id="home-page" style="background-image: url('{{ asset($hero->image) }}')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
@@ -16,7 +16,7 @@
                     @if ($hero->btn_text)
                         <a href="{{ $hero->btn_url }}" class="button-dark mouse-dir wow fadeInUp"
                             data-wow-delay="0.5s">{{ $hero->btn_text }} 
-                            <i class='fas fa-angle-right'></i>
+                            <i class='ms-1 fas fa-angle-right'></i>
                             <span class="dir-part"></span></a>
                     @endif
                 </div>
