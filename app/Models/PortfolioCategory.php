@@ -13,4 +13,9 @@ class PortfolioCategory extends Model
     {
         return $this->hasMany(Portfolio::class, 'category_id');
     }
+
+    public function limited_portfolios()
+    {
+        return $this->portfolios->slice(0, 2);
+    }
 }
