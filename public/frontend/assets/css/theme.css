@@ -333,6 +333,15 @@ header {
     margin-bottom: -15rem;
 }
 
+.headerImage {
+    position: fixed;
+    width: 100%;
+    object-fit: cover;
+    /* object-position: center 62%; */
+    z-index: -1;
+    transition: transform 0.1s linear;
+}
+
 #particles-js {
     position: absolute;
     left: 0;
@@ -378,8 +387,8 @@ header {
     color: #fdfdfd;
     font-weight: 400;
     font-size: 28px;
-    margin-bottom: 26px;    
-    letter-spacing: -1px;    
+    margin-bottom: 26px;
+    letter-spacing: -1px;
 }
 
 .header-text .title {

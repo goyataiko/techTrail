@@ -71,6 +71,20 @@
             scaleImage.style.transform = `scale(${scaleValue})`;
         });
 
+
+
+        const headerImage = document.querySelector('.headerImage');
+        let scrollValue = 0;
+        window.addEventListener('scroll', function() {
+            //현 스크롤 위치
+            const scrollTop = window.scrollY || document.documentElement.scrollTop;
+            scrollValue = scrollTop * 0.3;
+            
+            headerImage.style.transform = `translateY(${scrollValue}px)`;
+        });
+
+
+
         @if (!empty($errors->all()))
             @foreach ($errors->all() as $error)
                 toastr.error("{{ $error }}")
