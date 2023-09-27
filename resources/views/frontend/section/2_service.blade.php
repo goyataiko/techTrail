@@ -1,4 +1,3 @@
-
 <!-- Service-Area-Start -->
 <div id="about-page"></div>
 <section class="service-area section-padding-top col-md-10">
@@ -6,25 +5,26 @@
         <div class="row">
             <div class="col-lg-4">
                 <div class="single-service">
-                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Web Development</h3>
+                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Web 開発者</h3>
                     <div class="desc wow fadeInRight" data-wow-delay="0.4s">
-                        <p>Laravelを駆使し、魅力的な動的ウェブサイトを開発。ユーザーエクスペリエンスを最優先に、機能とデザインの調和を実現します。</p>
+                        <p>経験豊富なFull-Stack開発者として、幅広いスキルと知識を活かして、柔軟で効率的なウェブアプリケーションを構築します。
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-service">
-                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Branding Design</h3>
+                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">UI デザイナー</h3>
                     <div class="desc wow fadeInRight" data-wow-delay="0.4s">
-                        <p>技術の探求、学び、成長を共有する場です。開発者の深層心理からインス技術の探求、学び、成長を共有する場です。</p>
+                        <p>ユーザーの視点を第一に考え、魅力的で使いやすいウェブとアプリケーションをデザインします。</p>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4">
                 <div class="single-service">
-                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">User Experience</h3>
+                    <h3 class="title wow fadeInRight" data-wow-delay="0.3s">Producer</h3>
                     <div class="desc wow fadeInRight" data-wow-delay="0.4s">
-                        <p>技術の探求、学び、成長を共有する場です。開発者の深層心理からインス技術の探求、学び、成長を共有する場です。</p>
+                        <p>ユーザーのニーズを深く理解し、目標に向かって力を合わせてクリエイティブなビジョンを実現します。 </p>
                     </div>
                 </div>
             </div>

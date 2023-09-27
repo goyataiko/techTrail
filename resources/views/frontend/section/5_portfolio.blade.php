@@ -7,8 +7,7 @@
                 <div class="section-title">
                     <h3 class="title">Recent Portfolios</h3>
                     <div class="desc">
-                        <p>デジタルのクリエイティビティの舞台。ウェブデザイン、ブランドデザイン、Web開発の世界をご覧ください。
-                        </p>
+                        <p>成長と学びの記録、そして未来への歩みについて</p>
                     </div>
                 </div>
             </div>
