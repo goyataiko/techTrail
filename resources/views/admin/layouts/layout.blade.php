@@ -120,10 +120,6 @@
                         /* ローカルファイルを選んだあと呼ばれるのでサーバーへアップする */
                         insertImageFile(files[0]);
                     },
-                    onMediaDelete: (target) => {
-                        /* 画像を削除するを選んだ時呼ばれるのでサーバーへ削除要求する */
-                        removeImageFile(target[0].src);
-                    },
                 },
             });
         })
@@ -147,22 +143,6 @@
                     $('.summernote').summernote('insertNode', imgNode);
                 });
         }
-    </script>
-    <script>
-        $(".submit_button").click((e) => {
-            /* 一旦submitを無効 */
-            e.preventDefault();
-            let description = $('.summernote').summernote('code');
-            let edit_form = document.getElementById('edit_form');
-            if (edit_form != null) {
-                inputDescription = document.createElement("input");
-                inputDescription.type = 'hidden';
-                inputDescription.name = 'description';
-                inputDescription.value = description;
-                edit_form.appendChild(inputDescription);
-                edit_form.submit();
-            }
-        });
     </script>
 
 </body>
