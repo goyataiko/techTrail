@@ -16,8 +16,9 @@
     <!-- CSS Libraries -->
     {{-- https://datatables.net/manual/installation --}}
     <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet">
+    {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/selectric.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-tagsinput.css') }}">
@@ -65,10 +66,9 @@
     <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
-    <script src="{{ asset('assets/js/plugins/summernote-bs5.min.js') }}"></script>
-    {{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.20/summernote-bs4.min.css"
-        integrity="sha512-ngQ4IGzHQ3s/Hh8kMyG4FC74wzitukRMIcTOoKT3EyzFZCILOPF0twiXOQn75eDINUfKBYmzYn2AA8DkAk8veQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+    {{-- <script src="{{ asset('assets/js/plugins/summernote-bs5.min.js') }}"></script> --}}
+    <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+
     <script src="{{ asset('assets/js/plugins/jquery.selectric.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/jquery.uploadPreview.min.js') }}"></script>
     <script src="{{ asset('assets/js/plugins/bootstrap-tagsinput.min.js') }}"></script>
@@ -100,12 +100,49 @@
 
         $(document).ready(function() {
             $("#datepicker").datepicker();
-            $('.summernote').summernote();
         });
 
         $(document).ready(function() {
             $('#myDataTable').DataTable();
         });
+    </script>
+
+
+    <script>
+        // console.log("working!!");
+        $(document).ready(function() {
+            $('.summernote').summernote({
+                height: 300,
+                dialogsInBody: true,
+
+                callbacks: {
+                    onImageUpload: (files) => {
+                        /* ローカルファイルを選んだあと呼ばれるのでサーバーへアップする */
+                        insertImageFile(files[0]);
+                    },
+                },
+            });
+        })
+
+        function insertImageFile(file) {
+            let formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/insert-image-file', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                }).then((response) => {
+                    // サーバ側で応答に画像のurlを付与する
+                    let imgNode = document.createElement('img');
+                    imgNode.src = response.url;
+                    $('.summernote').summernote('insertNode', imgNode);
+                });
+        }
     </script>
 
 </body>
