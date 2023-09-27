@@ -385,9 +385,9 @@ header {
 
 .header-text .typer-title {
     color: #fdfdfd;
-    font-weight: 400;
-    font-size: 28px;
-    margin-bottom: 26px;
+    font-weight: 600;
+    font-size: 30px;
+    margin-bottom: 8px;
     letter-spacing: -1px;
 }
 
@@ -395,6 +395,10 @@ header {
     font-size: 76px;
     color: #ffffff;
     letter-spacing: 10px;
+}
+
+.header-text .title span {
+    font-weight: 700;
 }
 
 .header-text .desc {
@@ -473,6 +477,8 @@ header {
 
 .about-text .desc {
     margin-bottom: 50px;
+    letter-spacing: -1px;
+    line-height: 2;
 }
 
 /* --------------------

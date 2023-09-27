@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-lg-6">
                 <div class="row">
-                    <h3 class="title">Skills</h3>
+                    <h3 class="title">My Skills.</h3>
                 </div>
                 <div class="row skills wow fadeInUp" data-wow-delay="0.2s">
 

@@ -7,7 +7,7 @@
                 <div class="section-title">
                     <h3 class="title">Blog Posting</h3>
                     <div class="desc">
-                        <p>デジタルの世界での成長と洞察。キャリア、ブランディング、テクノロジーに関する視点を提供します。</p>
+                        <p>デジタルの世界を探求し、学び、成長する</p>
                     </div>
                 </div>
             </div>
