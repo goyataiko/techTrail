@@ -20,11 +20,11 @@
 
     {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet"> --}}
     {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/selectric.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-tagsinput.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/bootstrap-timepicker.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/daterangepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/select2.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/selectric.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('plugins/select2.min.css') }}">
 
     <!-- Template CSS -->
     <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
@@ -66,15 +66,14 @@
     <script src="{{ asset('assets/js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
-    {{-- <script src="{{ asset('assets/js/plugins/summernote-bs5.min.js') }}"></script> --}}
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
-    <script src="{{ asset('assets/js/plugins/jquery.selectric.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/jquery.uploadPreview.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap-tagsinput.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/bootstrap-timepicker.min.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/daterangepicker.js') }}"></script>
-    <script src="{{ asset('assets/js/plugins/select2.full.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery.selectric.min.js') }}"></script>
+    <script src="{{ asset('plugins/jquery.uploadPreview.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('plugins/daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('plugins/select2.full.min.js') }}"></script>
 
     <!-- Datatables JS File -->
     <script src="{{ asset('plugins/datatables/datatables.js') }}"></script>
