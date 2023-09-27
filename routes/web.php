@@ -10,11 +10,6 @@ use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Frontend\HomeController;
 use App\Http\Controllers\Summernote;
-use App\Models\Blog;
-use App\Models\BlogCategory;
-use App\Models\Portfolio;
-use App\Models\PortfolioCategory;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Route;
 
 /*

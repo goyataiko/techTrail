@@ -116,7 +116,7 @@
                                         <div class="progress">
                                             <div class="progress-bar" data-percent="90" aria-valuemax="100"></div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                     <div class="skill">
                                         <div class="skill-texts">
                                             <p class="progress-text">Photoshop</p>
