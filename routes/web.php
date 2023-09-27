@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\PortfolioController;
 use App\Http\Controllers\Admin\TyperTitleController;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Frontend\HomeController;
+use App\Http\Controllers\Summernote;
 use App\Models\Blog;
 use App\Models\BlogCategory;
 use App\Models\Portfolio;
@@ -28,69 +29,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::get('/n1test-before', function () {
-    DB::enableQueryLog();
-
-
-    $blog_category = BlogCategory::all();
-
-    $selectedBlogs = collect();
-    foreach ($blog_category as $category) {
-        $BlogsInCategory = Blog::where('category_id', $category->id)
-            ->take(1)->get();
-
-        $selectedBlogs = $selectedBlogs->merge($BlogsInCategory);
-    }
-
-    echo ('Result');
-    dump($selectedBlogs->toArray());
-
-    echo ('Query');
-    dump(DB::getQueryLog());
-});
-
-
-Route::get('/n1test-after', function () {
-    DB::enableQueryLog();
-
-    $blog_category = BlogCategory::with('blogs')->get();
-
-    $selectedBlogs = collect();
-    foreach ($blog_category as $category) {
-        $selectedBlogs = $selectedBlogs->merge($category->limited_blogs());
-    }
-
-    echo ('Result');
-    dump($selectedBlogs->toArray());
-
-    echo ('Query');
-    dump(DB::getQueryLog());
-});
-
-Route::get('/n1test-2', function () {
-    DB::enableQueryLog();
-
-    $portfolio_category = PortfolioCategory::with(['portfolios' => function ($query) {
-        $query->where('status', 2)
-            ->orderBy('created_at', 'desc');
-    }])->get();
-
-    // dd($portfolio_category);
-
-    foreach ($portfolio_category as $p) {
-        dump($p->limited_portfolios()->toArray());
-    }
-
-    echo ('Result');
-    dump($portfolio_category->toArray());
-
-    echo ('Query');
-    dump(DB::getQueryLog());
-});
-
-
-
-
+Route::post('/insert-image-file', [Summernote::class, 'insertImageFile'])->name('summernote.insert-image-file')->middleware('auth');
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 

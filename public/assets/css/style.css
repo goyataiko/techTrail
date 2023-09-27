@@ -256,7 +256,7 @@ select.form-control:not([size]):not([multiple]) {
 }
 
 .form-group a {
-  color: #fff;
+  color: #282828;
   text-decoration: none;
 }
 .form-group .control-label,
@@ -3618,6 +3618,10 @@ li {
 .real-upload,
 .preview-box {
   display: none;
+}
+
+.note-btn-group.open>.note-dropdown-menu {
+  min-width: 200px;
 }
 
 ::-webkit-scrollbar {
