@@ -154,8 +154,9 @@
             </div>
 
             <div class="col-lg-6 d-none d-lg-block">
-                <figure class="single-image text-right wow fadeInRight">
-                    <img src="{{ asset('frontend/assets/images/skill.jpg') }}" alt="">
+                <figure id="skillImageContainer" class="single-image text-right wow fadeInRight">
+                    <img id="skillmouseImg1" src="{{ asset('frontend/assets/images/1.png') }}">
+                    <img id="skillmouseImg2" src="{{ asset('frontend/assets/images/2.png') }}" style="display: none;">
                 </figure>
             </div>
         </div>
@@ -182,6 +183,20 @@
             setTimeout(() => {
                 bar.style.width = percent + '%';
             }, 100);
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#skillImageContainer").on("mouseenter", function() {
+                $("#skillmouseImg1").hide();
+                $("#skillmouseImg2").show();
+            });
+
+            $("#skillImageContainer").on("mouseleave", function() {
+                $("#skillmouseImg2").hide();
+                $("#skillmouseImg1").show();
+            });
         });
     </script>
 @endpush

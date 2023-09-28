@@ -5,7 +5,7 @@
         <div class="row d-flex">
             <div class="col-lg-6">
                 <figure class="about-image" id="imageContainer">
-                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/1.png') }}" class="wow fadeInUp">
+                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/1.png') }}">
                     <img id="mouseImg2" src="{{ asset('frontend/assets/images/2.png') }}" style="display: none;">
                 </figure>
             </div>
