@@ -24,8 +24,8 @@
     @include('frontend.layouts.navbar')
 
     <!-- Main-Start -->
-    <div class="main_wrapper" data-bs-spy="scroll" data-bs-target="#main_menu_area" data-bs-root-margin="0px 0px -40%"
-        data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary" tabindex="0">
+    <div data-bs-spy="scroll" data-bs-target="#main_menu_area" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="main_wrapper scrollspy-example bg-body-tertiary" tabindex="0">
 
         @yield('content')
 
@@ -79,7 +79,7 @@
             //현 스크롤 위치
             const scrollTop = window.scrollY || document.documentElement.scrollTop;
             scrollValue = scrollTop * 0.3;
-            
+
             headerImage.style.transform = `translateY(${scrollValue}px)`;
         });
 
