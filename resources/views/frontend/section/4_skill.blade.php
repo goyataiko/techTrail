@@ -110,11 +110,11 @@
 
                                     <div class="skill">
                                         <div class="skill-texts">
-                                            <p class="progress-text">Git</p>
-                                            <span class="progress-number">90%</span>
+                                            <p class="progress-text">AWS</p>
+                                            <span class="progress-number">60%</span>
                                         </div>
                                         <div class="progress">
-                                            <div class="progress-bar" data-percent="90" aria-valuemax="100"></div>
+                                            <div class="progress-bar" data-percent="60" aria-valuemax="100"></div>
                                         </div>
                                     </div>
                                     <div class="skill">

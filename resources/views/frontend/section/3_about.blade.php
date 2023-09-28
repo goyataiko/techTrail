@@ -4,9 +4,9 @@
     <div class="container">
         <div class="row d-flex">
             <div class="col-lg-6">
-                <figure class="about-image">
-                    <img src="{{ asset('frontend/assets/images/about-image.png') }}" alt="" class="wow fadeInUp"
-                        data-wow-delay="0.3s">
+                <figure class="about-image" id="imageContainer">
+                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/1.png') }}" class="wow fadeInUp">
+                    <img id="mouseImg2" src="{{ asset('frontend/assets/images/2.png') }}" style="display: none;">
                 </figure>
             </div>
             <div class="col-lg-6">
@@ -34,3 +34,19 @@
 </section>
 
 <!-- About-Area-End -->
+
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            $("#imageContainer").on("mouseenter", function() {
+                $("#mouseImg1").hide();
+                $("#mouseImg2").show();
+            });
+
+            $("#imageContainer").on("mouseleave", function() {
+                $("#mouseImg2").hide();
+                $("#mouseImg1").show();
+            });
+        });
+    </script>
+@endpush
