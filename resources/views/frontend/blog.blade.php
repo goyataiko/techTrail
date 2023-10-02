@@ -26,7 +26,7 @@
             <div class="row">
                 <div class="col-sm-12">
                     <ul class="filter-menu filter-portPage">
-                        <li class="{{ $category_id == 0 ? 'active' : '' }}" data-filter="*">All Projects</li>
+                        <li class="{{ $category_id == 0 ? 'active' : '' }}" data-filter="*">All Posts</li>
                         @foreach ($category as $ca)
                             <span>|</span>
                             <li class="{{ $category_id == $ca->id ? 'active' : '' }}" data-filter=".{{ $ca->slug }}">

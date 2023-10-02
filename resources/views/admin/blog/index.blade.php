@@ -115,8 +115,8 @@
                                                                         </button>
                                                                     </div>
                                                                     <div class="modal-body text-left">
-                                                                        Post <span class="badge badge-primary">ID:
-                                                                            {{ $ta->id }} </span> will be
+                                                                        Post <span class="badge badge-primary">
+                                                                            {{ $ta->title }} </span> will be
                                                                         deleted.<br>
                                                                         Are you sure you want to proceed?
                                                                     </div>
