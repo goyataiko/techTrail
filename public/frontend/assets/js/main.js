@@ -163,21 +163,42 @@
             autoplaySpeed: 6000,
             speed: 1000,
             slidesToShow: 1,
-            slidesToScroll: 1,            
+            slidesToScroll: 1,
         });
 
         // Portfolio Image Loded with Masonry
         var PortfolioMasonry = $('.portfolios');
         if (typeof imagesLoaded == 'function') {
             imagesLoaded(PortfolioMasonry, function () {
+                const urlParams = new URLSearchParams(window.location.search);
+                const id = urlParams.get('id');
+
+                let filterValue = '*';
+                switch (id) {
+                    case '0':
+                        filterValue = '*';
+                        break;
+                    case '1':
+                        filterValue = '.technology-trends';
+                        break;
+                    case '2':
+                        filterValue = '.career-growth';
+                        break;
+                    case '3':
+                        filterValue = '.branding-design';
+                        break;
+                    default:
+                        filterValue = '*';
+                }
+
                 setTimeout(function () {
                     PortfolioMasonry.isotope({
                         itemSelector: '.filter-item',
                         resizesContainer: false,
                         layoutMode: 'masonry',
-                        filter: '*'
+                        filter: filterValue
                     });
-                }, 500);
+                }, 100);
 
             });
         };
@@ -191,7 +212,7 @@
 
         // Filter JS for Porrtfolio
         $('.filter-menu').on('click', 'li', function () {
-            var filterValue = $(this).attr('data-filter');
+            const filterValue = $(this).attr('data-filter');
             PortfolioMasonry.isotope({
                 filter: filterValue
             });
