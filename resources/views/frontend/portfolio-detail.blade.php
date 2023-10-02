@@ -44,15 +44,6 @@
                             </div>
                         @endforeach
 
-                        {{-- <div class="pcard">
-                            <div class="pcard-header">
-                                <i class='fas fa-images'></i>
-                                Dashboard
-                            </div>
-                            <div class="pcard-body">
-                                <img src="{{ asset('portfolio_image\larajobportal2.png') }}" data-lity>
-                            </div>
-                        </div> --}}
                     </div>
                 </div>
                 {{-- 설명 --}}
@@ -65,14 +56,19 @@
                         <ul>
                             <li><strong>使用ツール</strong>: {{ $table->tool }}</li>
                             <li><strong>制作内容</strong>: {{ $table->work_detail }}</li>
-                            @if (!empty($table->site_link))
-                                <li><strong>Project URL</strong>:
-                                    <a href="{{ $table->site_link }}" class="btn">site link</a>
-                                    @if (!empty($table->plan_link))
-                                        <a href="{{ $table->plan_link }}" class="btn">plan data</a>
-                                    @endif
-                                </li>
-                            @endif
+
+                            <li><strong>Project URL</strong>:
+                                @if (!empty($table->site_link))
+                                    <a href="{{ $table->site_link }}" target="_blank">Site Link</a>
+                                @endif
+                                @if (!empty($table->plan_link))
+                                    <a href="{{ $table->plan_link }}" target="_blank">Plan Link</a>
+                                @endif
+                                @if (!empty($table->plan_link))
+                                    <a href="{{ $table->github }}" target="_blank">Github Link</a>
+                                @endif
+                            </li>
+
                         </ul>
                     </div>
                     <div class="portfolio-description">

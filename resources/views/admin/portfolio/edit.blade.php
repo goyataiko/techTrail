@@ -4,7 +4,7 @@
     <section class="section">
         <div class="section-header">
             <div class="section-header-back">
-                <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="/admin/portfolio" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             <h1>Edit The Post</h1>
             <div class="section-header-breadcrumb">
@@ -97,7 +97,14 @@
                                             value="{{ $table->plan_link }}">
                                     </div>
                                 </div>
-
+                                
+                                <div class="form-group row mb-4">
+                                    <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Github</label>
+                                    <div class="col-sm-12 col-md-9">
+                                        <input type="text" name="github" class="form-control">
+                                    </div>
+                                </div>
+                                
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Content</label>
                                     <div class="col-sm-12 col-md-9">

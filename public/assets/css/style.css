@@ -1253,6 +1253,10 @@ table tr:hover .table-links {
   display: none;
 }
 
+.modal-backdrop {
+  display: none;
+}
+
 /* 3.9 Nav */
 .nav-tabs .nav-item .nav-link {
   color: #6777ef;

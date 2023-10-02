@@ -16,6 +16,7 @@ class Portfolio extends Model
         'work_detail',
         'site_link',
         'plan_link',
+        'github',
         'description',
         'created_at',
         'status',

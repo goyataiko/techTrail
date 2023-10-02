@@ -92,10 +92,14 @@ class HomeController extends Controller
     {
         $category = BlogCategory::all();
         $table = Blog::find($id);
+        $related = Blog::where('id', '!=', $table->id)->where('category_id', $table->category_id)
+        ->where('status', 2)->orderBy('created_at', 'desc')->take(3)->get();
+        
         // dd($table);
         return view('frontend.blog-detail', compact(
             'category',
             'table',
+            'related',
         ));
     }
 

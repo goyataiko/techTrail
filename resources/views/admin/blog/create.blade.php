@@ -4,7 +4,7 @@
     <section class="section">
         <div class="section-header">
             <div class="section-header-back">
-                <a href="features-posts.html" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
+                <a href="/admin/blog" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
             </div>
             <h1>Create New Post</h1>
             <div class="section-header-breadcrumb">

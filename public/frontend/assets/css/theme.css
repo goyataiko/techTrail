@@ -387,7 +387,7 @@ header {
     color: #fdfdfd;
     font-weight: 600;
     font-size: 30px;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
     letter-spacing: -1px;
 }
 
@@ -1705,11 +1705,20 @@ Footer-Area
     margin-top: 6px;
 }
 
-.portfolio-details .portfolio-info .btn,
 .quote-area .btn {
     font-size: 14px;
     margin: 0 0.25rem;
     padding: 4px 7px;
+}
+.portfolio-info a {
+    font-size: 14px;
+    color: #282828;
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.portfolio-info a:hover {
+    color: #6777ef;
 }
 
 .portfolio-details .portfolio-description {
