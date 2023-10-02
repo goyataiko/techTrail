@@ -49,7 +49,7 @@ class BlogController extends Controller
 
         $create->save();
 
-        toastr()->success('Created successfully!');
+        toastr()->success('Created successfully!');        
         return redirect('/admin/blog');
     }
 
@@ -99,6 +99,7 @@ class BlogController extends Controller
         $blog->save();
 
         toastr()->success('Updated successfully!', 'Congrats');
+        return back();
         return redirect('admin/blog');
     }
 

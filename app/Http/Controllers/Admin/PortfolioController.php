@@ -66,7 +66,7 @@ class PortfolioController extends Controller
             }
         }
 
-        toastr()->success('Created successfully!');
+        toastr()->success('Created successfully!');        
         return redirect('/admin/portfolio');
     }
 
@@ -125,6 +125,7 @@ class PortfolioController extends Controller
         Portfolio::find($id)->update($inserted_data);
 
         toastr()->success('Updated successfully!', 'Congrats');
+        return back();
         return redirect('admin/portfolio');
     }
 

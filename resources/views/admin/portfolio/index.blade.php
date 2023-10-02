@@ -90,8 +90,10 @@
                                                 </td>
                                                 <td>
                                                     <div class="d-flex justify-content-center">
-                                                        <div class="btn border m-1"><i class='fas fa-folder-open'></i>
-                                                        </div>
+                                                        <a href="{{ route('portfolio.detail', [$ta->id]) }}"
+                                                            class="btn border m-1" target="_blank">
+                                                            <i class='fas fa-folder-open'></i>
+                                                        </a>
 
                                                         <!-- Button trigger modal -->
                                                         <div class="btn border m-1" data-toggle="modal"

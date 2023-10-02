@@ -5,6 +5,7 @@
         <div class="overlay"></div>
         <div class="text">
             <h1>{{ $table->title }}</h1>
+            <p>{{ $table->category->name }} | {{ $table->created_at->format('Y.m.d') }}</p>
         </div>
     </div>
 
@@ -18,9 +19,9 @@
         </div>
     </nav>
 
-    <section class="col-md-6">
+    <section class="col-md-7 col-lg-6 col-xl-5">
         <!-- Blog-Area-Start -->
-        <div class="container blog-post">
+        <div class="container blog-post mx-auto">
             <div class="row mt-5">
                 <div class="description">
                     {!! $table->description !!}
@@ -31,17 +32,12 @@
 
         <!-- Quote-Area-Start -->
         <div class="quote-area col-md-8 mx-auto text-center">
-            <h5><a href="#">{{ $table->category->name }}</a> カテゴリーの他の文</h5>
+            <h5><a href="{{ route('blog', ['id' => $table->category->id]) }}">{{ $table->category->name }}</a> カテゴリーの他の文</h5>
             <ul>
-                @foreach (\App\Models\Blog::where('id', '!=', $table->id)->where('category_id', $table->category_id)->orderBy('created_at', 'desc')->take(3)->get() as $blog)
+                @foreach ($related as $blog)
                     <li><a href="{{ route('blog.detail', [$blog->id]) }}">{{ $blog->title }}</a></li>
                 @endforeach
             </ul>
-            {{-- <div class="tags" style="margin-left: -3px">
-                <a href="#" class="btn border">tag 1</a>
-                <a href="#" class="btn border">tag 2</a>
-                <a href="#" class="btn border">tag 3</a>
-            </div> --}}
         </div>
         <!-- Quote-Area-End -->
 
