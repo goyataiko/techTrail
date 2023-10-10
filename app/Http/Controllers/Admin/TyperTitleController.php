@@ -32,7 +32,7 @@ class TyperTitleController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => ['required', 'max:100'],
+            'title' => ['required', 'string', 'max:100'],
         ]);
 
         $create = new TyperTitle;
@@ -66,7 +66,7 @@ class TyperTitleController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'title' => ['required', 'max:100'],
+            'title' => ['required', 'string', 'max:100'],
         ]);
 
         $update = TyperTitle::findorFail($id);
@@ -86,6 +86,5 @@ class TyperTitleController extends Controller
 
         toastr()->success('Deleted successfully!');
         return back();
-
     }
 }

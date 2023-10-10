@@ -32,7 +32,7 @@ class PortfolioCategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'max:30'],
+            'name' => ['required', 'string', 'max:30'],
         ]);
 
         $create = new PortfolioCategory;
@@ -66,7 +66,7 @@ class PortfolioCategoryController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name' => ['required', 'max:30'],
+            'name' => ['required', 'string', 'max:30'],
         ]);
 
         $update = PortfolioCategory::findorFail($id);

@@ -32,7 +32,7 @@ class BlogCategoryController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => ['required', 'max:30'],
+            'name' => ['required', 'string', 'max:30'],
         ]);
 
         $create = new BlogCategory;
@@ -66,7 +66,7 @@ class BlogCategoryController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'name' => ['required', 'max:30'],
+            'name' => ['required', 'string', 'max:30'],
         ]);
 
         $update = BlogCategory::findorFail($id);

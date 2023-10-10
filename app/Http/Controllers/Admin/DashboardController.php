@@ -11,8 +11,8 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $portfolio= Portfolio::count();
-        $blog= Blog::count();
+        $portfolio = Portfolio::count();
+        $blog = Blog::count();
 
         return view('admin.dashboard', compact('portfolio', 'blog'));
     }

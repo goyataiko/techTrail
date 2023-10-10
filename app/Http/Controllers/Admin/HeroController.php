@@ -56,15 +56,15 @@ class HeroController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'title' => ['max:200'],
-            'sub_title' => ['max:500'],
-            'image' => ['max:3072'],
+            'title' => ['string', 'max:200'],
+            'sub_title' => ['string', 'max:500'],
+            'image' => ['image', 'max:3072'],
             // 3mb
         ]);
 
         $hero = Hero::first();
         if ($request->hasfile('image')) {
-            if($hero && File::exists(public_path($hero->image))){
+            if ($hero && File::exists(public_path($hero->image))) {
                 File::delete(public_path($hero->image));
             }
             $image = $request->file('image');

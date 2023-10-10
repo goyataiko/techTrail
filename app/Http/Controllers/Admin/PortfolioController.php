@@ -36,6 +36,19 @@ class PortfolioController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['string', 'max:30'],
+            'category_id' => ['numeric'],
+            'tool' => ['string'],
+            'work_detail' => ['string'],
+            'site_link' => ['url'],
+            'plan_link' => ['url'],
+            'github' => ['url'],
+            'created_at' => ['date'],
+            'status' => ['numeric'],
+            'image' => ['required', 'image', 'max:3000'],
+        ]);
+
         $create = new Portfolio;
         $create->title = $request->title;
         $create->category_id = $request->category_id;
@@ -43,6 +56,7 @@ class PortfolioController extends Controller
         $create->work_detail = $request->work_detail;
         $create->site_link = $request->site_link;
         $create->plan_link = $request->plan_link;
+        $create->github = $request->github;
         $create->description = $request->description;
         $create->created_at = $request->created_at;
         $create->status = $request->status;
@@ -66,7 +80,7 @@ class PortfolioController extends Controller
             }
         }
 
-        toastr()->success('Created successfully!');        
+        toastr()->success('Created successfully!');
         return redirect('/admin/portfolio');
     }
 
@@ -94,6 +108,18 @@ class PortfolioController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'title' => ['string', 'max:30'],
+            'category_id' => ['numeric'],
+            'tool' => ['string'],
+            'work_detail' => ['string'],
+            'site_link' => ['url'],
+            'plan_link' => ['url'],
+            'github' => ['url'],
+            'created_at' => ['date'],
+            'status' => ['numeric'],
+            'image' => ['image', 'max:3000'],
+        ]);
 
         $portfolio = Portfolio::find($id);
 
