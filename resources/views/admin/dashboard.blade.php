@@ -16,7 +16,7 @@
                         <h4>Total Admin</h4>
                     </div>
                     <div class="card-body">
-                        10
+                        1
                     </div>
                 </div>
             </div>
@@ -28,10 +28,10 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>News</h4>
+                        <h4>Portfolio Contents</h4>
                     </div>
                     <div class="card-body">
-                        42
+                        {{$portfolio}}
                     </div>
                 </div>
             </div>
@@ -43,10 +43,10 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Reports</h4>
+                        <h4>Blog Contents</h4>
                     </div>
                     <div class="card-body">
-                        1,201
+                        {{$blog}}
                     </div>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 </div>
                 <div class="card-wrap">
                     <div class="card-header">
-                        <h4>Online Users</h4>
+                        <h4>Etc</h4>
                     </div>
                     <div class="card-body">
                         47
