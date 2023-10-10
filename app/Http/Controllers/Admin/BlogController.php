@@ -34,6 +34,15 @@ class BlogController extends Controller
      */
     public function store(Request $request)
     {
+        $request->validate([
+            'title' => ['string', 'max:30'],
+            'category_id' => ['numeric'],
+            'description' => ['string'],
+            'created_at' => ['date'],
+            'status' => ['numeric'],
+            'image' => ['required', 'image','max:3000'],
+        ]);
+
         $create = new Blog;
 
         $create->title = $request->title;
@@ -78,6 +87,14 @@ class BlogController extends Controller
      */
     public function update(Request $request, string $id)
     {
+        $request->validate([
+            'title' => ['string', 'max:30'],
+            'category_id' => ['numeric'],
+            'description' => ['string'],
+            'created_at' => ['date'],
+            'status' => ['numeric'],
+            'image' => ['image','max:3000'],
+        ]);
 
         $blog = Blog::find($id);
 

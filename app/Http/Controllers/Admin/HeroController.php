@@ -56,9 +56,9 @@ class HeroController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'title' => ['max:200'],
-            'sub_title' => ['max:500'],
-            'image' => ['max:3072'],
+            'title' => ['string','max:200'],
+            'sub_title' => ['string', 'max:500'],
+            'image' => ['image', 'max:3072'],
             // 3mb
         ]);
 
