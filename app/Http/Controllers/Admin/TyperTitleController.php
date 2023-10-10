@@ -86,6 +86,5 @@ class TyperTitleController extends Controller
 
         toastr()->success('Deleted successfully!');
         return back();
-
     }
 }

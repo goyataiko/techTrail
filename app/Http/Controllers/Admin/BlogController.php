@@ -40,7 +40,7 @@ class BlogController extends Controller
             'description' => ['string'],
             'created_at' => ['date'],
             'status' => ['numeric'],
-            'image' => ['required', 'image','max:3000'],
+            'image' => ['required', 'image', 'max:3000'],
         ]);
 
         $create = new Blog;
@@ -58,7 +58,7 @@ class BlogController extends Controller
 
         $create->save();
 
-        toastr()->success('Created successfully!');        
+        toastr()->success('Created successfully!');
         return redirect('/admin/blog');
     }
 
@@ -93,7 +93,7 @@ class BlogController extends Controller
             'description' => ['string'],
             'created_at' => ['date'],
             'status' => ['numeric'],
-            'image' => ['image','max:3000'],
+            'image' => ['image', 'max:3000'],
         ]);
 
         $blog = Blog::find($id);

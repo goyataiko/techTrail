@@ -46,7 +46,7 @@ class PortfolioController extends Controller
             'github' => ['url'],
             'created_at' => ['date'],
             'status' => ['numeric'],
-            'image' => ['required', 'image','max:3000'],
+            'image' => ['required', 'image', 'max:3000'],
         ]);
 
         $create = new Portfolio;
@@ -80,7 +80,7 @@ class PortfolioController extends Controller
             }
         }
 
-        toastr()->success('Created successfully!');        
+        toastr()->success('Created successfully!');
         return redirect('/admin/portfolio');
     }
 
@@ -118,7 +118,7 @@ class PortfolioController extends Controller
             'github' => ['url'],
             'created_at' => ['date'],
             'status' => ['numeric'],
-            'image' => ['image','max:3000'],
+            'image' => ['image', 'max:3000'],
         ]);
 
         $portfolio = Portfolio::find($id);
