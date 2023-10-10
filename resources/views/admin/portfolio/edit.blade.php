@@ -101,7 +101,7 @@
                                 <div class="form-group row mb-4">
                                     <label class="col-form-label text-md-right col-12 col-md-2 col-lg-2">Github</label>
                                     <div class="col-sm-12 col-md-9">
-                                        <input type="text" name="github" class="form-control">
+                                        <input type="text" name="github" class="form-control" value="{{ $table->github }}">
                                     </div>
                                 </div>
                                 

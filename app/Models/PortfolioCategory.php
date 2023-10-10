@@ -16,6 +16,6 @@ class PortfolioCategory extends Model
 
     public function limited_portfolios()
     {
-        return $this->portfolios->slice(0, 2);
+        return $this->portfolios->slice(0, 3);
     }
 }

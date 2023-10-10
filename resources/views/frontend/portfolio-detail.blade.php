@@ -57,18 +57,19 @@
                             <li><strong>使用ツール</strong>: {{ $table->tool }}</li>
                             <li><strong>制作内容</strong>: {{ $table->work_detail }}</li>
 
-                            <li><strong>Project URL</strong>:
-                                @if (!empty($table->site_link))
-                                    <a href="{{ $table->site_link }}" target="_blank">Site Link</a>
-                                @endif
-                                @if (!empty($table->plan_link))
-                                    <a href="{{ $table->plan_link }}" target="_blank">Plan Link</a>
-                                @endif
-                                @if (!empty($table->plan_link))
-                                    <a href="{{ $table->github }}" target="_blank">Github Link</a>
-                                @endif
-                            </li>
-
+                            @if (!empty($table->site_link)||!empty($table->plan_link)||!empty($table->github))
+                                <li><strong>Project URL</strong>:
+                                    @if (!empty($table->site_link))
+                                        <a href="{{ $table->site_link }}" target="_blank">Site Link</a>
+                                    @endif
+                                    @if (!empty($table->plan_link))
+                                        <a href="{{ $table->plan_link }}" target="_blank">Plan Link</a>
+                                    @endif
+                                    @if (!empty($table->github))
+                                        <a href="{{ $table->github }}" target="_blank">Github Link</a>
+                                    @endif
+                                </li>
+                            @endif
                         </ul>
                     </div>
                     <div class="portfolio-description">
