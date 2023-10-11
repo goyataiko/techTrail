@@ -16,6 +16,7 @@ class BlogController extends Controller
      */
     public function index()
     {
+        // abort(500);
         $table = Blog::get();
         return view('admin.blog.index', compact('table'));
     }
