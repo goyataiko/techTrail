@@ -13,8 +13,8 @@
                 <div class="about-text">
                     <h3 class="title wow fadeInUp" data-wow-delay="0.3s">The Developer.</h3>
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Laravelフレームワークを軸に、デザイン、フロントエンド、バックエンドのスキルを幅広く身につけたエンジニアです。フリーランスデザイナーとして培ったUI設計力とプロジェクトマネジメント力、プログラマーとして培ったフロントエンド開発スキル、ウクライナでの英語圏開発経験を活かし、短期間でLaravelを習得しました。
-                            これらの経験とスキルを活かして、幅広いプロジェクトに柔軟に対応し、チームの一員として貢献します。</p>
+                        <p>私は、Laravelフレームワークを軸に、デザイン、フロントエンド、バックエンドのスキルを幅広く身につけたエンジニアです。フリーランスデザイナーとして培ったUI設計力（ユーザーのニーズを踏まえた、使いやすいUIの設計）とプロジェクトマネジメント力（プロジェクトのスケジュール管理、予算管理、進捗管理）、プログラマーとして培ったフロントエンド開発スキル、英語圏の開発経験を活かして、短期間でLaravelを習得しました。これらの経験とスキルを活かして、幅広いプロジェクトに柔軟に対応し、チームの一員としたいと思います。
+                        </p>
 
                     </div>
                     <a href="{{secure_asset('frontend\assets\rirekisho_20231009.pdf')}}" class="button-primary-trans mouse-dir wow fadeInUp" data-wow-delay="0.5s" target="_blank">
