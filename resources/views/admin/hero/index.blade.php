@@ -55,7 +55,7 @@
                                         <label class="col-form-label text-md-right col-12 col-md-3 col-lg-3">
                                             Preview Image</label>
                                         <div class="col-sm-12 col-md-8">
-                                            <img src="{{ asset($hero->image) }}" alt="hero" class="w-50">
+                                            <img src="{{ secure_asset($hero->image) }}" alt="hero" class="w-50">
                                         </div>
                                     </div>
                                 @endif

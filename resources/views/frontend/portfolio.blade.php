@@ -2,7 +2,7 @@
 @section('content')
     <div class="videoHeader port-video">
         <video autoplay loop muted>
-            <source src="{{ asset('frontend/assets/images/header.mp4') }}" type="video/mp4">
+            <source src="{{ secure_asset('frontend/assets/images/header.mp4') }}" type="video/mp4">
         </video>
         <div class="overlay"></div>
         <div class="text">

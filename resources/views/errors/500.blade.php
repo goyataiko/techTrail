@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>500 error toast</title>
     {{-- <link rel="stylesheet" href="./style.css"> --}}
-    <link rel="stylesheet" href="{{ asset('assets\css\errors.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets\css\errors.css') }}">
 
 </head>
 

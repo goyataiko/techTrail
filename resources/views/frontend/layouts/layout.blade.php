@@ -6,19 +6,19 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tech Trail | Takano's Portfolio & Blog</title>
-    <link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon.png') }}" />
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/normalize.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/style-plugin-collection.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/theme.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/assets/css/responsive.css') }}">
+    <link rel="shortcut icon" type="image/ico" href="{{ secure_asset('frontend/assets/images/favicon.png') }}" />
+    <link rel="stylesheet" href="{{ secure_asset('frontend/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('frontend/assets/css/normalize.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('frontend/assets/css/style-plugin-collection.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('frontend/assets/css/theme.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('frontend/assets/css/responsive.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 
 </head>
 
 <body>
     <div class="preloader">
-        <img src="{{ asset('frontend/assets/images/preloader.gif') }}" alt="">
+        <img src="{{ secure_asset('frontend/assets/images/preloader.gif') }}" alt="">
     </div>
 
     @include('frontend.layouts.navbar')
@@ -33,12 +33,12 @@
     </div>
     <!-- Main-End -->
 
-    <script src="{{ asset('frontend/assets/js/vendor/jquery-min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/contact-form.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/jquery-plugin-collection.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/vendor/modernizr.js') }}"></script>
-    <script src="{{ asset('frontend/assets/js/main.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/vendor/jquery-min.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/contact-form.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/jquery-plugin-collection.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/vendor/modernizr.js') }}"></script>
+    <script src="{{ secure_asset('frontend/assets/js/main.js') }}"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 
     <script>
@@ -47,13 +47,13 @@
                 $('.main_menu').addClass('menu_fix');
                 $('.main_menu').each(function(index, element) {
                     const img = $(element).find("img");
-                    img.attr("src", "{{ asset('frontend/assets/images/logo-x.png') }}");
+                    img.attr("src", "{{ secure_asset('frontend/assets/images/logo-x.png') }}");
                 });
             } else {
                 $('.main_menu').removeClass('menu_fix');
                 $('.main_menu').each(function(index, element) {
                     const img = $(element).find("img");
-                    img.attr("src", "{{ asset('frontend/assets/images/logo-x-w.png') }}");
+                    img.attr("src", "{{ secure_asset('frontend/assets/images/logo-x-w.png') }}");
                 });
             }
         });
