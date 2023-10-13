@@ -3,7 +3,7 @@
 <nav class="navbar navbar-expand-lg main_menu" id="main_menu_area">
     <div class="container col-md-9">
         <a class="navbar-brand" href="/">
-            <img src="{{ asset('frontend/assets/images/logo-x-w.png') }}" alt="Tech Trail">
+            <img src="{{ secure_asset('frontend/assets/images/logo-x-w.png') }}" alt="Tech Trail">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

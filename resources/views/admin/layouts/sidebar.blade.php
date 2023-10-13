@@ -4,7 +4,7 @@
     <ul class="navbar-nav navbar-right">
         <li class="dropdown"><a href="#" data-toggle="dropdown"
                 class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-                <img alt="image" src="{{ asset('assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
+                <img alt="image" src="{{ secure_asset('assets/img/avatar/avatar-1.png') }}" class="rounded-circle mr-1">
                 <div class="d-sm-none d-lg-inline-block">Hi, {{ auth()->user()->name }}</div>
             </a>
             <div class="dropdown-menu dropdown-menu-right">
@@ -33,7 +33,7 @@
     <aside id="sidebar-wrapper">
         <div class="sidebar-brand mx-auto my-4 pt-2 pr-3">
             <a href="/dashboard">
-                <img src="{{ asset('assets/img/logo.png') }}" alt="logo" width="110">
+                <img src="{{ secure_asset('assets/img/logo.png') }}" alt="logo" width="110">
             </a>
         </div>
         <ul class="sidebar-menu">

@@ -1,7 +1,7 @@
 <!-- Contact-Area-Start -->
 
 <section class="footer-contact" id="contact">
-    <div class="overlay" style="background: url('{{ asset('frontend/assets/images/footer.jpg') }}') 50% 50%"></div>
+    <div class="overlay" style="background: url('{{ secure_asset('frontend/assets/images/footer.jpg') }}') 50% 50%"></div>
     <div class="container">
         <div class="row">
             <div class="contact-info col-lg-4">

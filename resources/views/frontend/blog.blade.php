@@ -1,7 +1,7 @@
 @extends('frontend.layouts.layout')
 @section('content')
     <div class="imageHeader">
-        <img class="scaleImage" src="{{ asset('frontend/assets/images/header.jpg') }}" alt="header">
+        <img class="scaleImage" src="{{ secure_asset('frontend/assets/images/header.jpg') }}" alt="header">
         <div class="overlay"></div>
         <div class="text">
             <h1>ブログ</h1>

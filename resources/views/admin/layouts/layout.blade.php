@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>Dashboard</title>
-    <link rel="shortcut icon" type="image/ico" href="{{ asset('frontend/assets/images/favicon-alt.png') }}" />
+    <link rel="shortcut icon" type="image/ico" href="{{ secure_asset('frontend/assets/images/favicon-alt.png') }}" />
 
     <!-- General CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -15,20 +15,20 @@
 
     <!-- CSS Libraries -->
     {{-- https://datatables.net/manual/installation --}}
-    <link rel="stylesheet" href="{{ asset('plugins/datatables/datatables.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('plugins/datatables/datatables.css') }}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css">
 
     {{-- <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-bs5.min.css" rel="stylesheet"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
-    <link rel="stylesheet" href="{{ asset('plugins/selectric.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/daterangepicker/daterangepicker.css') }}">
-    <link rel="stylesheet" href="{{ asset('plugins/select2.min.css') }}">
+    {{-- <link rel="stylesheet" href="{{ secure_asset('assets/css/plugins/summernote-bs5.min.css') }}"> --}}
+    <link rel="stylesheet" href="{{ secure_asset('plugins/selectric.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('plugins/daterangepicker/daterangepicker.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('plugins/select2.min.css') }}">
 
     <!-- Template CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/components.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/css/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('assets/css/components.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
 </head>
 
@@ -63,29 +63,29 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="{{ asset('assets/js/stisla.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/stisla.js') }}"></script>
 
     <!-- JS Libraies -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
 
-    <script src="{{ asset('plugins/jquery.selectric.min.js') }}"></script>
-    <script src="{{ asset('plugins/jquery.uploadPreview.min.js') }}"></script>
-    <script src="{{ asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
-    <script src="{{ asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.js') }}"></script>
-    <script src="{{ asset('plugins/daterangepicker/daterangepicker.js') }}"></script>
-    <script src="{{ asset('plugins/select2.full.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/jquery.selectric.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/jquery.uploadPreview.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/bootstrap-timepicker/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ secure_asset('plugins/daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ secure_asset('plugins/select2.full.min.js') }}"></script>
 
     <!-- Datatables JS File -->
-    <script src="{{ asset('plugins/datatables/datatables.js') }}"></script>
+    <script src="{{ secure_asset('plugins/datatables/datatables.js') }}"></script>
 
     <!-- Template JS File -->
-    <script src="{{ asset('assets/js/scripts.js') }}"></script>
-    <script src="{{ asset('assets/js/custom.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/scripts.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/custom.js') }}"></script>
 
     <!-- Page Specific JS File -->
-    <script src="{{ asset('assets/js/page/features-post-create.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/page/features-post-create.js') }}"></script>
     <!-- Page Specific JS File -->
-    <script src="{{ asset('assets/js/page/forms-advanced-forms.js') }}"></script>
+    <script src="{{ secure_asset('assets/js/page/forms-advanced-forms.js') }}"></script>
 
 
     <!-- Show Dynamic Validation Error -->

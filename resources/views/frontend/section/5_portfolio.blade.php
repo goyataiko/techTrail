@@ -47,7 +47,7 @@
                 {{-- <div data-wow-delay="0.3s" class="col-md-6 col-lg-4 filter-item branding">
                     <div class="single-portfolio">
                         <figure class="portfolio-image">
-                            <img src="{{ asset('frontend/assets/images/portfolio-1.jpg') }}" alt="">
+                            <img src="{{ secure_asset('frontend/assets/images/portfolio-1.jpg') }}" alt="">
                         </figure>
                         <div class="portfolio-content">
                             <a href="/portfolio-detail" data-lity class="icon"><i class="fas fa-plus"></i></a>

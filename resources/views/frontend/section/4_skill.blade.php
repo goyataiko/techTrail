@@ -155,8 +155,8 @@
 
             <div class="col-lg-6 d-none d-lg-block">
                 <figure id="skillImageContainer" class="single-image text-right wow fadeInRight">
-                    <img id="skillmouseImg1" src="{{ asset('frontend/assets/images/skill1.jpg') }}">
-                    <img id="skillmouseImg2" src="{{ asset('frontend/assets/images/skill2.jpg') }}" style="display: none;">
+                    <img id="skillmouseImg1" src="{{ secure_asset('frontend/assets/images/skill1.jpg') }}">
+                    <img id="skillmouseImg2" src="{{ secure_asset('frontend/assets/images/skill2.jpg') }}" style="display: none;">
                 </figure>
             </div>
         </div>
