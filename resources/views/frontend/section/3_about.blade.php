@@ -5,8 +5,8 @@
         <div class="row d-flex">
             <div class="col-lg-6">
                 <figure class="about-image" id="imageContainer">
-                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/me1.jpg') }}">
-                    <img id="mouseImg2" src="{{ asset('frontend/assets/images/me2.jpg') }}" style="display: none;">
+                    <img id="mouseImg1" src="{{ secure_asset('frontend/assets/images/me1.jpg') }}">
+                    <img id="mouseImg2" src="{{ secure_asset('frontend/assets/images/me2.jpg') }}" style="display: none;">
                 </figure>
             </div>
             <div class="col-lg-6">
