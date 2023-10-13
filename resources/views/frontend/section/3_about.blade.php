@@ -5,16 +5,16 @@
         <div class="row d-flex">
             <div class="col-lg-6">
                 <figure class="about-image" id="imageContainer">
-                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/1.jpg') }}">
-                    <img id="mouseImg2" src="{{ asset('frontend/assets/images/2.jpg') }}" style="display: none;">
+                    <img id="mouseImg1" src="{{ asset('frontend/assets/images/me1.jpg') }}">
+                    <img id="mouseImg2" src="{{ asset('frontend/assets/images/me2.jpg') }}" style="display: none;">
                 </figure>
             </div>
             <div class="col-lg-6">
                 <div class="about-text">
                     <h3 class="title wow fadeInUp" data-wow-delay="0.3s">The Developer.</h3>
                     <div class="desc wow fadeInUp" data-wow-delay="0.4s">
-                        <p>Laravelフレームワークを軸に、デザイン、フロントエンド、バックエンドのスキルを幅広く身につけたエンジニアです。フリーランスデザイナーとして培ったUI設計力とプロジェクトマネジメント力、プログラマーとして培ったフロントエンド開発スキル、ウクライナでの英語圏開発経験を活かし、短期間でLaravelを習得しました。
-                            これらの経験とスキルを活かして、幅広いプロジェクトに柔軟に対応し、チームの一員として貢献します。</p>
+                        <p>私は、Laravelフレームワークを軸に、デザイン、フロントエンド、バックエンドのスキルを幅広く身につけたエンジニアです。フリーランスデザイナーとして培ったUI設計力（ユーザーのニーズを踏まえた、使いやすいUIの設計）とプロジェクトマネジメント力（プロジェクトのスケジュール管理、予算管理、進捗管理）、プログラマーとして培ったフロントエンド開発スキル、英語圏の開発経験を活かして、短期間でLaravelを習得しました。これらの経験とスキルを活かして、幅広いプロジェクトに柔軟に対応し、チームの一員としたいと思います。
+                        </p>
 
                     </div>
                     <a href="{{asset('frontend\assets\rirekisho_20231009.pdf')}}" class="button-primary-trans mouse-dir wow fadeInUp" data-wow-delay="0.5s" target="_blank">
