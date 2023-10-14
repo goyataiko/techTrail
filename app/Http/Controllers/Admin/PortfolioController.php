@@ -71,7 +71,13 @@ class PortfolioController extends Controller
         // 복수 이미지
         $this_id = $create->id;
         if ($request->hasFile('images')) {
-            foreach ($request->file('images') as $image) {
+            // 배열을 'originalName' 기준으로 이름순으로 정렬합니다.
+            $images = $request->file('images');
+            usort($images, function ($a, $b) {
+            return strcmp($a->getClientOriginalName(), $b->getClientOriginalName());
+            });
+            
+            foreach ($images as $image) {
                 $path = $image->store('public/images/portfolio_images/' . $this_id);
                 $portfolio_image = new PortfolioImage;
                 $portfolio_image->name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
@@ -121,10 +127,17 @@ class PortfolioController extends Controller
             'status' => ['numeric'],
             'image' => ['image', 'max:3000'],
         ]);
-
+        
         $portfolio = Portfolio::find($id);
 
         if ($request->hasFile('images')) {
+            // 배열을 'originalName' 기준으로 이름순으로 정렬합니다.
+            $images = $request->file('images');
+            usort($images, function ($a, $b) {
+            return strcmp($a->getClientOriginalName(), $b->getClientOriginalName());
+            });
+            
+            
             //이미지 있는지 확인 후 있으면, 이미지 삭제
             $FolderPath = 'public/images/portfolio_images/' . $id;
             Storage::deleteDirectory($FolderPath);
@@ -135,7 +148,7 @@ class PortfolioController extends Controller
             }
 
             //새로운 파일 레코드 추가
-            foreach ($request->file('images') as $image) {
+            foreach ($images as $image) {
                 $path = $image->store('public/images/portfolio_images/' . $id);
                 $portfolio_image = new PortfolioImage;
                 $portfolio_image->name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
