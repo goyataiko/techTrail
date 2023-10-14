@@ -37,16 +37,17 @@ class PortfolioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => ['string', 'max:30'],
+            'title' => ['string', 'max:30', 'nullable'],
             'category_id' => ['numeric'],
-            'tool' => ['string'],
-            'work_detail' => ['string'],
-            'site_link' => ['url'],
-            'plan_link' => ['url'],
-            'github' => ['url'],
+            'tool' => ['string', 'nullable'],
+            'work_detail' => ['string', 'nullable'],
+            'site_link' => ['url', 'nullable'],
+            'plan_link' => ['url', 'nullable'],
+            'github' => ['url', 'nullable'],
+            'description' => ['string', 'nullable'],
             'created_at' => ['date'],
             'status' => ['numeric'],
-            'image' => ['required', 'image', 'max:3000'],
+            'image' => ['image', 'max:3000'],
         ]);
 
         $create = new Portfolio;
@@ -109,13 +110,13 @@ class PortfolioController extends Controller
     public function update(Request $request, string $id)
     {
         $request->validate([
-            'title' => ['string', 'max:30'],
+            'title' => ['string', 'max:30', 'nullable'],
             'category_id' => ['numeric'],
-            'tool' => ['string'],
-            'work_detail' => ['string'],
-            'site_link' => ['url'],
-            'plan_link' => ['url'],
-            'github' => ['url'],
+            'tool' => ['string', 'nullable'],
+            'work_detail' => ['string', 'nullable'],
+            'site_link' => ['url', 'nullable'],
+            'plan_link' => ['url', 'nullable'],
+            'github' => ['url', 'nullable'],
             'created_at' => ['date'],
             'status' => ['numeric'],
             'image' => ['image', 'max:3000'],
