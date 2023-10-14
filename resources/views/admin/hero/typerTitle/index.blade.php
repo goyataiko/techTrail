@@ -10,7 +10,7 @@
                         <div class="card-header">
                             <a href="{{ route('dashboard') }}" class="btn btn-icon"><i class="fas fa-arrow-left"></i></a>
 
-                            <h4>Blog Category</h4>
+                            <h4>Typer Title</h4>
                             <div class="card-header-action">
                                 <!-- Button trigger modal -->
                                 <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#create">Create

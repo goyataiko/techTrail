@@ -148,7 +148,9 @@ class PortfolioController extends Controller
             }
 
             //새로운 파일 레코드 추가
+            // foreach ($request->file('images') as $image) {
             foreach ($images as $image) {
+                // dd($images,$image );
                 $path = $image->store('public/images/portfolio_images/' . $id);
                 $portfolio_image = new PortfolioImage;
                 $portfolio_image->name = pathinfo($image->getClientOriginalName(), PATHINFO_FILENAME);
