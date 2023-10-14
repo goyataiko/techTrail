@@ -38,7 +38,7 @@ class BlogController extends Controller
         $request->validate([
             'title' => ['string', 'max:30'],
             'category_id' => ['numeric'],
-            'description' => ['string'],
+            'description' => ['string', 'nullable'],
             'created_at' => ['date'],
             'status' => ['numeric'],
             'image' => ['required', 'image', 'max:3000'],
