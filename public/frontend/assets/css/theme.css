@@ -335,6 +335,8 @@ header {
 
 .headerImage {
     position: fixed;
+    height: 100%;
+    margin-top: -90px;
     width: 100%;
     object-fit: cover;
     /* object-position: center 62%; */
@@ -1715,14 +1717,19 @@ Footer-Area
 }
 
 .portfolio-info a {
-    font-size: 14px;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 5px 10px;
+    border: 1.5px solid #282828;
     color: #282828;
-    margin-left: 10px;
-    font-weight: 500;
+    margin-left: 7px;
+    font-weight: 700;
+    transition: 0.3s ease-in-out;
 }
 
 .portfolio-info a:hover {
     color: #6777ef;
+    border: 1.5px solid #6777ef;
 }
 
 .portfolio-details .portfolio-description {
